@@ -18,13 +18,36 @@ Ensimmäisenä tehtävänä on tehdä lyhyet tiivistelmät ranskalaisin viivoin 
 
 -Raportissa ei saa valehdella tekemistään testeistä ja tuloksista, plagioida toisten tekstejä tai käyttää muiden kuvia luvattomasti.
 
-(Karvinen 4.6.2006.)
-
+(Karvinen 04.06.2006.)
 
 ### Free Software Definition
 
+-"Free Software"-määritelmällä tarkoitetaan vapaasti suomennettuna vapaata ohjelmistoa, eikä niinkään ilmaista ohjelmistoa.
+
+-Vapaan ohjelmiston määritelmä pohjautuu siihen, että kaikilla käyttäjillä tulisi olla oikeus toistaa, kopioida, jakaa, tutkia, muuttaa ja parantaa ohjelmistoa.
+
+-Vapaudet ovat jaettu neljään kategoriaan, jotka ovat vapaus 0, vapaus 1, vapaus 2 ja vapaus 3.
+
+-Vapaus 0 on käyttäjän oikeus käyttää ohjelmistoaan haluamaansa tarkoitukseen, ja tämä sisältää myös vapauden olla käyttämättä ohjelmistoa ollenkaan.
+
+-Vapaus 1 on käyttäjän oikeus tutkia lähdekoodia sekä muokata sitä.
+
+-Vapaus 2 on käyttäjän oikeus jakaa alkuperäinen ohjelmisto eteenpäin.
+
+-Vapaus 3 on käyttäjän oikeus jakaa muokkaamansa versio ohjelmistosta eteenpäin.
+
+-Vapaassa ohjelmistossa kaikkien vapauksien tulee täyttyä, ja yksikin puute estää ohjelmiston määrittelyn vapaaksi ohjelmistoksi. 
+
+-Avoimen lähdekoodin ohjelmistoja ei tule sekoittaa vapaisiin ohjelmistoihin, vaikka monet avoimen lähdekoodin ohjelmistot kuuluvatkin vapaan ohjelmiston määritelmään.
+
+(GNU Operating System s.a.)
+
+
+
 ## Lähteet
 
-Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 18.01.2024
+GNU Operating System. s.a. What is Free Software? GNU Operating System. Luettavissa: [https://www.gnu.org/philosophy/free-sw.html](https://www.gnu.org/philosophy/free-sw.html). Luettu: 18.01.2024.
 
-Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2006/raportin-kirjoittaminen-4/](https://terokarvinen.com/2006/raportin-kirjoittaminen-4/). Luettu: 18.01.2024.
+Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 18.01.2024.
+
+Karvinen, T. 04.06.2006. Raportin kirjoittaminen. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2006/raportin-kirjoittaminen-4/](https://terokarvinen.com/2006/raportin-kirjoittaminen-4/). Luettu: 18.01.2024.
