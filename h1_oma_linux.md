@@ -44,7 +44,7 @@ Ensimmäisenä tehtävänä oli tehdä lyhyet tiivistelmät ranskalaisin viivoin
 
 ## Linuxin asentaminen virtuaalitietokoneeseen
 
-Aloitin tehtävän tekemisen 21:40 illalla. En ollut aikaisemmin luonut virtuaalitietokoneita tai minulla ei ole tarvittavia ohjelmia valmiiksi, joten aikalailla nollasta lähdettiin liikenteeseen.
+Aloitin tehtävän tekemisen 21:40 illalla. En ollut aikaisemmin luonut virtuaalitietokoneita ja minulla ei ollut tarvittavia ohjelmia valmiiksi, joten aikalailla nollasta lähdettiin liikenteeseen.
 
 ### Käyttöympäristö
 
