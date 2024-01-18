@@ -22,7 +22,7 @@ Ensimmäisenä tehtävänä oli tehdä lyhyet tiivistelmät ranskalaisin viivoin
 
 ### Free Software Definition
 
-    -"Free Software"-määritelmällä tarkoitetaan vapaasti suomennettuna vapaata ohjelmistoa, eikä niinkään ilmaista ohjelmistoa.
+-"Free Software"-määritelmällä tarkoitetaan vapaasti suomennettuna vapaata ohjelmistoa, eikä niinkään ilmaista ohjelmistoa.
 
 -Vapaan ohjelmiston määritelmä pohjautuu siihen, että kaikilla käyttäjillä tulisi olla oikeus toistaa, kopioida, jakaa, tutkia, muuttaa ja parantaa ohjelmistoa.
 
