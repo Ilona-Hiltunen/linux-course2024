@@ -62,7 +62,7 @@ Tallennustilat: C:/ 500 GB SSD M.2, D:/ 1000 GB SSD M.2
 
 Virtalähde: Corsair 650 W ATX-virtalähde
 
-Käyttöjärjestelmä: Windows 11 Home
+Käyttöjärjestelmä: Windows 11 Home 64-bit
 
 ### Tarvittavien ohjelmien lataaminen ja asennus
 
