@@ -44,6 +44,8 @@ Ensimmäisenä tehtävänä oli tehdä lyhyet tiivistelmät ranskalaisin viivoin
 
 ## Linuxin asentaminen virtuaalitietokoneeseen
 
+Aloitin tehtävän tekemisen 21:40 illalla. En ollut aikaisemmin asentanut virtuaalitietokoneita tai minulla ei ole tarvittavia ohjelmia valmiiksi, joten aikalailla nollasta lähdettiin liikenteeseen.
+
 ### Käyttöympäristö
 
 Tietokone: Itse kasattu pöytätietokone
@@ -62,7 +64,9 @@ Virtalähde: Corsair 650 W ATX-virtalähde
 
 Käyttöjärjestelmä: Windows 11 Home
 
+### Tarvittavien ohjelmien lataaminen
 
+Ensimmäiseksi loin kansion tallennustila D:hen, johon minulla oli tarkoituksena ladata tarvittavat ohjelmat. Seuraavaksi menin Tero Karvisen [sivustolle](https://terokarvinen.com/2021/install-debian-on-virtualbox/), josta pääsin lataamaan Debian Live-levykuvan. Samalta sivustolta löysin [linkin](https://www.virtualbox.org/wiki/Downloads) VirtualBoxin lataamiseen. 
 
 
 
