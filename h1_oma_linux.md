@@ -1,6 +1,6 @@
 # H1 Oma Linux
 
-Ensimmäisenä tehtävänä on tehdä lyhyet tiivistelmät ranskalaisin viivoin artikkeleista raportin kirjoittaminen sekä Free Software Definition. Toisena tehtävänä on asentaa virtuaalikoneohjelmisto, jonka avulla luodaan uusi virtuaalikone. Tähän virtuaalikoneeseen olisikin sitten tarkoitus asentaa Linux. (Karvinen 2024.)
+Ensimmäisenä tehtävänä oli tehdä lyhyet tiivistelmät ranskalaisin viivoin artikkeleista raportin kirjoittaminen sekä Free Software Definition. Toisena tehtävänä oli asentaa virtuaalikoneohjelmisto, jonka avulla luotiin uusi virtuaalikone. Tähän virtuaalikoneeseen tuli asentaa Linux. (Karvinen 2024.)
 
 ## Tiivistelmät
 
@@ -43,6 +43,27 @@ Ensimmäisenä tehtävänä on tehdä lyhyet tiivistelmät ranskalaisin viivoin 
 (GNU Operating System s.a.)
 
 ## Linuxin asentaminen virtuaalitietokoneeseen
+
+### Käyttöympäristö
+
+Tietokone: Itse kasattu pöytätietokone
+
+Emolevy: PRIME Z390-P
+
+Prosessori: 3,70 GHz Intel Core i5-9600k
+
+Keskusmuisti: 16 GB 3200MHz DDR4
+
+Näytönohjain: Radeon RX 5600 XT Pulse 6GB GDDR6
+
+Virtalähde: Corsair 650 W ATX-virtalähde
+
+Tallennustilat: C:/ 500 GB SSD M.2, D:/ 1000 GB SSD M.2
+
+Käyttöjärjestelmä: Windows 11 Home
+
+
+
 
 
 
