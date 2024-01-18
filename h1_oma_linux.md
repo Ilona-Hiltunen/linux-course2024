@@ -94,9 +94,11 @@ Tässä vaiheessa huomasinkin, etten saa luotua virtuaalikonetta. Ongelma kuiten
 
 ### Virtuaalitietokoneen käyttö ja Linuxin asennus
 
-Kun yritin käynnistää virtuaalikonetta, törmäsin virheilmoitukseen jossa ilmoitettiin, että VT-x on pois käytöstä BIOS:ssa. Tämän korjaamiseksi minun täytyi sulkea kone ja asettaa tämä asetus päälle BIOS:sa. Tästä tapahtumasta en ymmärrettävästi voinut ottaa kuvia.
+Kun yritin käynnistää virtuaalikonetta, törmäsin virheilmoitukseen jossa ilmoitettiin, että VT-x on pois käytöstä BIOS:ssa. Tämän korjaamiseksi minun täytyi käynnistää tietokone uudelleen, mennä BIOS:iin ja ottaa käyttöön Intel (VMX) Virtualization Technology -asetus. Otin tapahtumasta kuvan puhelimella.
 
 ![Virhe](Kuvat/virheilmoitus.png)
+
+![Virheen korjaus](Kuvat/IMG_20240118_225130__01.jpg).
 
 
 
