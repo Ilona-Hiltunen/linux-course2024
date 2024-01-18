@@ -64,13 +64,21 @@ Virtalähde: Corsair 650 W ATX-virtalähde
 
 Käyttöjärjestelmä: Windows 11 Home
 
-### Tarvittavien ohjelmien lataaminen
+### Tarvittavien ohjelmien lataaminen ja asennus
 
 Ensimmäiseksi loin kansion tallennustila D:hen, johon minulla oli tarkoituksena ladata tarvittavat ohjelmat. Seuraavaksi menin Tero Karvisen [sivustolle](https://terokarvinen.com/2021/install-debian-on-virtualbox/), josta pääsin lataamaan Debian Live-levykuvan. Samalta sivustolta löysin [linkin](https://www.virtualbox.org/wiki/Downloads) VirtualBoxin lataamiseen. 
 
-![](Kuvat/Virtualbox_Debian_lataukset.png)
+![Lataukset](Kuvat/Virtualbox_Debian_lataukset.png)
 
+Asensin lataamani VirtualBoxin tallennustila D:hen sille luomaani kansioon. Tähän mennessä kaikki oli sujunut melko nopeasti ja ongelmitta, ja kello olikin 21:57, kun sain tämän osion valmiiksi.
 
+![Asennus](Kuvat/Virtualbox_asennus.png)
+
+### Virtuaalikoneen luominen
+
+Seurasin virtuaalikoneen luomiseen ohjeita samalta [sivustolta](https://terokarvinen.com/2021/install-debian-on-virtualbox/?fromSearch=virtualbox) mistä olin ladannut Debianin. Menin uuden virtuaalitietokoneen luomiseen ja laitoin Expert-moden päälle. Asetin virtuaalikoneen nimeksi Debian ja tallennuspaikaksi aiemmin tekemäni kansion. Lisäksi asetin levykuvaksi aiemmin lataamani Debian Live Linuxin.
+
+![Virtuaalikoneen luonti](Kuvat/Virtuaalikoneen_luonti.png)
 
 
 ## Lähteet
