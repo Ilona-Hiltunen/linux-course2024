@@ -98,7 +98,15 @@ Kun yritin käynnistää virtuaalikonetta, törmäsin virheilmoitukseen jossa il
 
 ![Virhe](Kuvat/virheilmoitus.png)
 
-![Virheen korjaus](Kuvat/IMG_20240118_225130__01.jpg).
+![Virheen korjaus](Kuvat/IMG_20240118_225130__01.jpg)
+
+Korjauksen jälkeen virtuaalitietokone käynnistyi ongelmitta. Testailin virtuaalikonetta hieman käymällä Teron nettisivuilla ja kaikki tuntui toimivan moitteettomasti. Näppäinjärjestelmä ei toistanut oikein ääkkösiä, mutta se olikin odotettavissa ennen käyttöjärjestelmän latausta.
+
+![Käynnistynyt virtuaalitietokone](Kuvat/toimiva_virtuaalikone.png)
+
+Seuraavaksi aloin asentamaan Debian Linuxia. Asetin käyttöjärjestelmän kieleksi englannin sekä sijainniksi Helsingin. Näppäimistön kieleksi annoin suomen, jotta ääkköset toimivat oikein. Asetin tietokoneen alustumaan, sillä upouudella virtuaalikoneella ei ole mitään tärkeää tietoa ja se on varmin tapa saada asennus onnistumaan oikein (Karvinen 2021). Seuraavaksi asetin nimeni ja tietokoneeseen kirjautumiseen käytettävän nimen. Tietokoneen nimeksi annoin anonyymisti "virtuaalikone", sillä se voi olla muille käyttäjille näkyvissä. Seuraavaksi asetin tietoturvallisen salasanan käyttämälläni salasanageneraattorilla.
+
+![Debian asetukset](Kuvat/debian_asennus.png)
 
 
 
@@ -110,5 +118,7 @@ Kun yritin käynnistää virtuaalikonetta, törmäsin virheilmoitukseen jossa il
 GNU Operating System. s.a. What is Free Software? GNU Operating System. Luettavissa: [https://www.gnu.org/philosophy/free-sw.html](https://www.gnu.org/philosophy/free-sw.html). Luettu: 18.01.2024.
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 18.01.2024.
+
+Karvinen, T. 2021. Install Debian on Virtualbox - Updated 2023. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2021/install-debian-on-virtualbox/](https://terokarvinen.com/2021/install-debian-on-virtualbox/). Luettu: 18.01.2024.
 
 Karvinen, T. 04.06.2006. Raportin kirjoittaminen. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2006/raportin-kirjoittaminen-4/](https://terokarvinen.com/2006/raportin-kirjoittaminen-4/). Luettu: 18.01.2024.
