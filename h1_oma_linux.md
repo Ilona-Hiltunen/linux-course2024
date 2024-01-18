@@ -108,10 +108,11 @@ Seuraavaksi aloin asentamaan Debian Linuxia. Asetin käyttöjärjestelmän kiele
 
 ![Debian asetukset](Kuvat/debian_asennus.png)
 
+Tämän jälkeen jäljellä olikin vain odotella asennuksen valmistumista. Kello oli tässä vaiheessa 23:32. Asennus valmistui 23:38, ja siinä ei näyttänyt olevan ongelmia. Kokeilin taas Teron [verkkosivustolle](https://terokarvinen.com/) menemistä, ja tällä kertaa ääkkösetkin toimivat odotetulla tavalla. Lopuksi testasin vielä komentokehotetta käskyllä $ cat /etc/os-release, jolloin sain tiedon nykyisestä käyttöjärjestelmästä, joka oli tehtävänannon mukainen.
 
+![Debian 12](Kuvat/debian12.png)
 
-
-
+Aloitin tehtävän klo 21:40 ja sain sen päätökseen 23:45. Tehtävässä oli pari ongelmaa matkalla, mutta onnistuin korjaamaan ne itsenäisesti tiedonhaun avulla. Muuten tehtävä sujuikin hyvin, ja uskon, että jatkossa osaan tehdä prosessin vielä nopeampaa. Toki kirjoitin samalla myös tämän raportin, jolloin aikaa meni hieman myös asioiden taltioimiseen. Olen tyytyväinen lopputulokseen, ja mielestäni onnistuinkin tässä tehtävänannon mukaisesti.
 
 ## Lähteet
 
@@ -122,3 +123,5 @@ Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto
 Karvinen, T. 2021. Install Debian on Virtualbox - Updated 2023. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2021/install-debian-on-virtualbox/](https://terokarvinen.com/2021/install-debian-on-virtualbox/). Luettu: 18.01.2024.
 
 Karvinen, T. 04.06.2006. Raportin kirjoittaminen. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2006/raportin-kirjoittaminen-4/](https://terokarvinen.com/2006/raportin-kirjoittaminen-4/). Luettu: 18.01.2024.
+
+VirtualBox. s.a. Download Virtualbox. Oracle. Luettavissa: [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads). Luettu: 18.01.2024.
