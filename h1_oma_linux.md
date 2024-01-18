@@ -7,10 +7,15 @@ Ensimmäisenä tehtävänä on tehdä lyhyet tiivistelmät ranskalaisin viivoin 
 ### Raportin kirjoittaminen
 
 -Raportissa kerrotaan tarkasti mitä on tehty ja mitä toiminnasta seurasi.
+
 -Hyvä raportti on toistettava, eli lopputuloksen tulisi olla sama, jos se toistetaan samalla tavalla uudelleen samalla laitteella.
+
 -Raportin tulisi olla myös täsmällinen, joka tarkoittaa että, raportissa tulisi ilmoittaa tarkkaan niin kellonajat kuin mahdolliset virheet imperfektissä.
+
 -Raportin on hyvä olla helppolukuinen, eli sen teossa tulisi käyttää virheetöntä kieltä ja kirjoittaa sivustolle sopivalla tyylillä.
+
 -Lähteisiin viittaminen on myös tärkeää raporteissa, ja ne osoittavatkin että raportin tekijä on tutustunut raportin aiheeseen.
+
 -Raportissa ei saa valehdella tekemistään testeistä ja tuloksista, plagioida toisten tekstejä tai käyttää muiden kuvia luvattomasti.
 
 (Karvinen 4.6.2006.)
