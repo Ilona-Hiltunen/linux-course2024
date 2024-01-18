@@ -88,6 +88,18 @@ Kovalevyn kooksi asetin 60 GB ja jätin allokoinnin pois päältä, jotta virtua
 
 ![Virtuaalikoneen luonti 3](Kuvat/Virtuaalikoneen_luonti3.png)
 
+Tässä vaiheessa huomasinkin, etten saa luotua virtuaalikonetta. Ongelma kuitenkin ratkesi yksinkertaisesti, sillä käynnistin Virtualboxin uudestaan järjestelmänvalvojana, jolloin se antoi minun luoda virtuaalikoneen. Tässä vaiheessa kello oli 22:33, kun sain virtuaalitietokoneen valmiiksi.
+
+![Valmis virtuaalikone](Kuvat/Valmis_virtuaalikone.png)
+
+### Virtuaalitietokoneen käyttö ja Linuxin asennus
+
+Kun yritin käynnistää virtuaalikonetta, törmäsin virheilmoitukseen jossa ilmoitettiin, että VT-x on pois käytöstä BIOS:ssa. Tämän korjaamiseksi minun täytyi sulkea kone ja asettaa tämä asetus päälle BIOS:sa. Tästä tapahtumasta en ymmärrettävästi voinut ottaa kuvia.
+
+![Virhe](Kuvat/virheilmoitus.png)
+
+
+
 
 
 
