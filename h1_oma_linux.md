@@ -1,6 +1,6 @@
 # H1 Oma Linux
 
-Ensimmäisenä tehtävänä oli tehdä lyhyet tiivistelmät ranskalaisin viivoin artikkeleista raportin kirjoittaminen sekä Free Software Definition. Toisena tehtävänä oli asentaa virtuaalikoneohjelmisto, jonka avulla luotiin uusi virtuaalikone. Tähän virtuaalikoneeseen tuli asentaa Linux. (Karvinen 2024.)
+Ensimmäisenä tehtävänä oli tehdä lyhyet tiivistelmät ranskalaisin viivoin artikkeleista Raportin kirjoittaminen sekä Free Software Definition. Toisena tehtävänä oli asentaa virtuaalikoneohjelmisto, jonka avulla luotiin uusi virtuaalikone. Tähän virtuaalikoneeseen tuli asentaa Linux. (Karvinen 2024.)
 
 ## Tiivistelmät
 
