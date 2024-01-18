@@ -80,6 +80,16 @@ Seurasin virtuaalikoneen luomiseen ohjeita samalta [sivustolta](https://terokarv
 
 ![Virtuaalikoneen luonti](Kuvat/Virtuaalikoneen_luonti.png)
 
+Asetin koneelle muistia 5 GB sekä neljä prosessorinydintä. 
+
+![Virtuaalikoneen luonti 2](Kuvat/Virtuaalikoneen_luonti2.png)
+
+Kovalevyn kooksi asetin 60 GB ja jätin allokoinnin pois päältä, jotta virtuaalikone vie vain sen tilan jota se todellisuudessa käyttää.
+
+![Virtuaalikoneen luonti 3](Kuvat/Virtuaalikoneen_luonti3.png)
+
+
+
 
 ## Lähteet
 
