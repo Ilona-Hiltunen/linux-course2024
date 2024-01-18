@@ -56,9 +56,9 @@ Keskusmuisti: 16 GB 3200MHz DDR4
 
 Näytönohjain: Radeon RX 5600 XT Pulse 6GB GDDR6
 
-Virtalähde: Corsair 650 W ATX-virtalähde
-
 Tallennustilat: C:/ 500 GB SSD M.2, D:/ 1000 GB SSD M.2
+
+Virtalähde: Corsair 650 W ATX-virtalähde
 
 Käyttöjärjestelmä: Windows 11 Home
 
