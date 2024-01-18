@@ -42,6 +42,8 @@ Ensimmäisenä tehtävänä on tehdä lyhyet tiivistelmät ranskalaisin viivoin 
 
 (GNU Operating System s.a.)
 
+## Linuxin asentaminen virtuaalitietokoneeseen
+
 
 
 ## Lähteet
