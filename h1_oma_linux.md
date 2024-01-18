@@ -94,13 +94,13 @@ Tässä vaiheessa huomasinkin, etten saa luotua virtuaalikonetta. Ongelma kuiten
 
 ### Virtuaalitietokoneen käyttö ja Linuxin asennus
 
-Kun yritin käynnistää virtuaalikonetta, törmäsin virheilmoitukseen jossa ilmoitettiin, että VT-x on pois käytöstä BIOS:ssa. Tämän korjaamiseksi minun täytyi käynnistää tietokone uudelleen, mennä BIOS:iin ja ottaa käyttöön Intel (VMX) Virtualization Technology -asetus. Otin tapahtumasta kuvan puhelimella.
+Kun yritin käynnistää virtuaalikonetta, törmäsin virheilmoitukseen jossa ilmoitettiin, että VT-x on pois käytöstä BIOS:ssa. Tämän korjaamiseksi minun täytyi käynnistää tietokone uudelleen, mennä BIOS:iin ja ottaa käyttöön Intel (VMX) Virtualization Technology -asetus. Otin tapahtumasta kuvan puhelimella. Ratkaisun ongelmaan löysin [tältä sivustolta](https://www.partitionwizard.com/partitionmanager/not-in-a-hypervisor-partition.html).
 
 ![Virhe](Kuvat/virheilmoitus.png)
 
 ![Virheen korjaus](Kuvat/IMG_20240118_225130__01.jpg)
 
-Korjauksen jälkeen virtuaalitietokone käynnistyi ongelmitta. Testailin virtuaalikonetta hieman käymällä Teron nettisivuilla ja kaikki tuntui toimivan moitteettomasti. Näppäinjärjestelmä ei toistanut oikein ääkkösiä, mutta se olikin odotettavissa ennen käyttöjärjestelmän latausta.
+Korjauksen jälkeen virtuaalitietokone käynnistyi ongelmitta. Testailin virtuaalikonetta hieman käymällä Teron [verkkosivustolla](https://terokarvinen.com/) ja kaikki tuntui toimivan moitteettomasti. Näppäinjärjestelmä ei toistanut oikein ääkkösiä, mutta se olikin odotettavissa ennen käyttöjärjestelmän latausta.
 
 ![Käynnistynyt virtuaalitietokone](Kuvat/toimiva_virtuaalikone.png)
 
@@ -108,13 +108,15 @@ Seuraavaksi aloin asentamaan Debian Linuxia. Asetin käyttöjärjestelmän kiele
 
 ![Debian asetukset](Kuvat/debian_asennus.png)
 
-Tämän jälkeen jäljellä olikin vain odotella asennuksen valmistumista. Kello oli tässä vaiheessa 23:32. Asennus valmistui 23:38, ja siinä ei näyttänyt olevan ongelmia. Kokeilin taas Teron [verkkosivustolle](https://terokarvinen.com/) menemistä, ja tällä kertaa ääkkösetkin toimivat odotetulla tavalla. Lopuksi testasin vielä komentokehotetta käskyllä $ cat /etc/os-release, jolloin sain tiedon nykyisestä käyttöjärjestelmästä, joka oli tehtävänannon mukainen.
+Tämän jälkeen jäljellä olikin vain odotella asennuksen valmistumista. Kello oli tässä vaiheessa 23:32. Asennus valmistui 23:38, ja siinä ei näyttänyt olevan ongelmia. Kokeilin taas Teron [verkkosivustolle](https://terokarvinen.com/) menemistä, ja tällä kertaa ääkkösetkin toimivat odotetulla tavalla. Lopuksi testasin vielä komentokehotetta käskyllä $ cat /etc/os-release, jolloin sain tiedon nykyisestä käyttöjärjestelmästä, joka oli tehtävänannon mukainen. Tiedon komennosta sain [tältä sivustolta](https://www.geeksforgeeks.org/how-to-check-the-os-version-in-linux/).
 
 ![Debian 12](Kuvat/debian12.png)
 
 Aloitin tehtävän klo 21:40 ja sain sen päätökseen 23:45. Tehtävässä oli pari ongelmaa matkalla, mutta onnistuin korjaamaan ne itsenäisesti tiedonhaun avulla. Muuten tehtävä sujuikin hyvin, ja uskon, että jatkossa osaan tehdä prosessin vielä nopeampaa. Toki kirjoitin samalla myös tämän raportin, jolloin aikaa meni hieman myös asioiden taltioimiseen. Olen tyytyväinen lopputulokseen, ja mielestäni onnistuinkin tässä tehtävänannon mukaisesti.
 
 ## Lähteet
+
+Portalpirate. 29.11.2023. Check the OS Version in Linux. GeeksforGeeks. Luettavissa: [https://www.geeksforgeeks.org/how-to-check-the-os-version-in-linux/](https://www.geeksforgeeks.org/how-to-check-the-os-version-in-linux/). Luettu: 18.01.2024.
 
 GNU Operating System. s.a. What is Free Software? GNU Operating System. Luettavissa: [https://www.gnu.org/philosophy/free-sw.html](https://www.gnu.org/philosophy/free-sw.html). Luettu: 18.01.2024.
 
@@ -123,5 +125,7 @@ Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto
 Karvinen, T. 2021. Install Debian on Virtualbox - Updated 2023. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2021/install-debian-on-virtualbox/](https://terokarvinen.com/2021/install-debian-on-virtualbox/). Luettu: 18.01.2024.
 
 Karvinen, T. 04.06.2006. Raportin kirjoittaminen. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2006/raportin-kirjoittaminen-4/](https://terokarvinen.com/2006/raportin-kirjoittaminen-4/). Luettu: 18.01.2024.
+
+Linda. 25.12.2023. How to Fix Not in a Hypervisor Partition Error. Minitool. Luettavissa: [https://www.partitionwizard.com/partitionmanager/not-in-a-hypervisor-partition.html](https://www.partitionwizard.com/partitionmanager/not-in-a-hypervisor-partition.html). Luettu: 18.03.2024.
 
 VirtualBox. s.a. Download Virtualbox. Oracle. Luettavissa: [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads). Luettu: 18.01.2024.
