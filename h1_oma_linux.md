@@ -76,7 +76,7 @@ Asensin lataamani VirtualBoxin tallennustila D:hen sille luomaani kansioon. Täh
 
 ### Virtuaalikoneen luominen
 
-Seurasin virtuaalikoneen luomiseen ohjeita samalta [sivustolta](https://terokarvinen.com/2021/install-debian-on-virtualbox/?fromSearch=virtualbox) mistä olin ladannut Debianin. Menin uuden virtuaalitietokoneen luomiseen ja laitoin Expert-moden päälle. Asetin virtuaalikoneen nimeksi Debian ja tallennuspaikaksi aiemmin tekemäni kansion. Lisäksi asetin levykuvaksi aiemmin lataamani Debian Live Linuxin.
+Seurasin virtuaalikoneen luomiseen ohjeita samalta [sivustolta](https://terokarvinen.com/2021/install-debian-on-virtualbox/?fromSearch=virtualbox) mistä olin ladannut Debianin. Aloin luomaan uutta virtuaalitietokonetta ja laitoin Expert-moden päälle. Asetin virtuaalikoneen nimeksi Debian ja tallennuspaikaksi aiemmin tekemäni kansion. Lisäksi asetin levykuvaksi aiemmin lataamani Debian Live Linuxin.
 
 ![Virtuaalikoneen luonti](Kuvat/Virtuaalikoneen_luonti.png)
 
