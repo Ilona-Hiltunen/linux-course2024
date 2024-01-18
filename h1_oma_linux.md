@@ -68,6 +68,8 @@ Käyttöjärjestelmä: Windows 11 Home
 
 Ensimmäiseksi loin kansion tallennustila D:hen, johon minulla oli tarkoituksena ladata tarvittavat ohjelmat. Seuraavaksi menin Tero Karvisen [sivustolle](https://terokarvinen.com/2021/install-debian-on-virtualbox/), josta pääsin lataamaan Debian Live-levykuvan. Samalta sivustolta löysin [linkin](https://www.virtualbox.org/wiki/Downloads) VirtualBoxin lataamiseen. 
 
+![](Kuvat/Virtualbox_Debian_lataukset.png)
+
 
 
 
