@@ -108,7 +108,7 @@ Seuraavaksi aloin asentamaan Debian Linuxia. Asetin käyttöjärjestelmän kiele
 
 ![Debian asetukset](Kuvat/debian_asennus.png)
 
-Tämän jälkeen jäljellä olikin vain odotella asennuksen valmistumista. Kello oli tässä vaiheessa 23:32. Asennus valmistui 23:38, ja siinä ei näyttänyt olevan ongelmia. Kokeilin taas Teron [verkkosivustolle](https://terokarvinen.com/) menemistä, ja tällä kertaa ääkkösetkin toimivat odotetulla tavalla. Lopuksi testasin vielä komentokehotetta käskyllä $ cat /etc/os-release, jolloin sain tiedon nykyisestä käyttöjärjestelmästä, joka oli tehtävänannon mukainen. Tiedon komennosta sain [tältä sivustolta](https://www.geeksforgeeks.org/how-to-check-the-os-version-in-linux/).
+Tämän jälkeen jäljellä olikin vain odotella asennuksen valmistumista. Kello oli tässä vaiheessa 23:32. Asennus valmistui 23:38, ja siinä ei näyttänyt olevan ongelmia. Kokeilin taas Teron [verkkosivustolle](https://terokarvinen.com/) menemistä, ja tällä kertaa ääkkösetkin toimivat odotetulla tavalla. Lopuksi testasin vielä terminaalia käskyllä $ cat /etc/os-release, jolloin sain tiedon nykyisestä käyttöjärjestelmästä, joka oli tehtävänannon mukainen. Tiedon komennosta sain [tältä sivustolta](https://www.geeksforgeeks.org/how-to-check-the-os-version-in-linux/).
 
 ![Debian 12](Kuvat/debian12.png)
 
