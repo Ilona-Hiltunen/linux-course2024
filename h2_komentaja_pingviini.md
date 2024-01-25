@@ -5,11 +5,13 @@ Toisen viikon tehtävänä on opiskella komentorivin käyttöä Linuxissa. Harjo
 ## Command line basics revisited
 
 - Komentoriviä on käytetty tietokoneissa jo ennen Internetin keksimistä, ja sen käyttö on yhä yleistä Linuxissa.
-- Komentorivi kohdistuu aina tietokoneessa olevaan johonkin hakemistoon, ja käytössä olevaa hakemistoa kutsutaan työhakemistoksi. Hakemistoja voi tarkastella ja vaihtaa erilaisilla komennoilla (kuten esim. $ cd haluttuhakemisto/)
-- Komentorivillä voi myös muokata, siirtää, luoda ja poistaa tiedostoja ja kansioita.
+- Komentorivi kohdistuu aina tietokoneessa olevaan johonkin hakemistoon, ja käytössä olevaa hakemistoa kutsutaan työhakemistoksi. Hakemistoja voi tarkastella ja vaihtaa erilaisilla komennoilla (kuten $ cd haluttuhakemisto/)
+- Komentorivillä voi myös muokata, siirtää, luoda ja poistaa tiedostoja ja kansioita. Mkdir luo uuden kansion, mv siirtää kansion/tiedoston, cp kopioi kansion/tiedoston ja rm poistaa kansion/tiedoston.
 - Komentoriviltä voidaan myös käyttää toista tietokonetta turvallisesti ottamalla etäyhteys SSH:lla.
-- Linuxin juurihakemiston (merkataan /) alta löytyvät kaikki muut hakemistot, ja sen alta voi löytää esimerkiksi käyttäjien kotihakemistot (/home/käyttäjä/), asetukset(/etc/) sekä lokitiedostot (/var/log/).
+- Linuxin juurihakemiston (merkataan /) alta löytyvät kaikki muut hakemistot, ja sen alta voi löytää esimerkiksi käyttäjien kotihakemistot (/home/käyttäjä/), asetukset (/etc/) sekä lokitiedostot (/var/log/).
 - Järjestelmän toimintaan vaikuttavat komennot vaativat pääkäyttäjän oikeuksia, joten nämä komennot täytyy suorittaa pääkäyttäjänä ($ sudo ennen haluttua komentoa).
+
+(Karvinen 2020)
 
 ## Komentorivi-harjoitukset
 
