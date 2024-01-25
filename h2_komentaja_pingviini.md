@@ -1,10 +1,15 @@
 # H2 Komentaja pingviini
 
-Toisen viikon tehtävänä on opiskella Linuxin komentokehotetta. Harjoittelu aloitetaan tiivistämällä Command line basics revisited -artikkeli ja sen jälkeen opittuja komentoja harjoitellaan käytännössä aiemmin kurssilla tekemämme virtuaalikoneen terminaaliohjelmassa. (Karvinen 2024.)
+Toisen viikon tehtävänä on opiskella komentorivin käyttöä Linuxissa. Harjoittelu aloitetaan tiivistämällä Command line basics revisited -artikkeli ja sen jälkeen opittuja komentoja harjoitellaan käytännössä aiemmin kurssilla tekemämme virtuaalikoneen terminaaliohjelmassa. (Karvinen 2024.)
 
 ## Command line basics revisited
 
-- sodrlso
+- Komentoriviä on käytetty tietokoneissa jo ennen Internetin keksimistä, ja sen käyttö on yhä yleistä Linuxissa.
+- Komentorivi kohdistuu aina tietokoneessa olevaan johonkin hakemistoon, ja käytössä olevaa hakemistoa kutsutaan työhakemistoksi. Hakemistoja voi tarkastella ja vaihtaa erilaisilla komennoilla (kuten esim. $ cd haluttuhakemisto/)
+- Komentorivillä voi myös muokata, siirtää, luoda ja poistaa tiedostoja ja kansioita.
+- Komentoriviltä voidaan myös käyttää toista tietokonetta turvallisesti ottamalla etäyhteys SSH:lla.
+- Linuxin juurihakemiston (merkataan /) alta löytyvät kaikki muut hakemistot, ja sen alta voi löytää esimerkiksi käyttäjien kotihakemistot (/home/käyttäjä/), asetukset(/etc/) sekä lokitiedostot (/var/log/).
+- Järjestelmän toimintaan vaikuttavat komennot vaativat pääkäyttäjän oikeuksia, joten nämä komennot täytyy suorittaa pääkäyttäjänä ($ sudo ennen haluttua komentoa).
 
 ## Komentorivi-harjoitukset
 
