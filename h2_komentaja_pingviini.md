@@ -23,6 +23,10 @@ Aloitin tehtävät klo 23:20. Tehtävien tekemiseen käytin viimeksi luomaani vi
 
 En ollut käyttänyt virtuaalikonetta vähään aikaan, joten minun täytyi päivittää pakettilista. Pakettilistan päivitys tulee tehdä siksi, että järjestelmä on ajan tasalla uusimmista paketeista, jolloin se osaa asentaa uusimmat ja usein ne toimivimmat ohjelmapaketit. Välillä järjestelmä ei myöskään löydä paketteja, jos se etsii niitä vanhentuneella tiedolla. (Jeet 5.12.2017.) Pakettilistan päivitys tehdään pääkäyttäjänä, sillä peruskäyttäjän oikeudet eivät salli sen päivitystä. 
 
+    $ sudo apt-get update
+
+!(Alkupäivittelyt)[Kuvat/alkupaivitykset.png]
+
 ## Lähteet
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 25.01.2024.
