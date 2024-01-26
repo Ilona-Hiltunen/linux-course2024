@@ -34,7 +34,7 @@ Kun olin saanut alkuvalmistelut tehtyä ryhdyin [Micron](https://micro-editor.gi
 
 ### Raudan tarkastelu
 
-Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. 
+Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Tietokoneen järjestelmäksi ja väyläksi on ilmoitettu VirtualBox, sillä käyttämäni tietokone on sillä luotu virtuaalikone. 
 
     $ sudo lshw -short -sanitize
 
