@@ -25,7 +25,7 @@ En ollut käyttänyt virtuaalikonetta vähään aikaan, joten minun täytyi päi
 
     $ sudo apt-get update
 
-!(Alkupäivittelyt)[Kuvat/alkupaivitykset.png]
+![Alkupäivittelyt](Kuvat/alkupaivitykset.png)
 
 ## Lähteet
 
