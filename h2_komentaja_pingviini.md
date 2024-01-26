@@ -34,7 +34,7 @@ Kun olin saanut alkuvalmistelut tehtyä ryhdyin [Micron](https://micro-editor.gi
 
 ### Raudan tarkastelu
 
-Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Tietokoneen järjestelmäksi ja väyläksi on ilmoitettu VirtualBox, sillä käyttämäni tietokone on sillä luotu virtuaalikone. 
+Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Tietokoneen järjestelmäksi ja väyläksi on ilmoitettu VirtualBox, sillä käyttämäni tietokone on sillä luotu virtuaalikone. Keskusmuistia tietokoneella on virtuaalikonetta luodessa asettamani 5 GB:tä, ja BIOS:lle varattua pitkäkestoista musitia on 128 KB. Tietokoneen prosessori on 15-0600k, eli sama kuin virtuaalikoneen alla toimivassa tietokoneessani. Piirisarjat ovat myös Intelin tuotantoa. Syötteessä on kytkettynä kaksi Plug and Play -laitetta. Tallennusohjain on Intel-pohjainen IDE-ohjain. 
 
     $ sudo lshw -short -sanitize
 
