@@ -34,7 +34,7 @@ Kun olin saanut alkuvalmistelut tehtyä ryhdyin [Micron](https://micro-editor.gi
 
 ### Raudan tarkastelu
 
-Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Alla olevassa listauksessa on rauta selitettynä.
+Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Alla olevassa listauksessa on rauta selitettynä. Kello oli 1:00 kun sain tämän osion suoritettua, ja päätinkin jatkaa hommaa seuraavana päivänä uudestaan.
 
     $ sudo lshw -short -sanitize
 
