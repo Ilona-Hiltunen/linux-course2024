@@ -34,9 +34,72 @@ Kun olin saanut alkuvalmistelut tehtyä ryhdyin [Micron](https://micro-editor.gi
 
 ### Raudan tarkastelu
 
-Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Tietokoneen järjestelmäksi ja väyläksi on ilmoitettu VirtualBox, sillä käyttämäni tietokone on sillä luotu virtuaalikone. Keskusmuistia tietokoneella on virtuaalikonetta luodessa asettamani 5 GB:tä, ja BIOS:lle varattua muistia on 128 KB. Tietokoneen prosessori on 15-0600k, eli sama kuin virtuaalikoneen alla toimivassa tietokoneessani. Piirisarjat ovat myös Intelin tuotantoa. Syötteessä on kytkettynä kaksi Plug and Play -laitetta. Tallennusohjain on Intel-pohjainen IDE-ohjain CD-asemalle. Tallennustilassa on CD-asema. Näytönsovitin on Virtualboxin luoma, ja Quest Additions -ohjelman asentamisen myötä se pystyy näyttämään virtuaalikoneen näytön oikean kokoisena. Ethernet-ohjain on Intelin. Seuraavana syötteessä on Virtualboxin hiiren integrointi, jonka avulla hiiri liikkuu sulavasti oman koneeni ja virtuaalikoneen välillä. Multimediassa on Intelin ääniohjain. Bus:ien kohdalla on kaksi USB-ohjainta. Seuraavana syötteessä on Virtualboxin osoitinlaite. Seuraava bridge on taas Intelin IDE-verkkosilta???. Seuraava bus on usb2 ohjain. Seuraava bus on Intelin isäntäohjain USB 2.0. Seuraava storage on Intelin SATA-tallennusohjain virtuaalikoneen massamuistille. Seuraava tallennustila on Virtualboxin luoma 42 GB kovalevy. Volume 1 on useissa Linuxissa käytetty EXT4 -tietojärjestelmä, joka tallentaa dataa lohkoina ja sillä on muistia 31 GB. Seuraava volume on Linuxissa käytetty swap-muisti, jota käytetään mikäli keskusmuistista loppuu tila, sillä on muistia 9 GB. Seuraavana input 0 on näppäimistö, input 2 virtanapainike, input 3 videoväylä, input 4 lepotilapainike, input 5 hiiri, input 7 kaiutin.
+Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Alla olevassa listauksessa on rauta "suomennettuna".
 
     $ sudo lshw -short -sanitize
+
+System : Virtualboxin luoma järjestelmä
+
+Bus: Virtualboxin luoma laiteväylä
+
+Memory: BIOS:in muisti 128 KB
+
+Memory: Keskusmuisti 5 GB
+
+Processor: Intel i5-9600k prosessori
+
+Bridge: Intelin piirisarja
+
+Bridge: Intelin piirisarja
+
+Input: Plug and Play-laite
+
+Input: Plug an Play-laite
+
+Storage: Intel-pohjainen IDE-ohjain CD-asemalle
+
+Disk: CD-asema
+
+Display: Virtualboxin luoma näytönsovitin, joka mahdollistaa virtualikoneen näytön näyttämisen oikean kokoisena Quest Additionsin asentamisen myötä
+
+Network: Intel-pohjainen Ethernet-ohjain
+
+Input: Virtualboxin hiiren integrointi, jonka avulla hiiri liikkuu sulavasti virtuaalikoneen ja oman koneeni välillä
+
+Multimedia: Intelin ääniohjain
+
+Bus: USB-ohjain
+
+Bus: USB-ohjain
+
+Input: Virtualboxin osoitinlaite
+
+Bridge: Intelin IDE-verkkosilta???
+
+Bus: USB 2.0-ohjain
+
+Bus: Intelin USB 2.0-isäntäohjain
+
+Storage: Intelin SATA-tallennusohjain virtuaalikoneen massamuistille
+
+Disk: Virtualboxin luoma 42 GB kovalevy
+
+Volume: Useissa Linuxeissa käytetty EXT4-tietojärjestelmä, joka tallentaa dataa lohkoina. Muistia sillä on 31 GB.
+
+Volume: Linuxissa käytetty swap-muisti, joka käytetään mikäli keskusmuistilta loppuu tila. Muistia sillä on n. 9 GB.
+
+Input0: Näppäimistö
+
+Input2: Virtapainike
+
+Input3: Videoväylä
+
+Input4: Lepotilapainike
+
+Input5: Hiiri
+
+Input7: Kaiutin
+
 
 ![Koneen rauta](Kuvat/koneen_rauta.png)
    
