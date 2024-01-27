@@ -34,69 +34,41 @@ Kun olin saanut alkuvalmistelut tehtyä ryhdyin [Micron](https://micro-editor.gi
 
 ### Raudan tarkastelu
 
-Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Alla olevassa listauksessa on rauta "suomennettuna".
+Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Alla olevassa listauksessa on rauta selitettynä.
 
     $ sudo lshw -short -sanitize
 
 - System : Virtualboxin luoma järjestelmä
 -  Bus: Virtualboxin luoma laiteväylä
 -  Memory: BIOS:in muisti 128 KB
-
-Memory: Keskusmuisti 5 GB
-
-Processor: Intel i5-9600k prosessori
-
-Bridge: Intelin piirisarja
-
-Bridge: Intelin piirisarja
-
-Input: Plug and Play-laite
-
-Input: Plug an Play-laite
-
-Storage: Intel-pohjainen IDE-ohjain CD-asemalle
-
-Disk: CD-asema
-
-Display: Virtualboxin luoma näytönsovitin, joka mahdollistaa virtualikoneen näytön näyttämisen oikean kokoisena Quest Additionsin asentamisen myötä
-
-Network: Intel-pohjainen Ethernet-ohjain
-
-Input: Virtualboxin hiiren integrointi, jonka avulla hiiri liikkuu sulavasti virtuaalikoneen ja oman koneeni välillä
-
-Multimedia: Intelin ääniohjain
-
-Bus: USB-ohjain
-
-Bus: USB-ohjain
-
-Input: Virtualboxin osoitinlaite
-
-Bridge: Intelin IDE-verkkosilta???
-
-Bus: USB 2.0-ohjain
-
-Bus: Intelin USB 2.0-isäntäohjain
-
-Storage: Intelin SATA-tallennusohjain virtuaalikoneen massamuistille
-
-Disk: Virtualboxin luoma 42 GB kovalevy
-
-Volume: Useissa Linuxeissa käytetty EXT4-tietojärjestelmä, joka tallentaa dataa lohkoina. Muistia sillä on 31 GB.
-
-Volume: Linuxissa käytetty swap-muisti, joka käytetään mikäli keskusmuistilta loppuu tila. Muistia sillä on n. 9 GB.
-
-Input0: Näppäimistö
-
-Input2: Virtapainike
-
-Input3: Videoväylä
-
-Input4: Lepotilapainike
-
-Input5: Hiiri
-
-Input7: Kaiutin
+-  Memory: Keskusmuisti 5 GB
+-  Processor: Intel i5-9600k prosessori
+-  Bridge: Intelin piirisarja
+-  Bridge: Intelin piirisarja
+-  Input: Plug and Play-laite
+-  Input: Plug an Play-laite
+-  Storage: Intel-pohjainen IDE-ohjain CD-asemalle
+-  Disk: CD-asema
+-  Display: Virtualboxin luoma näytönsovitin, joka mahdollistaa virtualikoneen näytön näyttämisen oikean kokoisena Quest Additionsin asentamisen myötä
+-  Network: Intel-pohjainen Ethernet-ohjain
+-  Input: Virtualboxin hiiren integrointi, jonka avulla hiiri liikkuu sulavasti virtuaalikoneen ja oman koneeni välillä
+-  Multimedia: Intelin ääniohjain
+-  Bus: USB-ohjain
+-  Bus: USB-ohjain
+-  Input: Virtualboxin osoitinlaite
+-  Bridge: Intelin IDE-verkkosilta
+-  Bus: USB 2.0-ohjain
+-  Bus: Intelin USB 2.0-isäntäohjain
+-  Storage: Intelin SATA-tallennusohjain virtuaalikoneen massamuistille
+-  Disk: Virtualboxin luoma 42 GB kovalevy
+-  Volume: Useissa Linuxeissa käytetty EXT4-tietojärjestelmä, joka tallentaa dataa lohkoina. Muistia sillä on 31 GB.
+-  Volume: Linuxissa käytetty swap-muisti, joka käytetään mikäli keskusmuistilta loppuu tila. Muistia sillä on n. 9 GB.
+-  Input0: Näppäimistö
+-  Input2: Virtapainike
+-  Input3: Videoväylä
+-  Input4: Lepotilapainike
+-  Input5: Hiiri
+-  Input7: Kaiutin
 
 
 ![Koneen rauta](Kuvat/koneen_rauta.png)
