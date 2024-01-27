@@ -38,9 +38,9 @@ Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suor
 
     $ sudo lshw -short -sanitize
 
-System : Virtualboxin luoma järjestelmä
+- System : Virtualboxin luoma järjestelmä
 
-Bus: Virtualboxin luoma laiteväylä
+- Bus: Virtualboxin luoma laiteväylä
 
 Memory: BIOS:in muisti 128 KB
 
