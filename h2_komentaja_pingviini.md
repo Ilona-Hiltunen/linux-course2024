@@ -78,8 +78,16 @@ Jatkoin harjoitusta seuraavana päivänä klo 7.00. Valitsin asennettaviksi kome
 
     $ sudo apt-get -y install thefuck fzf bpytop
 
+![Thefuck](Kuvat/thefuck.png)
+
+![Fzf](Kuvat/fzf.png)
+
+![Bpytop](Kuvat/bpytop.png)
+
 
 ## Lähteet
+
+
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 25.01.2024.
 
