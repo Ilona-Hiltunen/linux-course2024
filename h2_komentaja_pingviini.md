@@ -70,10 +70,13 @@ Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suor
 -  Input5: Hiiri
 -  Input7: Kaiutin
 
-
 ![Koneen rauta](Kuvat/koneen_rauta.png)
-   
 
+### Kolme uutta komentoriviohjelmaa
+   
+Jatkoin harjoitusta seuraavana päivänä klo 7.00. Valitsin asennettaviksi komentoriviohjelmiksi seuraavat: [Thefuck](https://github.com/nvbn/thefuck) - ohjelma joka korjaa väärin kirjoitetut komennot, [Fzf](https://github.com/junegunn/fzf) - ohjelma jolla voi hakea hakemistoja tai tiedostoja ja [Bpytop](https://github.com/aristocratos/bpytop) - ohjelma tietokoneen toiminnan seuraamiseen. Asennus onnistui nopeasti muutamissa sekunneissa ongelmitta. 
+
+    $ sudo apt-get -y install thefuck fzf bpytop
 
 
 ## Lähteet
