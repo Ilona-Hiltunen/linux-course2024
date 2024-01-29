@@ -140,9 +140,31 @@ Seuraavalla komennolla sain tulostettua kaikki rivit, jotka sisältävät sanan 
 
 ### Putket
 
+Seuraavaksi harjoittelin putkien käyttöä. Putkilla voi yhdistää useamman erillisen komennon yhdeksi. Kokeilin listata kaikki kansiot kotihakemistoni alta, ja tulostaa niistä vain ne, jotka sisältävät kirjaimen P. Se onnistui seuraavalla komennolla.
+
+    $ ls | grep -i 'p'
+
+(GeeksforGeeks 05.07.2023)
+
+### Onnistunut ja epäonnistunut tapahtuma
+
+Viimeisenä minun täytyi tehdä onnistunut ja epäonnistunut tapahtuma komentorivillä. Ensimmäiseksi tein epäonnistuneen tapahtuman seuraavalla käskyllä. Se ei toiminut sen vuoksi, koska en tehnyt komentoa pääkäyttäjänä kirjoittamalla "sudo" komennon alkuun. Näin ollen järjestelmä esti pääsyni kuvassa näkyviin kansioihin ja tiedostoihin. Tämä selvisi rivien perässä olevista koodeista 13, joka ilmoittaa että käyttäjällä ei ole lupaa tehdä haluttuja toimenpiteitä.
+
+    $ apt-get update
+
+![Epäonnistunut tapahtuma](Kuvat/epaonnistunut_tapahtuma.png)
+
+Seuraavaksi tein saman komennon pääkäyttäjänä lisäämällä sudo äskeisen komennon eteen. Terminaali kysyi käyttäjän salasanaani, jonka jälkeen se alkoi etsiä uusia pektteja. Tällä tavalla haluttu pakettilistan päivitys onnistui. Kuten seuraavasta kuvasta näkee, löytyi pakettilistaan neljä uudempaa versiota. Kaikki päivitykset olivat Debian-käyttöliittymään.
+
+    $ sudo apt-get update
+
+![Onnistunut tapahtuma](Kuvat/onnistunut_toimenpide.png)
+
 
 
 ## Lähteet
+
+GeeksforGeeks. 05.07.2023. Piping in Unix or Linux. GeeksforGeeks. Luettavissa: [https://www.geeksforgeeks.org/piping-in-unix-or-linux/](https://www.geeksforgeeks.org/piping-in-unix-or-linux/). Luettu: 29.01.2024.
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 25.01.2024.
 
