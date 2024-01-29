@@ -154,7 +154,7 @@ Viimeisenä minun täytyi tehdä onnistunut ja epäonnistunut tapahtuma komentor
 
 ![Epäonnistunut tapahtuma](Kuvat/epaonnistunut_tapahtuma.png)
 
-Seuraavaksi tein saman komennon pääkäyttäjänä lisäämällä sudo äskeisen komennon eteen. Terminaali kysyi käyttäjän salasanaani, jonka jälkeen se alkoi etsiä uusia pektteja. Tällä tavalla haluttu pakettilistan päivitys onnistui. Kuten seuraavasta kuvasta näkee, löytyi pakettilistaan neljä uudempaa versiota. Kaikki päivitykset olivat Debian-käyttöliittymään.
+Seuraavaksi tein saman komennon pääkäyttäjänä lisäämällä sudo äskeisen komennon eteen. Terminaali kysyi käyttäjän salasanaani, jonka jälkeen se alkoi etsiä uusia pektteja. Tällä tavalla haluttu pakettilistan päivitys onnistui. Kuten seuraavasta kuvasta näkee, löytyi pakettilistaan neljä uudempaa versiota. Kaikki päivitykset olivat Debian-käyttöjärjestelmään.
 
     $ sudo apt-get update
 
