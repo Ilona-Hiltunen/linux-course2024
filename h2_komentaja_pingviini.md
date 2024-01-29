@@ -86,29 +86,61 @@ Jatkoin harjoitusta seuraavana päivänä klo 7.00. Valitsin asennettaviksi kome
 
 ### Tärkeät kansiot 
 
-Seuraavaksi tutustuin tärkeisiin kansioihin. Aloitin ylimmästä / kansiosta, joka on juurihakemisto, jonka alta kaikki koneen sisältö löytyy. Juurihakemistoon pääsin kirjoittamalla kaksi kertaa seuraavan komennon, joka siirtää hakemistoa asteen ylöspäin. Se sisältää seuraavassa kuvassa olevat kansiot
+Seuraavaksi tutustuin tärkeisiin kansioihin. Aloitin ylimmästä / kansiosta, joka on juurihakemisto, jonka alta kaikki koneen sisältö löytyy. Juurihakemistoon pääsin kirjoittamalla kaksi kertaa seuraavan komennon, joka siirtää hakemistoa asteen ylöspäin. Se sisälsi seuraavassa kuvassa olevat kansiot.
 
     $ cd ..
+
+![Juurihakemisto](Kuvat/juurihakemisto.png)
 
 Seuraavaksi siirryin /etc/ kansioon. Siihen pääsin kirjoittamalla seuraavan komennon juurihakemistossa. Se sisältää järjestelmän asetuksia. Seuraavassa kuvassa tarkastelin mitä timezone -tiedosto sisältää, ja siitä näkyi, että aikavyöhykkeeksi on asetettu Europe/Helsinki.
 
     $ cd etc
 
+![Etc-kansio](Kuvat/etckansio.png)
+
 Palasin ylöspäin juurihakemistoon ja siirryin /var/log/ hakemistoon seuraavalla komennolla. Tämä kansio sisälsi järjestelmän lokeja. Tutustuin boot.log -kansion sisältöön ja se sisälsi odotetusti lokeja järjestelmästä. Otin kuvan esimerkiksi lokista, josta selviää että tietokone on yhdistettynä Internettiin.
 
     $ cd var/log
+
+![Var/log](Kuvat/varlogkansio.png)
 
 Palasin taas juurihakemistoon ja siirryin /media/ kansioon seuraavalla komennolla. Tämä kansio sisältää poistuvan sisällön, kuten esimerkiksi USB-tikun sisällön. Kansio sisälsi kaksi piilotettua hakemistoa, ja hakemiston käyttäjäni nimellä.
 
     $ cd media 
 
+![Mediakansio](Kuvat/mediakansio.png)
+
 Siirryin taas takaisin juurihakemistoon, ja siitä siirryin /home/ kansioon. Se sisältää jokaisen käyttäjän oman hakemiston. Koska koneella ei ole muita käyttäjiä kuin omani, se sisälsi vain yhden hakemiston käyttäjäni nimellä.
 
     $ cd home
 
+![Homekansio](Kuvat/homekansio.png)
+
 Siirryin /home/ kansiosta käyttäjäni /home/ilona/ kansioon. Se on kotihakemisto käyttäjälleni, johon voin tallentaa haluamaani sisältöä. Se sisälsi seuraavia kansioita.
 
     $ cd ilona
+
+![Käyttäjän kansio](Kuvat/kayttajakansio.png)
+
+### Grep-komento
+
+Harjoittelua varten tein moikka.txt tiedoston työpöydälleni. Se sisälsi pari tervehdystä. Seuraavalla komento tulosti kaikki rivit, joihin olin kirjoittanut "hello".
+
+    $ grep "hello" moikka.txt
+
+Seuraavalla komennolla sain tietää montako kertaa tiedosto sisältää sanan "hello". Sain tulokseksi 3.
+
+    $ grep -c "hello" moikka.txt
+
+Seuraavalla komennolla sain tulostettua kaikki rivit, jotka sisältävät sanan "HELLO", välittämättä siitä, ovatko kirjaimet isoja vai pieniä.
+
+    $ grep -i "HELLO" moikka.txt
+
+(Pankaj 3.8.2022)
+
+### Putket
+
+
 
 ## Lähteet
 
@@ -117,3 +149,5 @@ Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto
 Karvinen, T. 2020. Command Line Basics Revisited. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited](https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited). Luettu: 25.01.2024.
 
 Jeet S. 5.12.2017. Why to run sudo apt-get update everytime?. LinkedIn. Luettavissa: [https://www.linkedin.com/pulse/why-run-sudo-apt-get-update-everytime-jitendra-sikarwar/](https://www.linkedin.com/pulse/why-run-sudo-apt-get-update-everytime-jitendra-sikarwar/). Luettu: 26.01.2024.
+
+Pankaj. 3.8.2022. Grep Command in Linux/UNIX. DigitalOcean, LLC. Luettavissa: [https://www.digitalocean.com/community/tutorials/grep-command-in-linux-unix](https://www.digitalocean.com/community/tutorials/grep-command-in-linux-unix). Luettu: 29.01.2024.
