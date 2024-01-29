@@ -84,10 +84,33 @@ Jatkoin harjoitusta seuraavana päivänä klo 7.00. Valitsin asennettaviksi kome
 
 ![Bpytop](Kuvat/bpytop.png)
 
+### Tärkeät kansiot 
+
+Seuraavaksi tutustuin tärkeisiin kansioihin. Aloitin ylimmästä / kansiosta, joka on juurihakemisto, jonka alta kaikki koneen sisältö löytyy. Juurihakemistoon pääsin kirjoittamalla kaksi kertaa seuraavan komennon, joka siirtää hakemistoa asteen ylöspäin. Se sisältää seuraavassa kuvassa olevat kansiot
+
+    $ cd ..
+
+Seuraavaksi siirryin /etc/ kansioon. Siihen pääsin kirjoittamalla seuraavan komennon juurihakemistossa. Se sisältää järjestelmän asetuksia. Seuraavassa kuvassa tarkastelin mitä timezone -tiedosto sisältää, ja siitä näkyi, että aikavyöhykkeeksi on asetettu Europe/Helsinki.
+
+    $ cd etc
+
+Palasin ylöspäin juurihakemistoon ja siirryin /var/log/ hakemistoon seuraavalla komennolla. Tämä kansio sisälsi järjestelmän lokeja. Tutustuin boot.log -kansion sisältöön ja se sisälsi odotetusti lokeja järjestelmästä. Otin kuvan esimerkiksi lokista, josta selviää että tietokone on yhdistettynä Internettiin.
+
+    $ cd var/log
+
+Palasin taas juurihakemistoon ja siirryin /media/ kansioon seuraavalla komennolla. Tämä kansio sisältää poistuvan sisällön, kuten esimerkiksi USB-tikun sisällön. Kansio sisälsi kaksi piilotettua hakemistoa, ja hakemiston käyttäjäni nimellä.
+
+    $ cd media 
+
+Siirryin taas takaisin juurihakemistoon, ja siitä siirryin /home/ kansioon. Se sisältää jokaisen käyttäjän oman hakemiston. Koska koneella ei ole muita käyttäjiä kuin omani, se sisälsi vain yhden hakemiston käyttäjäni nimellä.
+
+    $ cd home
+
+Siirryin /home/ kansiosta käyttäjäni /home/ilona/ kansioon. Se on kotihakemisto käyttäjälleni, johon voin tallentaa haluamaani sisältöä. Se sisälsi seuraavia kansioita.
+
+    $ cd ilona
 
 ## Lähteet
-
-
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 25.01.2024.
 
