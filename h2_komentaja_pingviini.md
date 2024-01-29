@@ -17,7 +17,7 @@ Toisen viikon tehtävänä on opiskella komentorivin käyttöä Linuxissa. Harjo
 
 ## Komentorivi-harjoitukset
 
-Aloitin tehtävät klo 23:20. Tehtävien tekemiseen käytin viimeksi luomaani virtuaalikonetta Debian LinuxAROWORAW. Käynnistin komentojen suorittamista varten terminaaliohjelman, joka oli jo valmiiksi asennettuna käyttöjärjestelmään. En ollut käyttänyt virtuaalikonetta vähään aikaan, joten ensimmäiseksi minun täytyi päivittää pakettilista. Pakettilistan päivitys tulee tehdä siksi, että järjestelmä on ajan tasalla uusimmista paketeista, jolloin se osaa asentaa uusimmat ja usein ne toimivimmat ohjelmapaketit. Välillä järjestelmä ei myöskään löydä paketteja, jos se etsii niitä vanhentuneella tiedolla. (Jeet 5.12.2017.) Pakettilistan päivitys tehdään pääkäyttäjänä, sillä peruskäyttäjän oikeudet eivät salli sen päivitystä. 
+Aloitin komentoriviharjoitukset. Tehtävien tekemiseen käytin viimeksi luomaani virtuaalikonetta. Käynnistin komentojen suorittamista varten terminaaliohjelman, joka oli jo valmiiksi asennettuna käyttöjärjestelmään. En ollut käyttänyt virtuaalikonetta vähään aikaan, joten ensimmäiseksi minun täytyi päivittää pakettilista. Pakettilistan päivitys tulee tehdä siksi, että järjestelmä on ajan tasalla uusimmista paketeista, jolloin se osaa asentaa uusimmat ja usein ne toimivimmat ohjelmapaketit. Välillä järjestelmä ei myöskään löydä paketteja, jos se etsii niitä vanhentuneella tiedolla. (Jeet 5.12.2017.) Pakettilistan päivitys tehdään pääkäyttäjänä, sillä peruskäyttäjän oikeudet eivät salli sen päivitystä. 
 
     $ sudo apt-get update
 
@@ -34,7 +34,7 @@ Kun olin saanut alkuvalmistelut tehtyä ryhdyin [Micron](https://micro-editor.gi
 
 ### Raudan tarkastelu
 
-Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Alla olevassa listauksessa on rauta selitettynä. Kello oli 1:00 kun sain tämän osion suoritettua, ja päätinkin jatkaa hommaa seuraavana päivänä uudestaan.
+Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suorittaessa huomasin, ettei minulla ollut tarvittavaa lshw -ohjelmaa, joten asensin sen samalla tavalla, kuin yllä olevan Micro-editorin, tosin vaihdoin 'micron' tilalle 'lshw'. Kun suoritin komennon, sain pitkän listan koneen raudasta. Alla olevassa listauksessa on rauta selitettynä.
 
     $ sudo lshw -short -sanitize
 
@@ -74,7 +74,7 @@ Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suor
 
 ### Kolme uutta komentoriviohjelmaa
    
-Jatkoin harjoitusta seuraavana päivänä klo 7.00. Valitsin asennettaviksi komentoriviohjelmiksi seuraavat: [Thefuck](https://github.com/nvbn/thefuck) - ohjelma joka korjaa väärin kirjoitetut komennot, [Fzf](https://github.com/junegunn/fzf) - ohjelma jolla voi hakea hakemistoja tai tiedostoja ja [Bpytop](https://github.com/aristocratos/bpytop) - ohjelma tietokoneen toiminnan seuraamiseen. Asennus onnistui nopeasti muutamissa sekunneissa ongelmitta. 
+Valitsin asennettaviksi komentoriviohjelmiksi seuraavat: [Thefuck](https://github.com/nvbn/thefuck) - ohjelma joka korjaa väärin kirjoitetut komennot, [Fzf](https://github.com/junegunn/fzf) - ohjelma jolla voi hakea hakemistoja tai tiedostoja ja [Bpytop](https://github.com/aristocratos/bpytop) - ohjelma tietokoneen toiminnan seuraamiseen. Asennus onnistui nopeasti muutamissa sekunneissa ongelmitta. 
 
     $ sudo apt-get -y install thefuck fzf bpytop
 
@@ -98,7 +98,7 @@ Seuraavaksi siirryin /etc/ kansioon. Siihen pääsin kirjoittamalla seuraavan ko
 
 ![Etc-kansio](Kuvat/etckansio.png)
 
-Palasin ylöspäin juurihakemistoon ja siirryin /var/log/ hakemistoon seuraavalla komennolla. Tämä kansio sisälsi järjestelmän lokeja. Tutustuin boot.log -kansion sisältöön ja se sisälsi odotetusti lokeja järjestelmästä. Otin kuvan esimerkiksi lokista, josta selviää että tietokone on yhdistettynä Internettiin.
+Palasin ylöspäin juurihakemistoon ja siirryin /var/log/ hakemistoon seuraavalla komennolla. Tämä kansio sisälsi järjestelmän lokeja. Tutustuin boot.log -kansion sisältöön ja se sisälsi odotetusti lokeja järjestelmästä. Otin kuvan lokista, josta selviää että tietokone on yhdistettynä Internettiin.
 
     $ cd var/log
 
