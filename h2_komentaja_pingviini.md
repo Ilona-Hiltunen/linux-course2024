@@ -62,7 +62,7 @@ Seuraavaksi tarkastelin koneen laitteistoa seuraavalla komennolla. Komentoa suor
 -  Storage: Intelin SATA-tallennusohjain virtuaalikoneen massamuistille
 -  Disk: Virtualboxin luoma 42 GB kovalevy
 -  Volume: Useissa Linuxeissa käytetty EXT4-tietojärjestelmä, joka tallentaa dataa lohkoina. Muistia sillä on 31 GB.
--  Volume: Linuxissa käytetty swap-muisti, joka käytetään mikäli keskusmuistilta loppuu tila. Muistia sillä on n. 9 GB.
+-  Volume: Linuxissa käytetty swap-muisti, jota käytetään mikäli keskusmuistilta loppuu tila. Muistia sillä on n. 9 GB.
 -  Input0: Näppäimistö
 -  Input2: Virtapainike
 -  Input3: Videoväylä
