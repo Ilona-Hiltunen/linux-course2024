@@ -10,7 +10,7 @@ Kolmannen viikon ensimmäinen tehtävä oli tiivistää artikkelit [Name-Based V
 - Kun käyttäjältä tulee pyyntö yhdistää sivustoon, määrittelee Apache ensimmäiseksi yhdistettävän osoitteen IP-osoitteesta ja käytetystä portista. Mikäli kyseisessä osoitteessa on useampi host, Apache tarkentaa oikean osoitteen ServerNamesta ja ServerAliaksesta.
 - Mikäli pyynnön kanssa yhteensopivaa ServerNamea tai ServerAliasta ei löydy, käytetään ensimmäiseksi listattua hostia.
 - Kun virtual hostia luodaan, tulee sen sisältää vähintään ServerName (nimi, jolla host määritellään) ja DocumentRoot (polku, mistä hakemistosta näytettävä sisältö haetaan). Se voi myös sisältää ServerAliaksen (vaihtoehtoiset nimet, jolla pääsee samalle sivustolle).
-- Hostin nimiä ei kuitenkaan voi keksiä miten sattuu, sillä ne täytyy olla määritelty DNS-palvelimelle niin, että ne on liitetty käytettyyn IP-osoitteeseen.
+- Julkaistavan hostin nimiä ei kuitenkaan voi keksiä miten sattuu, sillä ne täytyy olla määritelty DNS-palvelimelle niin, että ne on liitetty käytettyyn IP-osoitteeseen.
 
 (The Apache Software Foundation s.a.)
 
@@ -22,6 +22,7 @@ Kolmannen viikon ensimmäinen tehtävä oli tiivistää artikkelit [Name-Based V
 - Host tulee ottaa käyttöön komennolla _$ sudo a2ensite ilona.example.com_. Apache ei löydä uutta hostia ilman uudelleenkäynnistystä, joten se tulee tehdä komennolla _$ sudo systemctl restart apache2_.
 - Sivustolle tulee myös luoda vähintään index html-tiedosto, jotta hostilla on jotain, mitä näyttää sivustolla. Tämä tiedosto tulee luoda siihen hakemistoon, joka on asetettu DocumentRoottiin. Tässä esimerkissä tiedosto voisi sijaita hakemistossa _/home/ilona/publicsites/ilona.example.com_.
 - Sivustoa voi testata käskyllä _$ curl localhost_ tai selaimessa kirjoittamalla _http://localhost_ osoitekenttään.
+- Tämä menetelmä ei vielä suoraan tee julkista verkkosivua, vaan julkaistavan sivuston verkkotunnus tulisi olla vuokrattuna rekisteröintejä tarjoavalta yritykseltä.
 
 (Karvinen 10.04.2018.)
 
