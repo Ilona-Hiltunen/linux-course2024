@@ -98,7 +98,7 @@ Seuraavaksi siirryin /etc/ kansioon. Siihen pääsin kirjoittamalla seuraavan ko
 
 ![Etc-kansio](Kuvat/etckansio.png)
 
-Palasin ylöspäin juurihakemistoon ja siirryin /var/log/ hakemistoon seuraavalla komennolla. Tämä kansio sisälsi järjestelmän lokeja. Tutustuin boot.log -kansion sisältöön ja se sisälsi odotetusti lokeja järjestelmästä. Otin kuvan lokista, josta selviää että tietokone on yhdistettynä Internettiin.
+Palasin ylöspäin juurihakemistoon ja siirryin /var/log/ hakemistoon seuraavalla komennolla. Tämä kansio sisälsi järjestelmän lokeja. Tutustuin boot.log -kansion sisältöön ja se sisälsi odotetusti lokeja järjestelmästä. Otin kuvan lokista, josta selviää että tietokone on yhdistettynä verkkoon.
 
     $ cd var/log
 
