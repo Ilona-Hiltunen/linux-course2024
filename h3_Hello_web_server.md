@@ -12,6 +12,8 @@ Kolmannen viikon ensimmäinen tehtävä oli tiivistää artikkelit [Name-Based V
 - Kun virtual hostia luodaan, tulee sen sisältää vähintään ServerName (nimi, jolla host määritellään) ja DocumentRoot (polku, mistä hakemistosta näytettävä sisältö haetaan). Se voi myös sisältää ServerAliaksen (vaihtoehtoiset nimet, jolla pääsee samalle sivustolle).
 - Hostin nimiä ei kuitenkaan voi keksiä miten sattuu, sillä ne täytyy olla määritelty DNS-palvelimelle niin, että ne on liitetty käytettyyn IP-osoitteeseen.
 
+(The Apache Software Foundation s.a.)
+
 ### Name Based Virtual Hosts on Apache - Multiple Websites to Single IP Address
 
 
