@@ -7,7 +7,7 @@ Kolmannen viikon ensimmäinen tehtävä oli tiivistää artikkelit [Name-Based V
 ### Nambe-based Virtual Host Support
 
 - Nimipohjaisessa virtual hostingissa pystytään lisäämään useampi host saman IP-osoitteen alle, toisinkuin IP-pohjaisessa hostingissa jokainen host tarvitsee erillisen IP-osoitteen.
-- Kun käyttäjältä tulee pyyntö yhdistää sivustolle, määrittelee Apache ensimmäiseksi yhdistettävän osoitteen IP-osoitteesta ja käytetystä portista. Mikäli kyseisessä osoitteessa on useampi host, Apache tarkentaa oikean osoitteen ServerNamesta ja ServerAliaksesta.
+- Kun käyttäjältä tulee pyyntö yhdistää sivustoon, määrittelee Apache ensimmäiseksi yhdistettävän osoitteen IP-osoitteesta ja käytetystä portista. Mikäli kyseisessä osoitteessa on useampi host, Apache tarkentaa oikean osoitteen ServerNamesta ja ServerAliaksesta.
 - Mikäli pyynnön kanssa yhteensopivaa ServerNamea tai ServerAliasta ei löydy, käytetään ensimmäiseksi listattua hostia.
 - Kun virtual hostia luodaan, tulee sen sisältää vähintään ServerName (nimi, jolla host määritellään) ja DocumentRoot (polku, mistä hakemistosta näytettävä sisältö haetaan). Se voi myös sisältää ServerAliaksen (vaihtoehtoiset nimet, jolla pääsee samalle sivustolle).
 - Hostin nimiä ei kuitenkaan voi keksiä miten sattuu, sillä ne täytyy olla määritelty DNS-palvelimelle niin, että ne on liitetty käytettyyn IP-osoitteeseen.
@@ -15,5 +15,7 @@ Kolmannen viikon ensimmäinen tehtävä oli tiivistää artikkelit [Name-Based V
 
 
 ## Lähteet
+
+The Apache Software Foundation. s.a. Name-based Virtual Host Support. Luettavissa: [https://httpd.apache.org/docs/2.4/vhosts/name-based.html](https://httpd.apache.org/docs/2.4/vhosts/name-based.html). Luettu: 30.01.2024
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 30.01.2024.
