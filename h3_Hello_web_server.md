@@ -26,6 +26,10 @@ Kolmannen viikon ensimmäinen tehtävä oli tiivistää artikkelit [Name-Based V
 
 (Karvinen 10.04.2018.)
 
+## Weppipalvelin-harjoitukset
+
+Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. 
+
 
 
 ## Lähteet
