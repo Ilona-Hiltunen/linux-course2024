@@ -47,8 +47,8 @@ Kävin pitkän taistelun, että sain lokit näkymään sitä mukaa, kun sivustol
 Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä access.logiin. Seuraavassa listauksessa ovat lokien osat selitettyinä, esimerkit ovat otettu ensimmäiseltä riviltä.
 
 - 127.0.0.1 = IP-osoite mistä pyyntö on tehty.
-- - = Tietoa ei ole saatavilla, mutta tämä viittaisi RFC 14-13 identiteettiin. Tämä tieto ei ole kovin luotettava, jonka vuoksi Apache ei lähtökohtaisesti yritä tunnistaa tätä.
-- - = Tietoa ei ole saatavilla, mutta tämä viittaa käyttäjänimeen.
+- '-' = Tietoa ei ole saatavilla, mutta tämä viittaisi RFC 14-13 identiteettiin. Tämä tieto ei ole kovin luotettava, jonka vuoksi Apache ei lähtökohtaisesti yritä tunnistaa tätä.
+- '-' = Tietoa ei ole saatavilla, mutta tämä viittaa käyttäjänimeen.
 - [31/Jan/2024:14:07:46 +0200] = Päivämäärä ja kellonaika, sekä aikavyöhyke.
 - "GET / HTTP/1.1" = Pyyntöön käytetty metodi, pyydetty resurssi ja käytetty protokolla.
 - 200 = Palvelimen käyttäjälle palauttama koodi. Numerolla 2 alkavat koodit ilmaisevat palvelimen vastaamisen onnistuneen, kun taas 3-alkuiset koodit viittaavat uudelleenohjaukseen. Numerolla 4 ja 5 alkavat koodit viittaavat virheeseen.
