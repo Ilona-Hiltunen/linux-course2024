@@ -46,7 +46,7 @@ Kävin pitkän taistelun, että sain lokit näkymään sitä mukaa, kun sivustol
 
     $ sudoedit /etc/apache2/apache2.conf 
     
-Loin CustomLogin tiedostoon seuraavan kuvan mukaisesti, joka ohjasi lokit tallentumaan tuttuun osoitteeseen: /var/log/apache2/access.log. Ymmärrykseni mukaan, mikäli CustomLogia ei olla määritelty, voi Apache tallentaa lokeja muuallekkin, kuin access.log -tiedostoon tai jättää ne tallentamatta. Vinkin tämän toteuttamiseen sain [ChatGPT:ltä]( https://chat.openai.com/).
+Loin CustomLogin tiedostoon seuraavan kuvan mukaisesti, mikä ohjasi lokit tallentumaan tuttuun osoitteeseen: /var/log/apache2/access.log. Ymmärrykseni mukaan, mikäli CustomLogia ei olla määritelty, voi Apache tallentaa lokeja muuallekkin, kuin access.log -tiedostoon tai jättää ne tallentamatta. Vinkin tämän toteuttamiseen sain [ChatGPT:ltä]( https://chat.openai.com/).
 
 ![Lokien korjaus](Kuvat/lokienkorjaus.png)
 
@@ -72,7 +72,11 @@ Aloitin uuden nimipohjaisen virtual hostin teon. Katsoin ohjeet sen tekoon [Tero
 
     $ sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf. 
   
-Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla. Otin uuden hostin käyttöön komennolla:
+Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla.
+
+![Syntaksi](Kuvat/uusihost.png)
+
+Otin uuden hostin käyttöön komennolla:
     
     $ sudo a2ensite hattu.example.com 
     
@@ -85,8 +89,6 @@ Tämän jälkeen käynnistin Apachen uudelleen komennolla:
     $ sudo systemctl restart apache2, jotta uusi host päivittyy. 
     
 Sitten vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
-
-![Syntaksi](Kuvat/uusihost.png)
 
 ![Komennot uudelle hostille](Kuvat/uusihost1.png)
 
@@ -110,6 +112,8 @@ Avasin juuri tekemäni hostin index.html-sivun komennolla seuraavalla komennolla
 
     $ micro publicsite/hattu.example.com/index.html 
 
+Käytin apuna tiedoston muokkaamiseen [Tero karvisen ohjetta](https://terokarvinen.com/2012/short-html5-page/).
+
 
 
 
@@ -117,9 +121,11 @@ Avasin juuri tekemäni hostin index.html-sivun komennolla seuraavalla komennolla
 
 The Apache Software Foundation. s.a. Name-based Virtual Host Support. Luettavissa: [https://httpd.apache.org/docs/2.4/vhosts/name-based.html](https://httpd.apache.org/docs/2.4/vhosts/name-based.html). Luettu: 30.01.2024
 
-The Apache Software Foundation. s.a. Log Files. Luettavissa: [https://httpd.apache.org/docs/2.4/logs.html#accesslog](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
+The Apache Software Foundation. s.a. Log Files. Luettavissa: [https://httpd.apache.org/docs/2.4/logs.html#accesslog](https://httpd.apache.org/docs/2.4/logs.html#accesslog). Luettu: 31.01.2024.
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 30.01.2024.
 
-Karvinen, T. 10.04.2018. Name Based Virtual Hosts on Apache - Multiple Websites to Single IP Address. Luettavissa: [https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Luettu: 30.01.2024
+Karvinen, T. 10.04.2018. Name Based Virtual Hosts on Apache - Multiple Websites to Single IP Address. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Luettu: 30.01.2024
+
+Karvinen, T. 12.02.2012. Short HTML5 page. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2012/short-html5-page/](https://terokarvinen.com/2012/short-html5-page/). Luettu: 31.01.2024.
 
