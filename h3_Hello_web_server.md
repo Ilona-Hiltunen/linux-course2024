@@ -82,7 +82,7 @@ Otin uuden hostin käyttöön komennolla:
     
 Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla:
 
-    _$ sudo a2dissite ilona.example.com
+    $ sudo a2dissite ilona.example.com
   
 Tämän jälkeen käynnistin Apachen uudelleen komennolla:
 
