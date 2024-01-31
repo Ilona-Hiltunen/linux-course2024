@@ -28,7 +28,13 @@ Kolmannen viikon ensimmäinen tehtävä oli tiivistää artikkelit [Name-Based V
 
 ## Weppipalvelin-harjoitukset
 
-Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. 
+Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. Koneen rautaa voi tarkastella tarkemmin [edellisestä raportista](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h2_komentaja_pingviini.md). Aloitin harjoitusten tekemisen kello 9:40. 
+
+## Weppipalvelimen vastaaminen localhost-osoitteesta
+
+Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla tekemälläni hostilla. Kirjoitin seuraavan komennon komentoriville. Komentorivi palautti vastaukseksi kirjoittamani tekstin, joten päättelin, että Apache-weppipalvelin toimii odotetulla tavalla.
+
+  $ curl localhost
 
 
 
