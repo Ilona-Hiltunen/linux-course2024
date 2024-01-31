@@ -98,7 +98,7 @@ Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis oso
     
 Tein lisäksi luomaani kansioon index.html -tiedoston komennolla: 
 
-    _$ micro publicsite/hattu.example.com/index.html_. 
+    $ micro publicsite/hattu.example.com/index.html 
     
 Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä sen toimimisen selaimesta http://localhost/ osoitteesta. Host toimi odotetulla tavalla.
 
