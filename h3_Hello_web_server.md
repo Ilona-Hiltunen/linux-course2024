@@ -122,6 +122,16 @@ Selaimessa se näytti tältä, joten päättelin, että kirjoittamani HTML5 oli 
 
 ### Curl-komennot
 
+Kokeilin curlia kahdella eri komennolla:
+
+    $ curl localhost
+    $ curl -I localhost
+
+Ensimmäinen komento palautti sivun samassa HTML5-syntaksissa, missä olin kirjoittanutkin sen. Toinen komento taas ei palauttanut mitään sivun näkyvästä sisällöstä.
+
+![Curl-komennot](Kuvat/curlit.png)
+
+
 
 
 
