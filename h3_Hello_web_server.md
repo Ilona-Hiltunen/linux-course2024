@@ -28,7 +28,7 @@ Kolmannen viikon ensimmäinen tehtävä oli tiivistää artikkelit [Name-Based V
 
 ## Weppipalvelin-harjoitukset
 
-Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. Koneen rautaa voi tarkastella tarkemmin [edellisestä raportista](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h2_komentaja_pingviini.md). Aloitin harjoitusten tekemisen kello 9:40. 
+Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. Koneen rautaa voi tarkastella tarkemmin [edellisestä raportista](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h2_komentaja_pingviini.md).
 
 ## Weppipalvelimen vastaaminen localhost-osoitteesta
 
@@ -39,6 +39,14 @@ Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla t
 ![Weppipalvelimen testaus](Kuvat/weppipalvelimen_testaus.png)
 
 ## Lokien tutkiminen
+
+Kävin pitkän taistelun, että sain lokit näkymään sitä mukaa, kun sivustolla vierailee. Lopulta sain ne näkymään editoimalla etc/apache2/apache2.conf tiedostoa komennolla _$ sudoedit /etc/apache2/apache2.conf_. Loin CustomLogin tiedostoon seuraavan kuvan mukaisesti, joka ohjasi lokit tallentumaan tuttuun osoitteeseen: /var/log/apache2/access.log. Ymmärrykseni mukaan, mikäli CustomLogia ei olla määritelty, voi Apache tallentaa lokeja muuallekkin, kuin access.log -tiedostoon. Vinkin tämän toteuttamiseen sain [ChatGPT:ltä]( https://chat.openai.com/).
+
+![Lokien korjaus](Kuvat/lokienkorjaus.png)
+
+Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat ilmoitukset siitä access.logiin. 
+
+![Lokit](Kuvat/lokientarkastelu.png)
 
 ## Uuden hostin teko
 
@@ -63,3 +71,4 @@ The Apache Software Foundation. s.a. Name-based Virtual Host Support. Luettaviss
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 30.01.2024.
 
 Karvinen, T. 10.04.2018. Name Based Virtual Hosts on Apache - Multiple Websites to Single IP Address. Luettavissa: [https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Luettu: 30.01.2024
+
