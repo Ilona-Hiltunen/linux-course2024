@@ -48,7 +48,7 @@ Aloitin uuden nimipohjaisen virtual hostin teon. Katsoin ohjeet sen tekoon [Tero
 
 ![Komennot uudelle hostille](Kuvat/uusihost1.png)
 
-Tässä vaiheessa tein hakemiston, mihin Documentroot osoittaa. Tein sen siis osoitteeseen /home/ilona/publicsite/ komennolla _$ mkdir publicsite/hattu.example.com_. Tein lisäksi luomaani kansioon index.html -tiedoston komennolla _$ micro publicsite/hattu.example.com/index.html_. Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä sen toimimisen selaimesta http://localhost/ osoitteesta. Host toimi odotetulla tavalla.
+Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis osoitteeseen /home/ilona/publicsite/ komennolla _$ mkdir publicsite/hattu.example.com_. Tein lisäksi luomaani kansioon index.html -tiedoston komennolla _$ micro publicsite/hattu.example.com/index.html_. Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä sen toimimisen selaimesta http://localhost/ osoitteesta. Host toimi odotetulla tavalla.
 
 ![Hakemisto Documentrootille](Kuvat/uusihost2.png)
 
