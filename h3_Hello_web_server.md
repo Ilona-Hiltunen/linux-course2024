@@ -32,9 +32,17 @@ Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. Ko
 
 ## Weppipalvelimen vastaaminen localhost-osoitteesta
 
-Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla tekemälläni hostilla. Kirjoitin seuraavan komennon komentoriville. Komentorivi palautti vastaukseksi kirjoittamani tekstin, joten päättelin, että Apache-weppipalvelin toimii odotetulla tavalla.
+Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla tekemälläni hostilla. Kirjoitin seuraavan komennon komentoriville. Komentorivi palautti vastaukseksi index.html-tiedostoon kirjoittamani tekstin, joten päättelin, että Apache-weppipalvelin toimii odotetulla tavalla. Testasin ohjelmaa vielä selaimella osoitteesta http://localhost/, ja sekin palautti kirjoittamani tekstin.
 
   $ curl localhost
+
+![Weppipalvelimen testaus](Kuvat/weppipalvelimen_testaus.png)
+
+## Lokien tutkiminen
+
+## Uuden hostin teko
+
+Aloitin uuden nimipohjaisen virtual hostin teon. Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä _sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf_. Kirjoitin host-tiedoston sisällön kuvan mukaisella tavalla. Otin uuden hostin käyttöön komennolla _sudo a2ensite hattu.example.com_. Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla _sudo a2dissite ilona.example.com_. Tämän jälkeen käynnistin Apachen uudelleen komennolla _sudo systemctl restart apache2_, jotta uusi host päivittyy. Tämän jälkeen vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön.
 
 
 
