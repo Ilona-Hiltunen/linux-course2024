@@ -46,7 +46,7 @@ Aloitin uuden nimipohjaisen virtual hostin teon. Aloitin hostin tekemisen tekem√
 
 ![Syntaksi](Kuvat/uusihost.png)
 
-![Komennot uudelle hostille](Kuvat/uusihost1.png]
+![Komennot uudelle hostille](Kuvat/uusihost1.png)
 
 
 
