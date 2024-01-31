@@ -70,7 +70,7 @@ Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä a
 
 Aloitin uuden nimipohjaisen virtual hostin teon. Katsoin ohjeet sen tekoon [Tero karvisen sivustolta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä:
 
-    $ sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf. 
+    $ sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf
   
 Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla.
 
