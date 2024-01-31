@@ -56,6 +56,8 @@ Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä a
 - "-" = Tietoa ei ole saatavilla, mutta tämä viittaisi sivustoon, josta käyttäjä on siirtynyt.
 - "curl/7.88.1" = Käyttäjän käyttämän ohjelman ilmoittamat tiedot.
 
+(The Apache Software Foundation s.a.)
+
 ![Lokit](Kuvat/lokientarkastelu.png)
 
 ## Uuden hostin teko
@@ -77,6 +79,8 @@ Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis oso
 ## Lähteet
 
 The Apache Software Foundation. s.a. Name-based Virtual Host Support. Luettavissa: [https://httpd.apache.org/docs/2.4/vhosts/name-based.html](https://httpd.apache.org/docs/2.4/vhosts/name-based.html). Luettu: 30.01.2024
+
+The Apache Software Foundation. s.a. Log Files. Luettavissa: [https://httpd.apache.org/docs/2.4/logs.html#accesslog](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 30.01.2024.
 
