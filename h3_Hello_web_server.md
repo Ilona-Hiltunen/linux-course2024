@@ -34,7 +34,7 @@ Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. Ko
 
 Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla tekemälläni hostilla. Kirjoitin seuraavan komennon komentoriville. Komentorivi palautti vastaukseksi index.html-tiedostoon kirjoittamani tekstin, joten päättelin, että Apache-weppipalvelin toimii odotetulla tavalla. Testasin ohjelmaa vielä selaimella osoitteesta http://localhost/, ja sekin palautti kirjoittamani tekstin.
 
-  $ curl localhost
+    $ curl localhost
 
 ![Weppipalvelimen testaus](Kuvat/weppipalvelimen_testaus.png)
 
@@ -62,7 +62,23 @@ Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä a
 
 ## Uuden hostin teko
 
-Aloitin uuden nimipohjaisen virtual hostin teon. Katsoin ohjeet sen tekoon [Tero karvisen sivustolta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä _$ sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf_. Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla. Otin uuden hostin käyttöön komennolla _$ sudo a2ensite hattu.example.com_. Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla _$ sudo a2dissite ilona.example.com_. Tämän jälkeen käynnistin Apachen uudelleen komennolla _$ sudo systemctl restart apache2_, jotta uusi host päivittyy. Tämän jälkeen vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
+Aloitin uuden nimipohjaisen virtual hostin teon. Katsoin ohjeet sen tekoon [Tero karvisen sivustolta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä:
+
+    $ sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf. 
+  
+Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla. Otin uuden hostin käyttöön komennolla:
+    
+    $ sudo a2ensite hattu.example.com 
+    
+Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla 
+
+    _$ sudo a2dissite ilona.example.com
+  
+Tämän jälkeen käynnistin Apachen uudelleen komennolla 
+
+    $ sudo systemctl restart apache2, jotta uusi host päivittyy. 
+    
+Tämän jälkeen vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
 
 ![Syntaksi](Kuvat/uusihost.png)
 
