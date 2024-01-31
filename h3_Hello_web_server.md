@@ -76,6 +76,9 @@ Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis oso
 
 ## HTML5 sivu
 
+Avasin juuri tekemäni hostin index.html-sivun komennolla seuraavalla komennolla.
+
+  $ micro publicsite/hattu.example.com/index.html 
 
 
 
