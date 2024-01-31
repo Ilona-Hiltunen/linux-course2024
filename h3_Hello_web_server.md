@@ -30,7 +30,7 @@ Kolmannen viikon ensimmäinen tehtävä oli tiivistää artikkelit [Name-Based V
 
 Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. Koneen rautaa voi tarkastella tarkemmin [edellisestä raportista](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h2_komentaja_pingviini.md).
 
-## Weppipalvelimen vastaaminen localhost-osoitteesta
+### Weppipalvelimen vastaaminen localhost-osoitteesta
 
 Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla tekemälläni hostilla. Kirjoitin seuraavan komennon komentoriville:
 
@@ -40,7 +40,7 @@ Komentorivi palautti vastaukseksi index.html-tiedostoon kirjoittamani tekstin, j
 
 ![Weppipalvelimen testaus](Kuvat/weppipalvelimen_testaus.png)
 
-## Lokien tutkiminen
+### Lokien tutkiminen
 
 Kävin pitkän taistelun, että sain lokit näkymään sitä mukaa, kun sivustolla vierailee. Lopulta sain ne näkymään editoimalla etc/apache2/apache2.conf tiedostoa komennolla:
 
@@ -66,7 +66,7 @@ Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä a
 
 ![Lokit](Kuvat/lokientarkastelu.png)
 
-## Uuden hostin teko
+### Uuden hostin teko
 
 Aloitin uuden nimipohjaisen virtual hostin teon. Katsoin ohjeet sen tekoon [Tero karvisen sivustolta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä:
 
@@ -106,7 +106,7 @@ Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä 
 
 ![Toimiva sivusto](Kuvat/uusihost3.png)
 
-## HTML5 sivu
+### HTML5 sivu
 
 Avasin juuri tekemäni hostin index.html-sivun komennolla seuraavalla komennolla.
 
@@ -119,6 +119,8 @@ Käytin apuna tiedoston muokkaamiseen [Tero karvisen ohjetta](https://terokarvin
 Selaimessa se näytti tältä, joten päättelin, että kirjoittamani HTML5 oli validi.
 
 ![HTML5 selaimessa](Kuvat/html_selaimessa.png)
+
+### Curl-komennot
 
 
 
