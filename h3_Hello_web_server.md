@@ -32,15 +32,21 @@ Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. Ko
 
 ## Weppipalvelimen vastaaminen localhost-osoitteesta
 
-Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla tekemälläni hostilla. Kirjoitin seuraavan komennon komentoriville. Komentorivi palautti vastaukseksi index.html-tiedostoon kirjoittamani tekstin, joten päättelin, että Apache-weppipalvelin toimii odotetulla tavalla. Testasin ohjelmaa vielä selaimella osoitteesta http://localhost/, ja sekin palautti kirjoittamani tekstin.
+Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla tekemälläni hostilla. Kirjoitin seuraavan komennon komentoriville:
 
     $ curl localhost
+
+Komentorivi palautti vastaukseksi index.html-tiedostoon kirjoittamani tekstin, joten päättelin, että Apache-weppipalvelin toimii odotetulla tavalla. Testasin ohjelmaa vielä selaimella osoitteesta http://localhost/, ja sekin palautti kirjoittamani tekstin.
 
 ![Weppipalvelimen testaus](Kuvat/weppipalvelimen_testaus.png)
 
 ## Lokien tutkiminen
 
-Kävin pitkän taistelun, että sain lokit näkymään sitä mukaa, kun sivustolla vierailee. Lopulta sain ne näkymään editoimalla etc/apache2/apache2.conf tiedostoa komennolla _$ sudoedit /etc/apache2/apache2.conf_. Loin CustomLogin tiedostoon seuraavan kuvan mukaisesti, joka ohjasi lokit tallentumaan tuttuun osoitteeseen: /var/log/apache2/access.log. Ymmärrykseni mukaan, mikäli CustomLogia ei olla määritelty, voi Apache tallentaa lokeja muuallekkin, kuin access.log -tiedostoon tai jättää ne tallentamatta. Vinkin tämän toteuttamiseen sain [ChatGPT:ltä]( https://chat.openai.com/).
+Kävin pitkän taistelun, että sain lokit näkymään sitä mukaa, kun sivustolla vierailee. Lopulta sain ne näkymään editoimalla etc/apache2/apache2.conf tiedostoa komennolla:
+
+    $ sudoedit /etc/apache2/apache2.conf 
+    
+Loin CustomLogin tiedostoon seuraavan kuvan mukaisesti, joka ohjasi lokit tallentumaan tuttuun osoitteeseen: /var/log/apache2/access.log. Ymmärrykseni mukaan, mikäli CustomLogia ei olla määritelty, voi Apache tallentaa lokeja muuallekkin, kuin access.log -tiedostoon tai jättää ne tallentamatta. Vinkin tämän toteuttamiseen sain [ChatGPT:ltä]( https://chat.openai.com/).
 
 ![Lokien korjaus](Kuvat/lokienkorjaus.png)
 
