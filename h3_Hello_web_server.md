@@ -112,7 +112,13 @@ Avasin juuri tekemäni hostin index.html-sivun komennolla seuraavalla komennolla
 
     $ micro publicsite/hattu.example.com/index.html 
 
-Käytin apuna tiedoston muokkaamiseen [Tero karvisen ohjetta](https://terokarvinen.com/2012/short-html5-page/).
+Käytin apuna tiedoston muokkaamiseen [Tero karvisen ohjetta](https://terokarvinen.com/2012/short-html5-page/). Kirjoitin index.html -tiedoston sisällön seuraavan kuvan mukaisesti. Lopuksi vielä tarkistin sen [tällä validoijalla](https://validator.w3.org/). 
+
+![HTML5-koodi](Kuvat/html_sivu.png)
+
+Selaimessa se näytti tältä, joten päättelin, että kirjoittamani HTML5 oli validi.
+
+![HTML5 selaimessa](Kuvat/html_selaimessa.png)
 
 
 
