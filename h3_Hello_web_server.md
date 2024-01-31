@@ -42,7 +42,11 @@ Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla t
 
 ## Uuden hostin teko
 
-Aloitin uuden nimipohjaisen virtual hostin teon. Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä _sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf_. Kirjoitin host-tiedoston sisällön kuvan mukaisella tavalla. Otin uuden hostin käyttöön komennolla _sudo a2ensite hattu.example.com_. Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla _sudo a2dissite ilona.example.com_. Tämän jälkeen käynnistin Apachen uudelleen komennolla _sudo systemctl restart apache2_, jotta uusi host päivittyy. Tämän jälkeen vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön.
+Aloitin uuden nimipohjaisen virtual hostin teon. Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä _sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf_. Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla. Otin uuden hostin käyttöön komennolla _sudo a2ensite hattu.example.com_. Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla _sudo a2dissite ilona.example.com_. Tämän jälkeen käynnistin Apachen uudelleen komennolla _sudo systemctl restart apache2_, jotta uusi host päivittyy. Tämän jälkeen vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön.
+
+![Syntaksi](Kuvat/uusihost.png)
+
+![Komennot uudelle hostille](Kuvat/uusihost1.png]
 
 
 
