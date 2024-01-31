@@ -42,11 +42,18 @@ Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla t
 
 ## Uuden hostin teko
 
-Aloitin uuden nimipohjaisen virtual hostin teon. Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä _sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf_. Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla. Otin uuden hostin käyttöön komennolla _sudo a2ensite hattu.example.com_. Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla _sudo a2dissite ilona.example.com_. Tämän jälkeen käynnistin Apachen uudelleen komennolla _sudo systemctl restart apache2_, jotta uusi host päivittyy. Tämän jälkeen vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
+Aloitin uuden nimipohjaisen virtual hostin teon. Katsoin ohjeet sen tekoon [Tero karvisen sivustolta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä _ 
+$ sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf_. Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla. Otin uuden hostin käyttöön komennolla _$ sudo a2ensite hattu.example.com_. Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla _$ sudo a2dissite ilona.example.com_. Tämän jälkeen käynnistin Apachen uudelleen komennolla _$ sudo systemctl restart apache2_, jotta uusi host päivittyy. Tämän jälkeen vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
 
 ![Syntaksi](Kuvat/uusihost.png)
 
 ![Komennot uudelle hostille](Kuvat/uusihost1.png)
+
+Tässä vaiheessa tein hakemiston, mihin Documentroot osoittaa. Tein sen siis osoitteeseen /home/ilona/publicsite/ komennolla _$ mkdir publicsite/hattu.example.com_. Tein lisäksi luomaani kansioon index.html -tiedoston komennolla _$ micro publicsite/hattu.example.com/index.html_. Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä sen toimimisen selaimesta http://localhost/ osoitteesta. Host toimi odotetulla tavalla.
+
+![Hakemisto Documentrootille](Kuvat/uusihost2.png)
+
+![Toimiva sivusto](Kuvat/uusihost3.png)
 
 
 
