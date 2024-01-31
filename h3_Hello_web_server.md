@@ -70,21 +70,29 @@ Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Doc
     
     $ sudo a2ensite hattu.example.com 
     
-Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla 
+Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla:
 
     _$ sudo a2dissite ilona.example.com
   
-Tämän jälkeen käynnistin Apachen uudelleen komennolla 
+Tämän jälkeen käynnistin Apachen uudelleen komennolla:
 
     $ sudo systemctl restart apache2, jotta uusi host päivittyy. 
     
-Tämän jälkeen vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
+Sitten vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
 
 ![Syntaksi](Kuvat/uusihost.png)
 
 ![Komennot uudelle hostille](Kuvat/uusihost1.png)
 
-Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis osoitteeseen /home/ilona/publicsite/ komennolla _$ mkdir publicsite/hattu.example.com_. Tein lisäksi luomaani kansioon index.html -tiedoston komennolla _$ micro publicsite/hattu.example.com/index.html_. Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä sen toimimisen selaimesta http://localhost/ osoitteesta. Host toimi odotetulla tavalla.
+Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis osoitteeseen /home/ilona/publicsite/ komennolla:
+    
+    $ mkdir publicsite/hattu.example.com
+    
+Tein lisäksi luomaani kansioon index.html -tiedoston komennolla: 
+
+    _$ micro publicsite/hattu.example.com/index.html_. 
+    
+Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä sen toimimisen selaimesta http://localhost/ osoitteesta. Host toimi odotetulla tavalla.
 
 ![Hakemisto Documentrootille](Kuvat/uusihost2.png)
 
