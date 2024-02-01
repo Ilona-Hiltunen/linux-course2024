@@ -99,7 +99,7 @@ Käytin tehtävään [Tero Karvisen ohjetta](https://terokarvinen.com/2018/04/10
 
 ![Toinen host](Kuvat/bonus2.png)
 
-Tämän jälkeen kävin editoimassa hosts-tiedostoa komennolla `$ sudoedit /etc/hosts`. Lisäsin tiedostoon kuvassa olevan korostetun tekstin, jossa asetetaan samaan IP-osoitteeseen toinenkin osoite.
+Tämän jälkeen kävin editoimassa `hosts`-tiedostoa komennolla `$ sudoedit /etc/hosts`. Lisäsin tiedostoon kuvassa olevan korostetun tekstin, jossa asetetaan samaan IP-osoitteeseen toinenkin osoite.
 
 ![Lisätty teksti](Kuvat/bonus1.png)
 
