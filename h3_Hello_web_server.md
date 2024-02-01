@@ -120,7 +120,7 @@ Kokeilin curlia kahdella eri komennolla:
     $ curl localhost
     $ curl -I localhost
 
-Ensimmäinen komento palautti sivun samassa HTML5-syntaksissa, missä olin kirjoittanutkin sen. Toinen komento taas ei palauttanut mitään sivun näkyvästä sisällöstä, vaan headerin sisällön. Toisen komennon vastauksessa näkyy pyynnö protokolla ja onnistuminen, sekä aika, jolloin se tehtiin. Lisäksi siitä selviää palvelin jolle pyyntö tehtiin sekä sivun päivityshistoria sekä versiointi. Siinä näkyy myös vähän sivun sisällöstä kuten sen koko tavuissa.
+Ensimmäinen komento palautti sivun samassa HTML5-syntaksissa, missä olin kirjoittanutkin sen. Toinen komento taas ei palauttanut mitään sivun näkyvästä sisällöstä, vaan headerin sisällön. Toisen komennon vastauksessa näkyy pyynnön protokolla ja onnistuminen, sekä aika, jolloin se tehtiin. Lisäksi siitä selviää palvelin jolle pyyntö tehtiin sekä sivun päivityshistoria sekä versiointi. Siinä näkyy myös vähän sivun sisällöstä kuten sen koko tavuissa.
 
 ![Curl-komennot](Kuvat/curlit.png)
 
