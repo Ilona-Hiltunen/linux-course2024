@@ -38,18 +38,18 @@ Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla t
 
 ### Lokien tutkiminen
 
-Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä tiedostoon /var/log/apache2/other_vhosts_access.log. Seuraavassa listauksessa ovat lokien osat selitettyinä, esimerkit ovat otettu alemmalta riviltä.
+Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä tiedostoon `/var/log/apache2/other_vhosts_access.log`. Seuraavassa listauksessa ovat lokien osat selitettyinä, esimerkit ovat otettu alemmalta riviltä.
 
-- hattu.example.com:80 = Sivusto ja portti mihin pyyntö on tehty.
-- 127.0.0.1 = IP-osoite mistä pyyntö on tehty.
-- '-' = Tietoa ei ole saatavilla, mutta tämä viittaisi RFC 14-13 identiteettiin. Tämä tieto ei ole kovin luotettava, jonka vuoksi Apache ei lähtökohtaisesti yritä tunnistaa tätä.
-- '-' = Tietoa ei ole saatavilla, mutta tämä viittaa käyttäjänimeen.
-- [01/Feb/2024:06:55:03 +0200] = Päivämäärä ja kellonaika, sekä aikavyöhyke.
-- "GET / HTTP/1.1" = Pyyntöön käytetty metodi, pyydetty resurssi ja käytetty protokolla.
-- 200 = Palvelimen käyttäjälle palauttama koodi. Numerolla 2 alkavat koodit ilmaisevat palvelimen vastaamisen onnistuneen, kun taas 3-alkuiset koodit viittaavat uudelleenohjaukseen. Numerolla 4 ja 5 alkavat koodit viittaavat virheeseen.
-- 406 = Käyttäjälle lähetetyn paketin koko.
-- "-" = Tietoa ei ole saatavilla, mutta tämä viittaisi sivustoon, josta käyttäjä on siirtynyt.
-- "curl/7.88.1" = Käyttäjän käyttämän ohjelman ilmoittamat tiedot.
+- `hattu.example.com:80` Sivusto ja portti mihin pyyntö on tehty.
+- `127.0.0.1` IP-osoite mistä pyyntö on tehty.
+- `-` Tietoa ei ole saatavilla, mutta tämä viittaisi RFC 14-13 identiteettiin. Tämä tieto ei ole kovin luotettava, jonka vuoksi Apache ei lähtökohtaisesti yritä tunnistaa tätä.
+- `-` Tietoa ei ole saatavilla, mutta tämä viittaa käyttäjänimeen.
+- `[01/Feb/2024:06:55:03 +0200]` Päivämäärä ja kellonaika, sekä aikavyöhyke.
+- `GET / HTTP/1.1"` Pyyntöön käytetty metodi, pyydetty resurssi ja käytetty protokolla.
+- `200` Palvelimen käyttäjälle palauttama koodi. Numerolla 2 alkavat koodit ilmaisevat palvelimen vastaamisen onnistuneen, kun taas 3-alkuiset koodit viittaavat uudelleenohjaukseen. Numerolla 4 ja 5 alkavat koodit viittaavat virheeseen.
+- `406` Käyttäjälle lähetetyn paketin koko.
+- `"-"` Tietoa ei ole saatavilla, mutta tämä viittaisi sivustoon, josta käyttäjä on siirtynyt.
+- `"curl/7.88.1"` Käyttäjän käyttämän ohjelman ilmoittamat tiedot.
 
 (The Apache Software Foundation s.a.)
 
@@ -57,37 +57,15 @@ Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä t
 
 ### Uuden hostin teko
 
-Aloitin uuden nimipohjaisen virtual hostin teon. Katsoin ohjeet sen tekoon [Tero karvisen sivustolta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Aloitin hostin tekemisen tekemällä uuden tiedoston /etc/apache2/sites-available kansioon käskyllä:
-
-    $ sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf
-  
-Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla.
+Aloitin uuden nimipohjaisen virtual hostin teon. Katsoin ohjeet sen tekoon [Tero karvisen sivustolta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Aloitin hostin tekemisen tekemällä uuden tiedoston `/etc/apache2/sites-available` kansioon komennolla `$ sudoedit /etc/apache2/sitesavailable/hattu.example.com.conf`. Kirjoitin host-tiedoston sisältöön portin, ServerNamen, ServerAliaksen ja Documentrootin kuvan mukaisella syntaksilla.
 
 ![Syntaksi](Kuvat/uusihost.png)
 
-Otin uuden hostin käyttöön komennolla:
-    
-    $ sudo a2ensite hattu.example.com 
-    
-Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla:
-
-    $ sudo a2dissite ilona.example.com
-  
-Tämän jälkeen käynnistin Apachen uudelleen seuraavalla komennolla, jotta uusi host päivittyy.
-
-    $ sudo systemctl restart apache2
-    
-Sitten vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
+Otin uuden hostin käyttöön komennolla `$ sudo a2ensite hattu.example.com`, sekä otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla `$ sudo a2dissite ilona.example.com`. Tämän jälkeen käynnistin Apachen uudelleen komennolla `$ sudo systemctl restart apache2`, jotta uusi host päivittyy. Sitten vielä tarkistin, että host on ilmestynyt `/etc/apache2/sites-enabled`-kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
 
 ![Komennot uudelle hostille](Kuvat/uusihost1.png)
 
-Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis osoitteeseen /home/ilona/publicsite/ komennolla:
-    
-    $ mkdir publicsite/hattu.example.com
-    
-Tein lisäksi luomaani kansioon index.html -tiedoston komennolla: 
-
-    $ micro publicsite/hattu.example.com/index.html 
+Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis osoitteeseen `/home/ilona/publicsite/` komennolla `$ mkdir publicsite/hattu.example.com`. Tein lisäksi luomaani kansioon index.html -tiedoston komennolla `$ micro publicsite/hattu.example.com/index.html`.
 
 ![Hakemisto Documentrootille](Kuvat/uusihost2.png)
     
@@ -97,11 +75,7 @@ Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä 
 
 ### HTML5 sivu
 
-Avasin juuri tekemäni hostin index.html-tiedoston seuraavalla komennolla.
-
-    $ micro publicsite/hattu.example.com/index.html 
-
-Käytin apuna tiedoston muokkaamiseen [Tero karvisen ohjetta](https://terokarvinen.com/2012/short-html5-page/). Kirjoitin index.html -tiedoston sisällön seuraavan kuvan mukaisesti. Lopuksi vielä tarkistin sen [tällä validoijalla](https://validator.w3.org/). 
+Avasin juuri tekemäni hostin index.html-tiedoston komennolla ` $ micro publicsite/hattu.example.com/index.html`. Käytin apuna tiedoston muokkaamiseen [Tero karvisen ohjetta](https://terokarvinen.com/2012/short-html5-page/). Kirjoitin `index.html`-tiedoston sisällön seuraavan kuvan mukaisesti. Lopuksi vielä tarkistin sen [tällä validoijalla](https://validator.w3.org/). 
 
 ![HTML5-koodi](Kuvat/html_sivu.png)
 
@@ -111,12 +85,7 @@ Selaimessa se näytti tältä, joten päättelin, että kirjoittamani HTML5 oli 
 
 ### Curl-komennot
 
-Kokeilin curlia kahdella eri komennolla:
-
-    $ curl localhost
-    $ curl -I localhost
-
-Ensimmäinen komento palautti sivun samassa HTML5-syntaksissa, missä olin kirjoittanutkin sen. Toinen komento taas ei palauttanut mitään sivun näkyvästä sisällöstä, vaan headerin sisällön. Toisen komennon vastauksessa näkyy pyynnön protokolla ja onnistuminen, sekä aika, jolloin se tehtiin. Lisäksi siitä selviää palvelin jolle pyyntö tehtiin sekä sivun päivityshistoria sekä versiointi. Siinä näkyy myös vähän sivun sisällöstä kuten sen koko tavuissa.
+Kokeilin curlia kahdella eri komennolla `$ curl localhost` ja `$ curl -I localhost`. Ensimmäinen komento palautti sivun samassa HTML5-syntaksissa, missä olin kirjoittanutkin sen. Toinen komento taas ei palauttanut mitään sivun näkyvästä sisällöstä, vaan headerin sisällön. Toisen komennon vastauksessa näkyy pyynnön protokolla ja onnistuminen, sekä aika, jolloin se tehtiin. Lisäksi siitä selviää palvelin jolle pyyntö tehtiin sekä sivun päivityshistoria sekä versiointi. Siinä näkyy myös tietoa sivun sisällöstä kuten sen koko tavuissa.
 
 ![Curl-komennot](Kuvat/curlit.png)
 
@@ -126,20 +95,15 @@ Yritin hankkia GitHub Education-pakettia, mutta sivusto ei hyväksynyt digitaali
 
 ### Kaksi eri sivua
 
-Käytin tehtävään [Tero Karvisen ohjetta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Minulla oli jo valmiiksi luotuna kaksi hostia koneelleni, joten päätin käyttää niitä tässä tehtävässä ja olla luomatta uutta. Ensimmäinen host, jonka tein ylemmässä tehtävässä oli jo käytössä, joten minun tarvitsi ottaa käyttöön vain toinen host. Tein sen seuraavilla komennoilla, joista ensimmäisellä otin hostin käyttöön ja toisella käynnistin Apachen uudelleen.
-
-    $ sudo a2ensite ilona.example.com
-    $ sudo systemctl restart apache2
+Käytin tehtävään [Tero Karvisen ohjetta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Minulla oli jo valmiiksi luotuna kaksi hostia koneelleni, joten päätin käyttää niitä tässä tehtävässä ja olla luomatta uutta. Ensimmäinen host, jonka tein ylemmässä tehtävässä oli jo käytössä, joten minun tarvitsi ottaa käyttöön vain toinen host. Otin toisen hostin käyttöön komennolla `$ sudo a2ensite ilona.example.com` ja uudelleenkäynnistin Apachen komennolla ` $ sudo systemctl restart apache2`.
 
 ![Toinen host](Kuvat/bonus2.png)
 
-Tämän jälkeen kävin editoimassa hosts-tiedostoa seuraavalla komennolla. Lisäsin tiedostoon kuvassa olevan korostetun tekstin, jossa asetetaan samaan IP-osoitteeseen toinenkin osoite.
-
-    $ sudoedit /etc/hosts
+Tämän jälkeen kävin editoimassa hosts-tiedostoa komennolla `$ sudoedit /etc/hosts`. Lisäsin tiedostoon kuvassa olevan korostetun tekstin, jossa asetetaan samaan IP-osoitteeseen toinenkin osoite.
 
 ![Lisätty teksti](Kuvat/bonus1.png)
 
-Tämän jälkeen testasin sivuston näkymistä localhostissa ja ilona.example.com:issa selaimella ja curl-komennolla. Molemmissa näkyi tekemäni sivut. 
+Tämän jälkeen testasin sivuston näkymistä `localhost`issa ja `ilona.example.com`issa selaimella ja curl-komennolla. Molemmissa näkyi tekemäni sivut. 
 
 ![Lopputulos](Kuvat/bonus3.png)
 
