@@ -65,7 +65,7 @@ Otin uuden hostin käyttöön komennolla `$ sudo a2ensite hattu.example.com`, se
 
 ![Komennot uudelle hostille](Kuvat/uusihost1.png)
 
-Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis osoitteeseen `/home/ilona/publicsite/` komennolla `$ mkdir publicsite/hattu.example.com`. Tein lisäksi luomaani kansioon index.html -tiedoston komennolla `$ micro publicsite/hattu.example.com/index.html`.
+Tässä vaiheessa tein hakemiston mihin Documentroot osoittaa. Tein sen siis osoitteeseen `/home/ilona/publicsite/` komennolla `$ mkdir publicsite/hattu.example.com`. Tein lisäksi luomaani kansioon `index.html`-tiedoston komennolla `$ micro publicsite/hattu.example.com/index.html`.
 
 ![Hakemisto Documentrootille](Kuvat/uusihost2.png)
     
