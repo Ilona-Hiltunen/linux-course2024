@@ -124,6 +124,8 @@ Ensimmäinen komento palautti sivun samassa HTML5-syntaksissa, missä olin kirjo
 
 ![Curl-komennot](Kuvat/curlit.png)
 
+## Bonustehtävät
+
 
 
 
