@@ -126,9 +126,26 @@ Ensimmäinen komento palautti sivun samassa HTML5-syntaksissa, missä olin kirjo
 
 ## Bonustehtävät
 
+Yritin hankkia GitHub Education-pakettia, mutta sivusto ei hyväksynyt digitaalisessa muodossa olevaa opiskelutodistusta tai opiskelijakorttia. Minulla ei ollut tähän hätään mitään fyysistä todistetta, josta voisin ottaa kuvan, joten päätin jättää tämän siihen asti että käyn koululla hankkimassa opiskelutodistuksen.
 
+### Kaksi eri sivua
 
+Käytin tehtävään [Tero Karvisen ohjetta](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Minulla oli jo valmiiksi luotuna kaksi hostia koneelleni, joten päätin käyttää niitä tässä tehtävässä ja olla luomatta uutta. Ensimmäinen host, jonka tein ylemmässä tehtävässä oli jo käytössä, joten minun tarvitsi ottaa käyttöön vain toinen host. Tein sen seuraavilla komennoilla, joista ensimmäisellä otin hostin käyttöön ja toisella käynnistin Apachen uudelleen.
 
+    $ sudo a2ensite ilona.example.com
+    $ sudo systemctl restart apache2
+
+![Toinen host](Kuvat/bonus2.png)
+
+Tämän jälkeen kävin editoimassa hosts-tiedostoa seuraavalla komennolla. Lisäsin tiedostoon kuvassa olevan korostetun tekstin, jossa asetetaan samaan IP-osoitteeseen toinenkin osoite.
+
+    $ sudoedit /etc/hosts
+
+![Lisätty teksti](Kuvat/bonus1.png)
+
+Tämän jälkeen testasin sivuston näkymistä localhostissa ja ilona.example.com:issa selaimella ja curl-komennolla. Molemmissa näkyi tekemäni sivut. 
+
+![Lopputulos](Kuvat/bonus3.png)
 
 ## Lähteet
 
