@@ -32,11 +32,7 @@ Käytin tehtävään taas aikaisemmin luomaani Debian Linux-virtuaalikonetta. Ko
 
 ### Weppipalvelimen vastaaminen localhost-osoitteesta
 
-Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla tekemälläni hostilla. Kirjoitin seuraavan komennon komentoriville:
-
-    $ curl localhost
-
-Komentorivi palautti vastaukseksi index.html-tiedostoon kirjoittamani tekstin, joten päättelin, että Apache-weppipalvelin toimii odotetulla tavalla. Testasin ohjelmaa vielä selaimella osoitteesta http://localhost/, ja sekin palautti kirjoittamani tekstin.
+Testasin weppipalvelimen vastaamista localhost -osoitteesta viime oppitunnilla tekemälläni hostilla. Kirjoitin seuraavan `$ curl localhost` komentoriville. Komentorivi palautti vastaukseksi `index.html`-tiedostoon kirjoittamani tekstin, joten päättelin, että Apache-weppipalvelin toimii odotetulla tavalla. Testasin ohjelmaa vielä selaimella osoitteesta http://localhost/, ja sekin palautti kirjoittamani tekstin.
 
 ![Weppipalvelimen testaus](Kuvat/weppipalvelimen_testaus.png)
 
