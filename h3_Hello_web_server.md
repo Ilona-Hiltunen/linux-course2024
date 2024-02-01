@@ -101,7 +101,7 @@ Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä 
 
 ### HTML5 sivu
 
-Avasin juuri tekemäni hostin index.html-sivun seuraavalla komennolla.
+Avasin juuri tekemäni hostin index.html-tiedoston seuraavalla komennolla.
 
     $ micro publicsite/hattu.example.com/index.html 
 
