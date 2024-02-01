@@ -75,7 +75,7 @@ Nyt olin tehnyt tarvittavat toimenpiteet hostin luomiseksi, ja tarkistin vielä 
 
 ### HTML5 sivu
 
-Avasin juuri tekemäni hostin index.html-tiedoston komennolla ` $ micro publicsite/hattu.example.com/index.html`. Käytin apuna tiedoston muokkaamiseen [Tero karvisen ohjetta](https://terokarvinen.com/2012/short-html5-page/). Kirjoitin `index.html`-tiedoston sisällön seuraavan kuvan mukaisesti. Lopuksi vielä tarkistin sen [tällä validoijalla](https://validator.w3.org/). 
+Avasin juuri tekemäni hostin `index.html`-tiedoston komennolla ` $ micro publicsite/hattu.example.com/index.html`. Käytin apuna tiedoston muokkaamiseen [Tero karvisen ohjetta](https://terokarvinen.com/2012/short-html5-page/). Kirjoitin `index.html`-tiedoston sisällön seuraavan kuvan mukaisesti. Lopuksi vielä tarkistin sen [tällä validoijalla](https://validator.w3.org/). 
 
 ![HTML5-koodi](Kuvat/html_sivu.png)
 
