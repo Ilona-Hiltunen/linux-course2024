@@ -42,29 +42,22 @@ Komentorivi palautti vastaukseksi index.html-tiedostoon kirjoittamani tekstin, j
 
 ### Lokien tutkiminen
 
-Kävin pitkän taistelun, että sain lokit näkymään sitä mukaa, kun sivustolla vierailee. Lopulta sain ne näkymään editoimalla etc/apache2/apache2.conf tiedostoa komennolla:
+Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä tiedostoon /var/log/apache2/other_vhosts_access.log1. Seuraavassa listauksessa ovat lokien osat selitettyinä, esimerkit ovat otettu alemmalta riviltä.
 
-    $ sudoedit /etc/apache2/apache2.conf 
-    
-Loin CustomLogin tiedostoon seuraavan kuvan mukaisesti, mikä ohjasi lokit tallentumaan tuttuun osoitteeseen: /var/log/apache2/access.log. Ymmärrykseni mukaan, mikäli CustomLogia ei olla määritelty, voi Apache tallentaa lokeja muuallekkin, kuin access.log -tiedostoon tai jättää ne tallentamatta. Vinkin tämän toteuttamiseen sain [ChatGPT:ltä]( https://chat.openai.com/).
-
-![Lokien korjaus](Kuvat/lokienkorjaus.png)
-
-Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä access.logiin. Seuraavassa listauksessa ovat lokien osat selitettyinä, esimerkit ovat otettu ensimmäiseltä riviltä.
-
+- hattu.example.com:80 = Sivusto ja portti mihin pyyntö on tehty
 - 127.0.0.1 = IP-osoite mistä pyyntö on tehty.
 - '-' = Tietoa ei ole saatavilla, mutta tämä viittaisi RFC 14-13 identiteettiin. Tämä tieto ei ole kovin luotettava, jonka vuoksi Apache ei lähtökohtaisesti yritä tunnistaa tätä.
 - '-' = Tietoa ei ole saatavilla, mutta tämä viittaa käyttäjänimeen.
-- [31/Jan/2024:14:07:46 +0200] = Päivämäärä ja kellonaika, sekä aikavyöhyke.
+- [01/Feb/2024:06:55:03 +0200] = Päivämäärä ja kellonaika, sekä aikavyöhyke.
 - "GET / HTTP/1.1" = Pyyntöön käytetty metodi, pyydetty resurssi ja käytetty protokolla.
 - 200 = Palvelimen käyttäjälle palauttama koodi. Numerolla 2 alkavat koodit ilmaisevat palvelimen vastaamisen onnistuneen, kun taas 3-alkuiset koodit viittaavat uudelleenohjaukseen. Numerolla 4 ja 5 alkavat koodit viittaavat virheeseen.
-- 238 = Käyttäjälle lähetetyn paketin koko.
+- 406 = Käyttäjälle lähetetyn paketin koko.
 - "-" = Tietoa ei ole saatavilla, mutta tämä viittaisi sivustoon, josta käyttäjä on siirtynyt.
 - "curl/7.88.1" = Käyttäjän käyttämän ohjelman ilmoittamat tiedot.
 
 (The Apache Software Foundation s.a.)
 
-![Lokit](Kuvat/lokientarkastelu.png)
+![Lokit](Kuvat/lokit.png)
 
 ### Uuden hostin teko
 
