@@ -77,9 +77,9 @@ Otin pois käytöstä vanhan tunnilla tehdyn hostin komennolla:
 
     $ sudo a2dissite ilona.example.com
   
-Tämän jälkeen käynnistin Apachen uudelleen komennolla:
+Tämän jälkeen käynnistin Apachen uudelleen seuraavalla komennolla, jotta uusi host päivittyy.
 
-    $ sudo systemctl restart apache2, jotta uusi host päivittyy. 
+    $ sudo systemctl restart apache2
     
 Sitten vielä tarkistin, että host on ilmestynyt /etc/apache2/sites-enabled kansioon, mistä selvisi, että host on otettu käyttöön ja vanha host on poistunut käytöstä.
 
