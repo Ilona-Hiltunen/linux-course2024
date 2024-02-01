@@ -44,7 +44,7 @@ Komentorivi palautti vastaukseksi index.html-tiedostoon kirjoittamani tekstin, j
 
 Menin localhostiin curlilla ja selaimen kautta, ja sain seuraavat lokit siitä tiedostoon /var/log/apache2/other_vhosts_access.log1. Seuraavassa listauksessa ovat lokien osat selitettyinä, esimerkit ovat otettu alemmalta riviltä.
 
-- hattu.example.com:80 = Sivusto ja portti mihin pyyntö on tehty
+- hattu.example.com:80 = Sivusto ja portti mihin pyyntö on tehty.
 - 127.0.0.1 = IP-osoite mistä pyyntö on tehty.
 - '-' = Tietoa ei ole saatavilla, mutta tämä viittaisi RFC 14-13 identiteettiin. Tämä tieto ei ole kovin luotettava, jonka vuoksi Apache ei lähtökohtaisesti yritä tunnistaa tätä.
 - '-' = Tietoa ei ole saatavilla, mutta tämä viittaa käyttäjänimeen.
