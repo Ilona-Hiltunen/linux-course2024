@@ -48,7 +48,7 @@ Tarkemmin koneen rautaa voi tarkastella [täältä](https://github.com/Ilona-Hil
 
 ### Tunnuksen luominen ja virtuaalipalvelimen vuokraus
 
-Menin DigitalOceanin aloitussivulle ja painoin `Sign up`. Aloitin tunnuksien tekemisen syöttämällä nimeni ja sähköpostini. Tämän jälkeen minun tuli täyttää kysely, jossa kysyttiin mm. mihin aion Digital Oceania käyttää ja mikä rooli minulla vuokraajana on. Lopuksi asetin maksutietoni, ja DigitalOcean vuorostaan vahvisti ne tekemällä 0,95 € katevarauksen. Rekisteröinti oli valmis ja pääsinkin aloitusnäkymään. Yhdistin vielä GitHub-tunnukseni tekemääni käyttäjätunnukseen, jotta sain käyttööni luvatut 200$. Nyt olin valmis aloittamaan palvelimen vuokrauksen.
+Menin DigitalOceanin etusivulle ja painoin `Sign up`. Aloitin tunnuksien tekemisen syöttämällä nimeni ja sähköpostini. Tämän jälkeen minun tuli täyttää kysely, jossa kysyttiin mm. mihin aion Digital Oceania käyttää ja mikä rooli minulla vuokraajana on. Lopuksi asetin maksutietoni, ja DigitalOcean vuorostaan vahvisti ne tekemällä 0,95 € katevarauksen. Rekisteröinti oli valmis ja pääsinkin aloitusnäkymään. Yhdistin vielä GitHub-tunnukseni tekemääni käyttäjätunnukseen, jotta sain käyttööni luvatut 200$. Nyt olin valmis aloittamaan palvelimen vuokrauksen.
 
 ![DigitalOceanin aloitussivu](Kuvat/dg_etusivu.png)
 
@@ -110,7 +110,7 @@ Seuraavaksi sivu piti vielä tehdä näkyväksi muille, sillä palomuuri esti yh
 
 ## Domain-nimen hankinta ja käyttöönotto
 
-Minulla oli jo valmiiksi vuokrattuna domain ilonahiltunen.com [Namecheap](https://www.namecheap.com/)-palveluntarjoajalta, sillä olin ajatellut tehdä siihen verkkosivu-CV:n. Siellä ei kuitenkaan ole toistaiseksi mitään sisältöä, joten päätin käyttää sitä tässä tehtävässä. Demonstroin tässä tehtävässä, kuinka domain-nimen voi ostaa, mutta en vie maksua loppuun asti. Tehtävien teon aloitin kello 21:20.
+Minulla oli jo valmiiksi vuokrattuna domain ilonahiltunen.com [Namecheap](https://www.namecheap.com/)-palveluntarjoajalta, sillä olin ajatellut tehdä siihen verkkosivu-CV:n. Siellä ei kuitenkaan ole toistaiseksi mitään sisältöä, joten päätin käyttää sitä tässä tehtävässä. Demonstroin tässä tehtävässä, kuinka domain-nimen voi ostaa, mutta en vie maksua loppuun asti. Tehtävässä on käytetty ohjeena artikkelia [Teoriasta käytäntöön pilvipalvelimen avulla](https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/).  Tehtävien teon aloitin kello 21:20.
 
 ### Domain-nimen ostaminen Namecheapilta
 
