@@ -13,12 +13,26 @@ Neljännen viikon tehtävänä oli tiivistää artikkelit [Teoriasta käytäntö
   - Suojata palvelin palomuurilla, sekä avata ainoastaan tarvittavat portit liikenteelle.
   - Tehdä oma pääkäyttäjä hyvällä salasanalla, ja sen jälkeen sulkea root.
   - Päivittää ja asentaa palvelimen ohjelmat.
-- Näiden toimenpiteiden jälkeen palvelinta voi käyttää haluamaansa tarkoitukseen, esim. omien kotisivujen hostaukseen kuten artikkelin kirjoittaja oli tehnyt.
+- Näiden toimenpiteiden jälkeen palvelinta voi käyttää haluamaansa tarkoitukseen, esim. omille kotisivuille kuten artikkelin kirjoittaja oli tehnyt.
 - Virtuaalipalvelimen lokeja voi tarkastella hakemistosta `/var/log/auth.log`, ja sieltä voi tunnistaa vaikkapa murtautumisyrityksiä.
 
 (Lehto 14.02.2022.)
 
 ### First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS
+
+- Virtuaalipalvelimen fyysinen sijainti kannattaa valita loppukäyttäjien sijainnin mukaan, eli suomalaisille pidettävän sivuston palvelimen olisi hyvä sijaita Euroopassa.
+- Kun virtuaalipalvelin on luotu, generoituu sille IP-osoite. Palvelinta voi käyttää SSH-yhteydellä komennolla `$ ssh root@palvelimen IP-osoite`.
+- Ennen palomuurin käyttöönottoa, tulee palomuurin asetuksista sallia SSH-yhteys komennolla `$ sudo ufw allow 22/tcp`.
+- Palvelimelle voi lisätä käyttäjän komennolla `$ sudo adduser kayttaja`. Samalla komennolla `$ sudo adduser kayttaja sudo` voi asettaa käyttäjän pääkäyttäjäksi.
+- Palvelimen ohjelmistot kannattaa myös päivittää, sillä niiden vanhoissa versioissa on usein tietoturvauhkia.
+- Kun palvelimelle asentaa julkisen weppipalvelimen tulee sen käyttämä portti avata palomuurin asetuksista komennolla `$ sudo ufw allow 80/tcp`.
+- Kun koneelle on asennettu weppipalvelin, verkkosivustolle voi päästä palvelimen IP-osoitteella. Mikäli sivuston haluaa toimivan nimellä, tulee domain-nimi vuokrata palveluntarjoajalta ja yhdistää se palvelimen IP-osoitteeseen.
+
+(Karvinen 19.09.2017)
+
+## Virtuaalipalvelimen hankinta ja käyttöönotto
+
+## Domain-nimen hankinta ja käyttöönotto
 
 
 
