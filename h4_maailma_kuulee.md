@@ -44,6 +44,8 @@ Massamuisti: 40 GB
 
 Käyttöjärjestelmä: Debian 12 Bookworm (64-bit)
 
+Tarkemmin koneen rautaa voi tarkastella [täältä](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h2_komentaja_pingviini.md#raudan-tarkastelu).
+
 ### Tunnuksen luominen ja virtuaalipalvelimen vuokraus
 
 Menin DigitalOceanin aloitussivulle ja painoin `Sign up`. Aloitin tunnuksien tekemisen syöttämällä nimeni ja sähköpostini. Tämän jälkeen minun tuli täyttää kysely, jossa kysyttiin mm. mihin aion Digital Oceania käyttää ja mikä rooli minulla vuokraajana on. Lopuksi asetin maksutietoni, ja DigitalOcean vuorostaan vahvisti ne tekemällä 0,95 € katevarauksen. Rekisteröinti oli valmis ja pääsinkin aloitusnäkymään. Yhdistin vielä GitHub-tunnukseni tekemääni käyttäjätunnukseen, jotta sain käyttööni luvatut 200$. Nyt olin valmis aloittamaan palvelimen vuokrauksen.
