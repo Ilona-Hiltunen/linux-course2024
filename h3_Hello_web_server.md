@@ -91,7 +91,9 @@ Kokeilin curlia kahdella eri komennolla `$ curl localhost` ja `$ curl -I localho
 
 ## Bonustehtävät
 
-Yritin hankkia GitHub Education-pakettia, mutta sivusto ei hyväksynyt digitaalisessa muodossa olevaa opiskelutodistusta tai opiskelijakorttia. Minulla ei ollut tähän hätään mitään fyysistä todistetta, josta voisin ottaa kuvan, joten päätin jättää tämän siihen asti että käyn koululla hankkimassa opiskelutodistuksen.
+~~Yritin hankkia GitHub Education-pakettia, mutta sivusto ei hyväksynyt digitaalisessa muodossa olevaa opiskelutodistusta tai opiskelijakorttia. Minulla ei ollut tähän hätään mitään fyysistä todistetta, josta voisin ottaa kuvan, joten päätin jättää tämän siihen asti että käyn koululla hankkimassa opiskelutodistuksen.~~
+
+EDIT 06.02.2024. Myöhemmällä yrittämällä GitHub Education-pakettiin tarvittava tunnistautuminen onnistui. Muutaman päivän päästä todistuksen toimittamisesta sähköpostiini tuli viesti, jossa vahvistettiin, että hakemukseni on hyväksytty ja nyt olen GitHubin Global Campus-jäsen.
 
 ### Kaksi eri sivua
 
