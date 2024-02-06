@@ -102,7 +102,7 @@ Seuraavaksi päivitin Apachen testisivun näyttämään "Hello world!". En enä�
 
 ![Testisivun vaihto](Kuvat/testisivu_vaihto.png)
 
-Seuraavaksi sivu piti vielä tehdä näkyväksi muille, sillä palomuuri esti yhteydet portista 80 mitä Apache käyttää. Avasin portin 80 komennolla `$ sudo ufw allow 80/tcp`. Syötin salasanani, ja komentorivi ilmoitti, että palomuurin asetukset ovat muutettu. Tarkistin vielä komennolla `$ sudo ufw status`, ja komentorivillä näkyi, että portti 80 sallitaan yhteydet. Kokeilin kirjoittaa virtuaalipalvelimen IP-osoitteen hakukenttään ja se palautti juuri muokkaamani `index`-tiedoston. Kokeilin samaa vielä puhelimellani, ja sekin toimi odotetusti. Kello oli 19:57, kun sain tämän osion päätökseen.
+Seuraavaksi sivu piti vielä tehdä näkyväksi muille, sillä palomuuri esti yhteydet portista 80 mitä Apache käyttää. Avasin portin 80 komennolla `$ sudo ufw allow 80/tcp`. Syötin salasanani, ja komentorivi ilmoitti, että palomuurin asetukset ovat muutettu. Tarkistin vielä komennolla `$ sudo ufw status`, ja komentorivillä näkyi, että portti 80 on sallittu. Kokeilin kirjoittaa virtuaalipalvelimen IP-osoitteen hakukenttään ja se palautti juuri muokkaamani `index`-tiedoston. Kokeilin samaa vielä puhelimellani, ja sekin toimi odotetusti. Kello oli 19:57, kun sain tämän osion päätökseen.
 
 ![Sivun tekeminen näkyväksi](Kuvat/sivu_nakymaan.png)
 
