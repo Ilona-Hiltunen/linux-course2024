@@ -76,6 +76,20 @@ Aloitin käyttöönoton toimenpiteet klo 18:00. Yritin yhdistää virtuaalipalve
 
 ![SSH:ta ei löydy](Kuvat/ssh-eiloydy.png)
 
+Loin SSH-yhteyden harjoituspalvelimen roottiin komennolla `$ ssh root@134.209.202.182`. Komentorivi kysyi haluanko varmasti yhdistää, johon vastasin kyllä. Tämän jälkeen syötin luontivaiheessa asettamani salasanan ja pääsin onnistuneesti sisään.
+
+![SSH-yhteyden muodostus](Kuvat/root_kirjautuminen.png)
+
+Kun olin saanut yhteyden muodostettua, aloin ensimmäisenä asentamaan palomuuria. Päivitin pakettilistan komennolla `$ sudo apt-get update` ja asensin palomuurin komennolla `$ sudo apt-get install ufw`. Asennus sujui muutamissa sekunneissa ongelmitta. Ennen kuin laitoin palomuurin päälle, avasin portin 22 komennolla `$ sudo ufw allow 22/tcp`, jotta SSH-yhteys säilyy. Komentorivi ilmoitti, että asetukset ovat päivitetty. Tämän jälkeen laitoin palomuurin päälle komennolla `$ sudo ufw enable`. Tarkistin vielä lopputuloksen komennolla `$ ufw status`, ja vastauksesta ilmeni, että palomuuri on päällä ja portti 22 sallittu.
+
+![Palomuurin asennus](Kuvat/palomuurin_asennus.png)
+
+Tein käyttäjän itselleni komennolla `$ sudo adduser ilona`. Asetin käyttäjälle salasanan ja nimeni. Asetin tekemäni käyttäjän pääkäyttäjäksi komennolla `$ sudo adduser ilona sudo`. Tämän jälkeen avasin uuden komentorivin, jotta voin kokeilla, että tekemäni käyttäjä varmasti toimii ennen rootin lukitsemista. Pääsin kirjautumaan ilona-käyttäjälleni sisään ja kokeilin varalta tehdä myös pääkäyttäjän toimintoja. Ne onnistuivat, joten uskalsin nyt siirtyä rootin lukitsemiseen. Lukitsin rootin komennolla `$ sudo usermod --lock root`. Suljin komentorivin, jossa root oli käynnissä ja yritin kirjautua puhtaalta komentoriviltä roottiin. En päässyt sisään - mikä tietenkin oli tässä vaiheessa toivottava lopputulos.
+
+![Root kiinni](Kuvat/root_sulku.png)
+
+Viimeisenä vuorossa oli päivittää harjoituspalvelimen ohjelmat ajantasalle. 
+
 
 ## Domain-nimen hankinta ja käyttöönotto
 
