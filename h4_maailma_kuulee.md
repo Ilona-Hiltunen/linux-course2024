@@ -36,12 +36,54 @@ Aloitin tehtävien tekemisen klo 17:00 pohtimalla mitä palveluntarjoajaa käyt�
 
 ### Käyttöympäristö 
 
+Tietokone: Virtualboxilla luotu virtuaalikone
+
+Keskusmuisti: 5 GB
+
+Massamuisti: 40 GB
+
+Käyttöjärjestelmä: Debian 12 Bookworm (64-bit)
+
+### Tunnuksen luominen ja virtuaalipalvelimen vuokraus
+
+Menin DigitalOceanin aloitussivulle ja painoin `Sign up`. Aloitin tunnuksien tekemisen syöttämällä nimeni ja sähköpostini. Tämän jälkeen minun tuli täyttää kysely, jossa kysyttiin mm. mihin aion Digital Oceania käyttää ja mikä rooli minulla vuokraajana on. Lopuksi asetin maksutietoni, ja DigitalOcean vuorostaan vahvisti ne tekemällä 0,95 € katevarauksen. Rekisteröinti oli valmis ja pääsinkin aloitusnäkymään. Yhdistin vielä GitHub-tunnukseni tekemääni käyttäjätunnukseen, jotta sain käyttööni luvatut 200$. Nyt olin valmis aloittamaan palvelimen vuokrauksen.
+
+![DigitalOceanin aloitussivu](Kuvat/dg_etusivu.png)
+
+Painoin aloitussivulta kohtaa `Deploy a virtual machine` ja pääsin luomaan virtuaalipalvelinta, joka DigitalOceanissa oli nimetty Dropletiksi. Asetin palvelimen sijainniksi Amsterdamin, sillä sivuston loppukäyttäjät ovat suomalaisia. Näin välimatka Suomeen ja siten palvelimen vastausaikakin tulisi olla lyhyempi (Karvinen 06.02.2024). 
+
+![Sijainnin valinta](Kuvat/dg-sijainti.png)
+
+Valitsin käyttöjärjestelmäksi Debianin uusimman version, sillä olimme harjoitelleet sen käyttöä tällä kurssilla. Lisäksi valitsin palvelimen tyypiksi jaetun.
+
+![Käyttöjärjestelmän ja tyypin valinta](Kuvat/dg-kayttis.png)
+
+Sivusto ehdotti minulle aluksi melko kallista palvelinta, mutta päätin vuokrata 6$ kuussa maksavan palvelimen, jossa on 1 GB keskusmuistia ja 25 GB säilytystilaa. Sivusto tarjosi myös erilaisia lisäpalveluita kuten ylimääräistä levytilaa, mutta en ottanut mitään näistä lisäpalveluista. 
+
+![Koon ja hinnan valinta](Kuvat/dg-size.png)
+
+Asetin palvelimen salasanaksi turvallisen salasanageneraattorilla luodun salasanan. Lopuksi jäljellä olikin vain enää virtuaalipalvelimien määrän valitseminen ja nimeäminen. Tarkoituksiini verkkosivuston näyttämiseen riittää hyvin yksi virtuaalipalvelin. Nimesin sen harjoituspalvelimeksi.
+
+![Loppuasetukset](Kuvat/dg-finalize.png)
+
+Palvelin generoitui muutamisessa sekunneissa ja sen luonti oli valmis 17:51. Luonti näyttää tässä vaiheessa onnistuneen, mutta lopullisesti se selviää, kun pääsee palvelimeen käsiksi.
+
+![Valmis palvelin](Kuvat/dg-valmis.png)
+
+### Alkutoimenpiteet
+
+Aloitin käyttöönoton toimenpiteet klo 18:00. Yritin yhdistää virtuaalipalvelimelle SSH-yhteydellä, mutta komentorivi kertoi, ettei sellaista komentoa ole. Tästä päättelin ettei SSH:ta ole asennettu. Päivitin ensin pakettilistan komennolla `$ sudo apt-get update` ja sen jälkeen asensin SSH:n komennolla `$ sudo apt-get install openssh-client`. Tämän jälkeen kokeilin löytyykö SSH:ta komennolla `$ man ssh`, joka palautti SSH:n manuaalin. Ongelma ratkesi siis melko yksinkertaisesti.
+
+![SSH:ta ei löydy](Kuvat/ssh-eiloydy.png)
+
 
 ## Domain-nimen hankinta ja käyttöönotto
 
 
 
 ## Lähteet
+
+Karvinen, T. 06.02.2024. Suullinen tiedonanto. Linux-palvelimet kurssin luento. Kuunneltu: 06.02.2024.
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Luettu: 06.02.2024.
 
