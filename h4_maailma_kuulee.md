@@ -13,7 +13,7 @@ Neljännen viikon tehtävänä oli tiivistää artikkelit [Teoriasta käytäntö
   - Suojata palvelin palomuurilla, sekä avata ainoastaan tarvittavat portit liikenteelle.
   - Tehdä oma pääkäyttäjä hyvällä salasanalla, ja sen jälkeen sulkea root.
   - Päivittää ja asentaa palvelimen ohjelmat.
-- Näiden toimenpiteiden jälkeen palvelinta voi käyttää haluamaansa tarkoitukseen, esim. weppipalvelimena kuten artikkelin kirjoittaja oli tehnyt.
+- Näiden toimenpiteiden jälkeen palvelinta voi käyttää haluamaansa tarkoitukseen, esim. omien kotisivujen hostaukseen kuten artikkelin kirjoittaja oli tehnyt.
 - Virtuaalipalvelimen lokeja voi tarkastella hakemistosta `/var/log/auth.log`, ja sieltä voi tunnistaa vaikkapa murtautumisyrityksiä.
 
 (Lehto 14.02.2022.)
