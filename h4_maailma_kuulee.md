@@ -106,10 +106,37 @@ Seuraavaksi sivu piti vielä tehdä näkyväksi muille, sillä palomuuri esti yh
 
 ![Sivun tekeminen näkyväksi](Kuvat/sivu_nakymaan.png)
 
-
 ## Domain-nimen hankinta ja käyttöönotto
 
+Minulla oli jo valmiiksi vuokrattuna domain ilonahiltunen.com [Namecheap](https://www.namecheap.com/)-palveluntarjoajalta, sillä olin ajatellut tehdä siihen verkkosivu-CV:n. Siellä ei kuitenkaan ole toistaiseksi mitään sisältöä, joten päätin käyttää sitä tässä tehtävässä. Demonstroin tässä tehtävässä, kuinka domain-nimen voi ostaa, mutta en vie maksua loppuun asti. Tehtävien teon aloitin kello 21:20.
 
+### Domain-nimen ostaminen Namecheapilta
+
+Kirjoitin haluamani nimen Namecheapin etusivulta löytyvään hakukenttään. Päätin, että kuvitteellisesti haluaisin ostaa nimen linuxpalvelimet.com. 
+
+![Nimen etsiminen](Kuvat/nimen_haku.png)
+
+Nimi näytti olevan vapaana, ja hintaa sillä olisi 9,57€ vuodessa. Lisäsin sen ostoskoriini painamalla kärryn kuvaa. Siirryin maksuun painamalla `Checkout`-nappia.
+
+![Nimen valinta](Kuvat/nimen_valinta.png)
+
+Asetin vuokrausajaksi yhden vuoden, ja otin automaattivuokrauksen pois päältä. Otin lisäpalveluksi ilmaisen Domain Privacyn, mutta muita maksullisia lisäpalveluita en ottanut. Tämän jälkeen olisin voinut vuokrata nimen painamalla `Confirm Order`-nappia, mutta koska tarkoituksenani ei ollut ostaa sitä oikeasti, en vienyt maksutapahtumaa loppuun. Näin kuitenkin tapahtuisi domain-nimen vuokraaminen.
+
+![Nimen osto](Kuvat/nimen_osto.png)
+
+### Domain-nimen käyttöönotto
+
+Kirjauduin sisään käyttäjälleni Namecheapissa ja menin profiiliini. Profiilissa oli painike, jossa pääsi Domain Listiin. Listalla näkyi vuokraamani ilonahiltunen.com-domain. Painoin painiketta `manage`, jotta pääsen hallinnoimaan nimeäni.
+
+![Domain-lista](Kuvat/domain-list.png)
+
+Valitsin ylhäältä asetuksista `Advanced DNS`-kohdan. Poistin kaikki valmiina olevat tiedostot. Painoin `add new record`-nappia ja lisäsin kaksi uutta tiedostoa, joissa arvona oli luomani palvelimen IP-osoite ja tietojen päivitysaika 5 minuuttia. Nyt ilonahiltunen.com-nimellä haku pitäisi ohjautua palvelimen IP-osoitteeseen.
+
+![Domain-ohjaus](Kuvat/nimen_ohjaus.png)
+
+Testasin vielä selaimessa hakea ilonahiltunen.com, ja se ohjautui oikealle sivustolle. Testasin samaa myös puhelimessani, ja sielläkin tuli vastaan tuttu "Hello world!". Kello oli 22:00, kun sain tehtävän valmiiksi.
+
+![ilona.hiltunen.com](Kuvat/ilonahiltunen.com.png)
 
 ## Lähteet
 
