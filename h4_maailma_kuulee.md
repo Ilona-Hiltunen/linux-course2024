@@ -94,6 +94,18 @@ Viimeisenä vuorossa oli päivittää harjoituspalvelimen ohjelmat ajantasalle. 
 
 ## Weppipalvelimen asennus ja testisivun korvaus
 
+Aloitin weppipalvelimen asentelun 19.15. Minun ei tarvinnut päivittää pakettilistaa, sillä olin juuri tehnyt sen joten asensin suoraan Apachen komennolla `$ sudo apt-get install apache2`. Asennus sujui muutamissa sekunneissa ongelmitta. Testasin että Apache on asentunut ja näyttää oletussivun onnistuneesti komennolla `$ curl localhost`, ja komentorivi palauttikin sen mitä piti.
+
+![Apachen testaus](Kuvat/apache_testaus.png)
+
+Seuraavaksi päivitin Apachen testisivun näyttämään "Hello world!". En enään muistanut tunnilta, miten sen sai tehtyä komentoriviltä kätevästi, joten päätin muokata tiedostoa komennolla `$ sudoedit /var/www/html/index.html`. Tiedoston tyhjentämisessä meni muutama tovi, mutta lopulta sainkin kun sainkin sisällöksi vain "Hello world!". Tarkisin vielä sisällön komennolla `$ curl localhost`, ja se näytti oikealta.
+
+![Testisivun vaihto](Kuvat/testisivu_vaihto.png)
+
+Seuraavaksi sivu piti vielä tehdä näkyväksi muille, sillä palomuuri esti yhteydet portista 80 mitä Apache käyttää. Avasin portin 80 komennolla `$ sudo ufw allow 80/tcp`. Syötin salasanani, ja komentorivi ilmoitti, että palomuurin asetukset ovat muutettu. Tarkistin vielä komennolla `$ sudo ufw status`, ja komentorivillä näkyi, että portti 80 sallitaan yhteydet. Kokeilin kirjoittaa virtuaalipalvelimen IP-osoitteen hakukenttään ja se palautti juuri muokkaamani `index`-tiedoston. Kokeilin samaa vielä puhelimellani, ja sekin toimi odotetusti. Kello oli 19:57, kun sain tämän osion päätökseen.
+
+![Sivun tekeminen näkyväksi](Kuvat/sivu_nakymaan.png)
+
 
 ## Domain-nimen hankinta ja käyttöönotto
 
