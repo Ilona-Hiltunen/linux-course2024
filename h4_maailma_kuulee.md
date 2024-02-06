@@ -8,10 +8,17 @@ Neljännen viikon tehtävänä oli tiivistää artikkelit [Teoriasta käytäntö
 
 - Pilvipalvelimia voi vuokrata eri palveluntarjoajilta, esimerkiksi DigitalOcean tarjoaa palvelinten vuokrausta. Vuokrattava pilvipalvelimen tehokkuus tulee valita omien tarpeiden mukaan. On kuitenkin suositeltavaa aloittaa halvimmasta sopivasta vaihtoehdosta, sillä palvelimen tehoja saa helposti lisättyä jälkikäteenkin.
 - Domain-nimiä voi myös vuokrata useilta eri palveluntarjoajilta, esimerkiksi Namecheap on tällainen. Vuokrattu nimi tulee osoittaa palvelimen IP-osoitteeseen, jotta domain-nimelle tuleva liikenne ohjautuu halutulle palvelimelle.
-- Kun palvelimen laittaa käyttökuntoon, tulisi tehdä seuraavat toimenpiteet;
+- Virtuaalipalvelinta voi käyttää halutulla tietokoneella SSH-yhteyden avulla.
+- Kun palvelimen ottaa käyttöön, tulisi tehdä seuraavat toimenpiteet;
   - Suojata palvelin palomuurilla, sekä avata ainoastaan tarvittavat portit liikenteelle.
-  - Tehdä oma pääkäyttäjä hyvällä salasanalla, ja sulkea root.
+  - Tehdä oma pääkäyttäjä hyvällä salasanalla, ja sen jälkeen sulkea root.
   - Päivittää ja asentaa palvelimen ohjelmat.
+- Näiden toimenpiteiden jälkeen palvelinta voi käyttää haluamaansa tarkoitukseen, esim. weppipalvelimena kuten artikkelin kirjoittaja oli tehnyt.
+- Virtuaalipalvelimen lokeja voi tarkastella hakemistosta `/var/log/auth.log`, ja sieltä voi tunnistaa vaikkapa murtautumisyrityksiä.
+
+(Lehto 14.02.2022.)
+
+### First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS
 
 
 
