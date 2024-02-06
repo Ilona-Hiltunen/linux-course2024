@@ -32,6 +32,11 @@ Neljännen viikon tehtävänä oli tiivistää artikkelit [Teoriasta käytäntö
 
 ## Virtuaalipalvelimen hankinta ja käyttöönotto
 
+Aloitin tehtävien tekemisen klo 17:00 pohtimalla mitä palveluntarjoajaa käytän tehtävässä. Päädyin käyttämään [DigitalOceania](https://www.digitalocean.com/) virtuaalipalvelimen vuokraamiseen, sillä sain sinne ilmaiseksi 200$ edestä käyttövaroja GitHubin Education-paketin myötä. Käytin tehtävässä ohjeena artikkeleita [Teoriasta käytäntöön pilvipalvelimen avulla](https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/) sekä [First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS](https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/).
+
+### Käyttöympäristö 
+
+
 ## Domain-nimen hankinta ja käyttöönotto
 
 
