@@ -88,7 +88,11 @@ Tein käyttäjän itselleni komennolla `$ sudo adduser ilona`. Asetin käyttäj�
 
 ![Root kiinni](Kuvat/root_sulku.png)
 
-Viimeisenä vuorossa oli päivittää harjoituspalvelimen ohjelmat ajantasalle. 
+Viimeisenä vuorossa oli päivittää harjoituspalvelimen ohjelmat ajantasalle. Aloitin pakettilistan päivittämisellä tuttuun tapaan `$ sudo apt-get update` ja sen jälkeen asensin päivitykset komennolla `$ sudo apt-get dist-upgrade`. Päivittämisessa minuutti tai pari, mutta mitään virheitä ei tullut. Nyt virtuaalipalvelimen alkuvalmistelut olivat valmiita, ja kello oli 19:00.
+
+![Ohjelmien päivittäminen](Kuvat/paivittely.png)
+
+## Weppipalvelimen asennus ja testisivun korvaus
 
 
 ## Domain-nimen hankinta ja käyttöönotto
