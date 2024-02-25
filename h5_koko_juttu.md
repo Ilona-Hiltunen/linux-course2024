@@ -40,7 +40,7 @@ Aloitin tämän osion teon 21:05 ja käytin apuna tähänkin Tero Karvisen [Inst
 
 ![Uuden koneen näkymät](Kuvat/virtuaalikone4.png)
 
-Valitsin käyttöjärjestelmän kieleksi Amerikan englannin. Valitsin sijainniksi Helsingin. Asetin näppäimistöksi Suomalaisen oletusnäppäimistön. Asetin kovalevyn alustumaan kokonaan, sillä uudella virtuaalikonella ei ole vielä tietoa mitä pitäisi säilyttää. Users-välilehdellä asetin nimeksi kokon nimeni, ja käyttäjänimekseni ilona. Asetin salasanaksi tietoturvallisen salasanan salasanageneraattorilla. Nyt olin valmis käyttöjärjestelmän asetusten kanssa, ja painoin `Install`-näppäintä aloittaakseni käyttöjärjestelmän lataamisen. 
+Valitsin käyttöjärjestelmän kieleksi Amerikan englannin. Valitsin sijainniksi Helsingin. Asetin näppäimistöksi Suomalaisen oletusnäppäimistön. Asetin kovalevyn alustumaan kokonaan, sillä uudella virtuaalikonella ei ole vielä tietoa mitä pitäisi säilyttää. Users-välilehdellä asetin nimeksi koko nimeni, ja käyttäjänimekseni ilona. Asetin salasanaksi tietoturvallisen salasanan salasanageneraattorilla. Nyt olin valmis käyttöjärjestelmän asetusten kanssa, ja painoin `Install`-näppäintä aloittaakseni käyttöjärjestelmän lataamisen. 
 
 ![Käyttöjärjestelmän asetukset](Kuvat/virtuaalikone5.png)
 
