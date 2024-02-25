@@ -72,7 +72,7 @@ Tämän jälkeen avasin terminaalin. Siirryin komennolla `$ cd /media/*/VBox*` l
 
 ![Quest Additions-asennus](Kuvat/virtuaalikone12.png)
 
-Käynnistin virtuaalikoneen uudestaan. Nyt pystyin suurentamaan virtuaalikoneen näyötn oman näyttöni kokoiseksi ja kopioimaan tekstiä oman tietokoneeni ja virtuaalikoneen välillä. Testasin vielä käydä satunnaisilla sivustoilla, ja nekin toimivat odotetusti. Kello oli 22:10, kun sain tämän osion päätökseen.
+Käynnistin virtuaalikoneen uudestaan. Nyt pystyin suurentamaan virtuaalikoneen näytön oman näyttöni kokoiseksi ja kopioimaan tekstiä oman tietokoneeni ja virtuaalikoneen välillä. Testasin vielä käydä satunnaisilla sivustoilla, ja nekin toimivat odotetusti. Kello oli 22:10, kun sain tämän osion päätökseen.
 
 ![Toimiva Quest Additions](Kuvat/virtuaalikone13.png)
 
