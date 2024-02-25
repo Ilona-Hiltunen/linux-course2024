@@ -20,9 +20,47 @@ Käyttöjärjestelmä: Windows 11 Home 64-bit
 
 ### Virtuaalikoneen luominen
 
-### Alkutoimenpiteet
+Aloitin tehtävien teon 20:45. Käytin apuna tässä osiossa Tero Karvisen [Install Debian on Virtualbox - Updated 2023](https://terokarvinen.com/2021/install-debian-on-virtualbox/) -artikkelia. Ensimmäiseksi avasin Virtualbox-ohjelman ja aloitin uuden virtuaalikoneen teon painikkeesta `new`. Annoin tietokoneen nimeksi Debiani2, laitoin sen tallentumaan tallennustila C:hen ja asetin sille levykuvaksi [tehtävässä 1](https://terokarvinen.com/2021/install-debian-on-virtualbox/) lataamani Debian liven. Koneen käyttöjärjestelmäksi asetin 64-bit Linux Debianin.
 
-### Ohjelmien asentaminen
+![Koneen nimeäminen](Kuvat/virtuaalikone1.png)
+
+Asetin virtuaalikoneen käyttöön 4 GB ram-muistia ja 4 prosessorinydintä. 
+
+![Ram-muistin laitto](Kuvat/virtuaalikone2.png)
+
+Seuraavaksi siirryin Hard Disk-välilehdelle ja annoin virtuaalikoneelle massamuistia 60 GB. Jätin allokoinnin maksimikokoon pois päältä, jotta virtuaalikone vie vain sen muistin, jota se käyttää.
+
+![Massamuistin laitto](Kuvat/virtuaalikone3.png)
+
+Tämän jälkeen virtuaalikoneen asetukset olivat valmiit ja painoin `finish`-nappia luodakseni virtuaalikoneen. Luonti sujui ongelmitta ja tässä vaiheessa kello olikin 21:03.
+
+### Linux Debian-asennus
+
+Aloitin tämän osion teon 21:05 ja käytin apuna tähänkin Tero Karvisen [Install Debian on Virtualbox - Updated 2023](https://terokarvinen.com/2021/install-debian-on-virtualbox/) -artikkelia. Käynnistin virtuaalikoneen painamalla `start` Virtualboxin ohjelmassa. Virtuaalikone käynnistyi ongelmitta tosin hieman hitaasti noin minuutissa. Testailin toimivuuden vierailemalla satunnaisilla verkkosivuilla, ja näppäimistö, hiiri ja näyttö toimivat odotetusti. Aloitin Debian-käyttöjärjestelmän asennuksen painamalla työpöydällä olevaa `install debian`-kuvaketta. 
+
+![Uuden koneen näkymät](Kuvat/virtuaalikone4.png)
+
+Valitsin käyttöjärjestelmän kieleksi Amerikan englannin. Valitsin sijainniksi Helsingin. Asetin näppäimistöksi Suomalaisen oletusnäppäimistön. Asetin kovalevyn alustumaan kokonaan, sillä uudella virtuaalikonella ei ole vielä tietoa mitä pitäisi säilyttää. Users-välilehdellä asetin nimeksi kokon nimeni, ja käyttäjänimekseni ilona. Asetin salasanaksi tietoturvallisen salasanan salasanageneraattorilla. Nyt olin valmis käyttöjärjestelmän asetusten kanssa, ja painoin `Install`-näppäintä aloittaakseni käyttöjärjestelmän lataamisen. 
+
+![Käyttöjärjestelmän asetukset](Kuvat/virtuaalikone5.png)
+
+Käyttöjärjestelmän asennus käynnistyi kello 21:21. Asennus sujui ongelmitta ja valmistui kello 21:26. Käynnistin virtuaalikoneen uudelleen ja tällä kertaa se aukesikin kysyen juuri luomani käyttäjän tietoja. Testasin vielä näppäimistöä, hiirtä ja näyttöä vierailemalla satunnaisilla sivuilla ja ne toimivat odotetusti. 
+
+![Käyttöjärjestelmän testailu](Kuvat/virtuaalikone6.png)
+
+### Alkutoimenpiteet ja ohjelmien asentaminen
+
+Aloitin tämän osion tekemisen 21:35 ja käytin tähänkin apuna Tero Karvisen [Install Debian on Virtualbox - Updated 2023](https://terokarvinen.com/2021/install-debian-on-virtualbox/) -artikkelia. Ensimmäiseksi avasin terminaalin virtuaalikoneessani. Kirjoitin siihen komennon `$ sudo apt-get update` päivittääkseni ohjelmistojen pakettilistan. Terminaali kysyi salasanaani, ja tämän asetettuani se päivitti uudet paketit. Tämän jälkeen kirjoitin terminaaliin komennon `$ sudo apt-get -y dist-upgrade`, joka taas päivitti kaikki pakettilistaan tulleet päivitykset. Päivityksiä oli paljon, ja päivittelyssä menikin 21:36-21:40 välinen aika. Tein komennot uudestaan saadakseni kuvan tapahtumasta, sillä päivityksiä oli niin paljon ettei komentoja enään näkynyt. Koska olin juuri päivittänyt kaiken mahtui komennot yhteen kuvaan.
+
+![Päivittäminen](Kuvat/virtuaalikone7.png)
+
+Sen jälkeen olin valmis asentamaan palomuurin. Latasin palomuuri-ohjelmiston komennolla `$ sudo apt-get -y install ufw`. Asetin sen päälle komennolla `$ sudo ufw enable`. 
+
+![Palomuurin asennus](Kuvat/virtuaalikone8.png)
+
+![Palomuurin käyttöönotto](Kuvat/virtuaalikone9.png)
+
+Käynnistin virtuaalikoneen uudestaan ja avasin terminaalin. Testasin vielä palomuurin toimintaa komennolla `$ sudo ufw status`, ja päällä näytti olevan. 
 
 
 
@@ -42,4 +80,6 @@ Käyttöjärjestelmä: Windows 11 Home 64-bit
 ## Lähteet
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/. Luettu: 13.02.2024.
+
+Karvinen, T. 2023. Install Debian on Virtualbox - Updated 2023. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2021/install-debian-on-virtualbox/](https://terokarvinen.com/2021/install-debian-on-virtualbox/). Luettu: 25.02.2024
 
