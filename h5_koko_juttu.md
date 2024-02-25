@@ -62,7 +62,19 @@ Sen jälkeen olin valmis asentamaan palomuurin. Latasin palomuuri-ohjelmiston ko
 
 Käynnistin virtuaalikoneen uudestaan ja avasin terminaalin. Testasin vielä palomuurin toimintaa komennolla `$ sudo ufw status`, ja päällä näytti olevan. 
 
+![Päällä oleva palomuuri](Kuvat/virtuaalikone10.png)
 
+Päätin vielä asentaa Quest Additions-ohjelman, jotta virtuaalikoneen näytön resoluutio on parempi. Menin virtuaalikoneen ylhäältä `Devices` kohtaan ja painoin "Insert Quest Additions CD image"-valintaa. Näin virtuaalikoneen levyasemaan tuli levykuva, jonka avulla pystyn asentamaan Quest Additions:in. 
+
+![Quest Additions-levykuva](Kuvat/virtuaalikone11.png)
+
+Tämän jälkeen avasin terminaalin. Siirryin komennolla `$ cd /media/*/VBox*` levyn sisältöön ja tutkin sen sisältöä komennolla `$ ls`. Sieltä löytyi Linuxiin sopiva Quest Additions, ja asensin sen komennolla `$ sudo bash VBoxLinuxAdditions.run`. Kirjoitin vahingossa salasani väärin, mutta kirjoitettuani sen oikein asennus sujui ongelmitta muutamissa sekunneissa.
+
+![Quest Additions-asennus](Kuvat/virtuaalikone12.png)
+
+Käynnistin virtuaalikoneen uudestaan. Nyt pystyin suurentamaan virtuaalikoneen näyötn oman näyttöni kokoiseksi ja kopioimaan tekstiä oman tietokoneeni ja virtuaalikoneen välillä. Testasin vielä käydä satunnaisilla sivustoilla, ja nekin toimivat odotetusti. Kello oli 22:10, kun sain tämän osion päätökseen.
+
+![Toimiva Quest Additions](Kuvat/virtuaalikone13.png)
 
 ## Sivun luonti Apache-weppipalvelimelle
 
