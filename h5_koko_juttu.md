@@ -19,7 +19,7 @@ Käyttöjärjestelmä: Windows 11 Home 64-bit
 
 ### Virtuaalikoneen luominen
 
-Ensimmäisenä vuorossa oli luoda uusi virtuaalikone. Aloitin tehtävän teon 20:45. Käytin apuna tässä osiossa Tero Karvisen [Install Debian on Virtualbox - Updated 2023](https://terokarvinen.com/2021/install-debian-on-virtualbox/) -artikkelia. Ensimmäiseksi avasin Virtualbox-ohjelman ja aloitin uuden virtuaalikoneen teon painikkeesta `new`. Annoin tietokoneen nimeksi Debiani2, laitoin sen tallentumaan tallennustila C:hen ja asetin sille levykuvaksi [tehtävässä 1](https://terokarvinen.com/2021/install-debian-on-virtualbox/) lataamani Debian liven. Koneen käyttöjärjestelmäksi asetin 64-bit Linux Debianin.
+Ensimmäisenä vuorossa oli luoda uusi virtuaalikone. Aloitin tehtävän teon 20:45. Käytin apuna tässä osiossa Tero Karvisen [Install Debian on Virtualbox - Updated 2023](https://terokarvinen.com/2021/install-debian-on-virtualbox/) -artikkelia. Ensimmäiseksi avasin Virtualbox-ohjelman ja aloitin uuden virtuaalikoneen teon painikkeesta `new`. Annoin tietokoneen nimeksi Debiani2, laitoin sen tallentumaan tallennustila C:hen ja asetin sille levykuvaksi [tehtävässä 1](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h1_oma_linux.md) lataamani Debian liven. Koneen käyttöjärjestelmäksi asetin 64-bit Linux Debianin.
 
 ![Koneen nimeäminen](Kuvat/virtuaalikone1.png)
 
