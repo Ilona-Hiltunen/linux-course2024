@@ -20,7 +20,7 @@ Käyttöjärjestelmä: Windows 11 Home 64-bit
 
 ### Virtuaalikoneen luominen
 
-Aloitin tehtävien teon 20:45. Käytin apuna tässä osiossa Tero Karvisen [Install Debian on Virtualbox - Updated 2023](https://terokarvinen.com/2021/install-debian-on-virtualbox/) -artikkelia. Ensimmäiseksi avasin Virtualbox-ohjelman ja aloitin uuden virtuaalikoneen teon painikkeesta `new`. Annoin tietokoneen nimeksi Debiani2, laitoin sen tallentumaan tallennustila C:hen ja asetin sille levykuvaksi [tehtävässä 1](https://terokarvinen.com/2021/install-debian-on-virtualbox/) lataamani Debian liven. Koneen käyttöjärjestelmäksi asetin 64-bit Linux Debianin.
+Ensimmäisenä vuorossa oli luoda uusi virtuaalikone. Aloitin tehtävän teon 20:45. Käytin apuna tässä osiossa Tero Karvisen [Install Debian on Virtualbox - Updated 2023](https://terokarvinen.com/2021/install-debian-on-virtualbox/) -artikkelia. Ensimmäiseksi avasin Virtualbox-ohjelman ja aloitin uuden virtuaalikoneen teon painikkeesta `new`. Annoin tietokoneen nimeksi Debiani2, laitoin sen tallentumaan tallennustila C:hen ja asetin sille levykuvaksi [tehtävässä 1](https://terokarvinen.com/2021/install-debian-on-virtualbox/) lataamani Debian liven. Koneen käyttöjärjestelmäksi asetin 64-bit Linux Debianin.
 
 ![Koneen nimeäminen](Kuvat/virtuaalikone1.png)
 
@@ -50,7 +50,7 @@ Käyttöjärjestelmän asennus käynnistyi kello 21:21. Asennus sujui ongelmitta
 
 ### Alkutoimenpiteet ja ohjelmien asentaminen
 
-Aloitin tämän osion tekemisen 21:35 ja käytin tähänkin apuna Tero Karvisen [Install Debian on Virtualbox - Updated 2023](https://terokarvinen.com/2021/install-debian-on-virtualbox/) -artikkelia. Ensimmäiseksi avasin terminaalin virtuaalikoneessani. Kirjoitin siihen komennon `$ sudo apt-get update` päivittääkseni ohjelmistojen pakettilistan. Terminaali kysyi salasanaani, ja tämän asetettuani se päivitti uudet paketit. Tämän jälkeen kirjoitin terminaaliin komennon `$ sudo apt-get -y dist-upgrade`, joka taas päivitti kaikki pakettilistaan tulleet päivitykset. Päivityksiä oli paljon, ja päivittelyssä menikin 21:36-21:40 välinen aika. Tein komennot uudestaan saadakseni kuvan tapahtumasta, sillä päivityksiä oli niin paljon ettei komentoja enään näkynyt. Koska olin juuri päivittänyt kaiken mahtui komennot yhteen kuvaan.
+Seuraavana vuorossa oli tehdä alkutoimenpiteet ja asentaa muutama ohjelma. Aloitin tämän osion tekemisen 21:35 ja käytin tähänkin apuna Tero Karvisen [Install Debian on Virtualbox - Updated 2023](https://terokarvinen.com/2021/install-debian-on-virtualbox/) -artikkelia. Ensimmäiseksi avasin terminaalin virtuaalikoneessani. Kirjoitin siihen komennon `$ sudo apt-get update` päivittääkseni ohjelmistojen pakettilistan. Terminaali kysyi salasanaani, ja tämän asetettuani se päivitti uudet paketit. Tämän jälkeen kirjoitin terminaaliin komennon `$ sudo apt-get -y dist-upgrade`, joka taas päivitti kaikki pakettilistaan tulleet päivitykset. Päivityksiä oli paljon, ja päivittelyssä menikin 21:36-21:40 välinen aika. Tein komennot uudestaan saadakseni kuvan tapahtumasta, sillä päivityksiä oli niin paljon ettei komentoja enään näkynyt. Koska olin juuri päivittänyt kaiken mahtui komennot yhteen kuvaan.
 
 ![Päivittäminen](Kuvat/virtuaalikone7.png)
 
@@ -78,7 +78,7 @@ Käynnistin virtuaalikoneen uudestaan. Nyt pystyin suurentamaan virtuaalikoneen 
 
 ## Sivun luonti Apache-weppipalvelimelle
 
-Aloitin tehtävän teon kello 19:40. Käytin tehtävässä apuna Tero Karvisen [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/) -artikkelia. Avasin virtuaalitietokoneen ja käynnistin terminaaliohjelman. Aloitin pakettilistan päivityksellä komennolla `$ sudo apt-get update`, niin kuin edellisessäkin osiossa. Latasin Apache-weppipalvelimen komennolla `$ sudo apt-get -y install apache2`. 
+Seuraavaksi aloin luomaann sivua Apache-weppipalvelimelle. Aloitin tehtävän teon kello 19:40. Käytin tehtävässä apuna Tero Karvisen [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/) -artikkelia. Avasin virtuaalitietokoneen ja käynnistin terminaaliohjelman. Aloitin pakettilistan päivityksellä komennolla `$ sudo apt-get update`, niin kuin edellisessäkin osiossa. Latasin Apache-weppipalvelimen komennolla `$ sudo apt-get -y install apache2`. 
 
 ![Apachen lataus](Kuvat/apache1.png)
 
@@ -106,7 +106,25 @@ Kokeilin vielä kerran mennä osoitteeseen http://localhost/ selaimella, ja täl
 
 ## Kirjautumisen automatisointi SSH-avaimella
 
+Seuraavaksi tuli kirjautuminen automatisoida SSH-avaimella. Päätin automatisoida kirjautumisen [viime tehtävässä](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h4_maailma_kuulee.md) luomalleni virtuaalipalvelimelle. Käytin tehtävässä apuna Debian Wikin [SSH-tietosivua](https://wiki.debian.org/SSH). Asensin SSH-etähallintapalvelimen komennolla `sudo apt-get install openssh-server`. 
 
+![SSH-etähallintapalvelimen asennus](Kuvat/ssh1.png)
+
+Seuraavaksi loin SSH-yhteyden DigitalOceanin virtuaalipalvelimelle komennolla `$ ssh ilona@134.209.202.182`. Terminaali kysyi salasanaani, ja sen asetettuani pääsin kirjautumaan harjoituspalvelimeksi nimeämälleni virtuaalipalvelimelle. Jätin yhteyden auki terminaaliin siltä varalta, että en pääsisi enään kirjautumaan sinne takaisin SSH-avainta luodessani.
+
+![SSH-yhteyden luominen](Kuvat/ssh2.png)
+
+Avasin uuden terminaalin ja loin SSH-avaimen komennolla `$ ssh-keygen` virtuaalikoneellani. Terminaali kysyi mihin kansioon avain talletetaan, ja päätin tallentaa sen oletuskansioon. Tarvittava kansio avaimelle luotiin automaattisesti. Tämän jälkeen pystyi asettamaan salasanan SSH-avaimelle. Sen asettamisen jälkeen SSH-avain oli luotu.
+
+![SSH-avaimen luonti](Kuvat/ssh3.png)
+
+Tämän jälkeen kopion SSH-avaimen virtuaapalvelimelleni komennolla `$ ssh-copy-id ilona@134.209.202.182`. Terminaali kysyi virtuaalipalvelimeni salasanaa, ja asetettuani sen onnistuneesti palvelin ilmoitti, että avain on lisätty ja voin kokeilla kirjautumista SSH-avaimella.
+
+![SSH-avaimen lisäys](Kuvat/ssh4.png)
+
+Tämän jälkeen kokeilin kirjautumista virtuaalikoneeltani virtuaalipalvelimelleni komennolla `$ ssh ilona@134.209.202.182`. Pääsin kirjautumaan virtuaalipalvelimelleni automaattisesti, eikä salasanaa kysytty, joten päättelin SSH-avaimen asennuksen onnistuneen. Kello oli 22:20, kun sain tehtävän päätökseen.
+
+![Onnistunut kirjautuminen SSH-avaimella](Kuvat/ssh5.png)
 
 ## Domain-nimen tutkiminen
 
@@ -114,6 +132,8 @@ Kokeilin vielä kerran mennä osoitteeseen http://localhost/ selaimella, ja täl
 
 
 ## Lähteet
+
+Debian Wiki. 09.11.2023. SSH. Debian Wiki. Luettavissa: [https://wiki.debian.org/SSH](https://wiki.debian.org/SSH). Luettu: 26.02.2024.
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/. Luettu: 13.02.2024.
 
