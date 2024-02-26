@@ -1,6 +1,6 @@
 # H5 Koko juttu
 
-Viidennessä tehtäväkokonaisuudessa kerrataan oppimaamme ja tehdään uusi tyhjä virtuaalikone. Uudella virtuaalikoneella tulee olla Apache weppipalvelin, ja sille luotu uusi etusivu. Lisäksi virtuaalikoneella tulee olla SSH-etähallintapalvelin, ja SSH-yhteydellä kirjautuminen tulee automatisoida SSH-avaimella. Tämän jälkeen viime tehtävässä vuokrattua domain-nimeä tulee tutkia `host`- ja `dig`-komennoilla sekä analysoida tulokset. Bonustehtävänä oli asentaa vagrant, ja tehdä silläkin virtuaalikone. (Karvinen 2024.)
+Viidennessä tehtäväkokonaisuudessa kerrataan oppimaamme ja tehdään uusi tyhjä virtuaalikone. Uudella virtuaalikoneella tulee olla Apache weppipalvelin, ja sille luotu uusi etusivu. Lisäksi virtuaalikoneella tulee olla SSH-etähallintapalvelin, ja SSH-yhteydellä kirjautuminen tulee automatisoida SSH-avaimella. Tämän jälkeen viime tehtävässä vuokrattua domain-nimeä tulee tutkia `host`- ja `dig`-komennoilla sekä analysoida tulokset. (Karvinen 2024.)
 
 ## Uusi virtuaalikone
 
@@ -128,8 +128,19 @@ Tämän jälkeen kokeilin kirjautumista virtuaalikoneeltani virtuaalipalvelimell
 
 ## Domain-nimen tutkiminen
 
-## Vagrant
+Viimeisenä tehtävänä tuli tutkia [[viime tehtävän](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h4_maailma_kuulee.md) domain-nimeä `host` ja `dig` komennoilla ja verrata tietoja nimen vuokraajan tietoihin. Vuokraaja oli tapauksessani [NameCheap](https://www.namecheap.com/). Aloitin tehtävän teon 22:45. Käytin tehtävässä apuna Tero Karvisen [tehtävänantoon H5 kirjoittamia vinkkejä](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Kokeilin ensin `host`-komentoa, ja huomasin, että komentoa ei löydy eli sitä ei ole asennettu. Asensin komennot kirjoittamalla terminaaliin `$ sudo apt-get -y install bind9-dnsutils bind9-host`. 
 
+![Host- ja dig-komennon asentaminen](Kuvat/domain1.png)
+
+Kokeilin ensimmäistä komentoa kirjoittamalla terminaaliin `host ilonahiltunen.com`. Se palautti sivuston IP-osoitteen, joka oli sama, jonka olin asettanut NameCheap-sivustolle domain-nimeni osoitteeksi.
+
+![Host-komento](Kuvat/domain2.png)
+
+![IP-osoite Namecheapissa](Kuvat/domain3.png)
+
+Tämän jälkeen kokeilin seuraavaa komentoa kirjoittamalla terminaaliin `dig ilonahiltunen.com`. Tämä komento palautti pidemmän tekstin, kuin äskeinen. Käytin apuna vastauksen tulkitsemiseen Linux Handbookin artikkelia [Dig Command in Linux Explained](https://linuxhandbook.com/dig-command/). Ensimmäinen rivi tarkoittaa, mistä laitteesta pyyntö on tehty ja mihin se on tehty. Seuraavaksi ilmoitetaan vastaus, joka pyynnön kohteena ollut sivusto palautti. Tässä tapauksessa saimme vastauksena sivuston IP-osoitteen, eikä pyynnön onnistumisessa ilmennyt virheitä. Viimeisenä on tietoa pyynnöstä, kuten siihen kulunut aika, mistä pyyntö on tehty ja milloin pyyntö tehtiin. Tämänkin komennon vastauksessa yhteneväistä Namecheapin sivustolle oli asettamani domain-nimen IP-osoite.
+
+![Dig-komento](Kuvat/domain4.png)
 
 ## Lähteet
 
@@ -140,4 +151,6 @@ Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto
 Karvinen, T. 10.04.2018. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address. Luettavissa: [https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Luettu: 26.02.2024.
 
 Karvinen, T. 2023. Install Debian on Virtualbox - Updated 2023. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2021/install-debian-on-virtualbox/](https://terokarvinen.com/2021/install-debian-on-virtualbox/). Luettu: 25.02.2024
+
+Linux Handbook. s.a. Dig Command in Linux Explained. Linux Handbook. Luettavissa: [https://linuxhandbook.com/dig-command/](https://linuxhandbook.com/dig-command/). Luettu: 26.02.2024.
 
