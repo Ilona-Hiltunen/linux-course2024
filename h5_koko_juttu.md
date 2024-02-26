@@ -137,7 +137,7 @@ Tämän jälkeen kokeilin kirjautumista virtuaalikoneeltani virtuaalipalvelimell
 
 ## Domain-nimen tutkiminen
 
-Viimeisenä tehtävänä tuli tutkia [[viime tehtävän](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h4_maailma_kuulee.md) domain-nimeä `host` ja `dig` komennoilla ja verrata tietoja nimen vuokraajan tietoihin. Vuokraaja oli tapauksessani [NameCheap](https://www.namecheap.com/). Aloitin tehtävän teon 22:45. Käytin tehtävässä apuna Tero Karvisen [tehtävänantoon H5 kirjoittamia vinkkejä](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Kokeilin ensin `host`-komentoa, ja huomasin, että komentoa ei löydy eli sitä ei ole asennettu. Asensin komennot kirjoittamalla terminaaliin `$ sudo apt-get -y install bind9-dnsutils bind9-host`. 
+Viimeisenä tehtävänä tuli tutkia [viime tehtävän](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h4_maailma_kuulee.md) domain-nimeä `host` ja `dig` komennoilla ja verrata tietoja nimen vuokraajan tietoihin. Vuokraaja oli tapauksessani [NameCheap](https://www.namecheap.com/). Aloitin tehtävän teon 22:45. Käytin tehtävässä apuna Tero Karvisen [tehtävänantoon H5 kirjoittamia vinkkejä](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Kokeilin ensin `host`-komentoa, ja huomasin, että komentoa ei löydy eli sitä ei ole asennettu. Asensin komennot kirjoittamalla terminaaliin `$ sudo apt-get -y install bind9-dnsutils bind9-host`. 
 
 ![Host- ja dig-komennon asentaminen](Kuvat/domain1.png)
 
