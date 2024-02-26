@@ -5,7 +5,6 @@ Viidennessä tehtäväkokonaisuudessa kerrataan oppimaamme ja tehdään uusi tyh
 ## Uusi virtuaalikone
 
 ### Käyttöympäristö
-
 Tietokone: Itse kasattu pöytätietokone
 
 Prosessori: 3,70 GHz Intel Core i5-9600k
