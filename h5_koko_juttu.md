@@ -157,9 +157,11 @@ Tehtävä valmistui 23:05.
 
 Päätin vielä kokeillla Vagrantin käyttöä. Aloitin tehtävän teon 23:40. Käytin tehtävässä apuna Tero Karvisen [tehtävänantoon H5 kirjoittamia vinkkejä](https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/). Latasin [Vagrantin](https://developer.hashicorp.com/vagrant/install?product_intent=vagrant) Windows AMD64-version.
 
-![Asennetteva Vagrant]()
+![Asennetteva Vagrant](Kuvat/Vagrant1.png)
 
 Tämän jälkeen käynnistin asennusohjelman tietokoneellani. Asennuksessa ei tarvinnut asettaa muita asetuksia, kuin tallennuspaikka, jonka asetin tallentumaan tallennustila D:hen. Asennus valmistui nopeasti minuutissa. Asennuksen valmistuttua tuli minun käynnistää tietokone uudelleen.
+
+![Asennus](Kuvat/Vagrant2.png)
 
 
 ## Lähteet
