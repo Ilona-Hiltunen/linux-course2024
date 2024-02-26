@@ -78,7 +78,31 @@ Käynnistin virtuaalikoneen uudestaan. Nyt pystyin suurentamaan virtuaalikoneen 
 
 ## Sivun luonti Apache-weppipalvelimelle
 
+Aloitin tehtävän teon kello 19:40. Käytin tehtävässä apuna Tero Karvisen [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/) -artikkelia. Avasin virtuaalitietokoneen ja käynnistin terminaaliohjelman. Aloitin pakettilistan päivityksellä komennolla `$ sudo apt-get update`, niin kuin edellisessäkin osiossa. Latasin Apache-weppipalvelimen komennolla `$ sudo apt-get -y install apache2`. 
 
+![Apachen lataus](Kuvat/apache1.png)
+
+Tämän jälkeen loin uuden tiedoston Apachen asetuskansioon komennolla `$ sudoedit /etc/apache2/sites-avaible/kissa.example.com.conf`. Kirjoitin tiedoston sisällön kuvassa näkyvällä syntaksilla ja tallensin tiedoston.
+
+![Uuden tiedoston luominen](Kuvat/apache3.png)
+
+![Syntaksi](Kuvat/apache2.png)
+
+Otin sivuston käyttöön komennolla `$ sudo a2ensite kissa.example.com`. Tämän jälkeen käynnistin Apachen uudestaan komennolla `$ sudo systemctl restart apache2`. 
+
+![Sivun ottaminen käyttöön](Kuvat/apache4.png)
+
+Kokeilin vierailla osoitteessa http://localhost/ selaimella, mutta huomasin, että se yhä näyttää Apachen oletussivua. Korjasin asian ottamalla pois käytöstä Apachen oletussivun komennolla `sudo a2dissite 000-default.conf` ja käynnistin Apachen taas uudelleen komennolla `$ sudo systemctl restart apache2`. Tämän jälkeen sain toivomani virheilmoituksen selaimeen, jonka tiesin johtuvan siitä, etten ole luonut index-tiedostoa kissa.example-sivustolle.
+
+![Oletussivun poisto käytöstä](Kuvat/apache5.png)
+
+Tämän jälkeen loin kansion, jonka olin asettanut juuri kissa.example-sivun asetustiedostoon poluksi. Tein sen komennolla `$ mkdir -p /home/ilona/publicsites/kissa.example.com`. Tämän jälkeen loin vielä etusivun kyseiseen kansioon komennolla `$ micro /home/ilona/publicsites/kissa.example.com/index.html`. Kirjoitin sivun sisällöksi lyhyen testitekstin. 
+
+![Kansion ja etusivun luominen](Kuvat/apache6.png)
+
+Kokeilin vielä kerran mennä osoitteeseen http://localhost/ selaimella, ja tällä kertaa sivusto näytti kirjoittamani tekstin. Kello oli 20:14, kun sain tehtävän valmiiksi.
+
+![Valmis sivu](Kuvat/apache7.png)
 
 ## Kirjautumisen automatisointi SSH-avaimella
 
@@ -92,6 +116,8 @@ Käynnistin virtuaalikoneen uudestaan. Nyt pystyin suurentamaan virtuaalikoneen 
 ## Lähteet
 
 Karvinen, T. 2024. Linux Palvelimet 2024 alkukevät. Tero Karvisen verkkosivusto. Luettavissa: https://terokarvinen.com/2024/linux-palvelimet-2024-alkukevat/. Luettu: 13.02.2024.
+
+Karvinen, T. 10.04.2018. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address. Luettavissa: [https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/). Luettu: 26.02.2024.
 
 Karvinen, T. 2023. Install Debian on Virtualbox - Updated 2023. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2021/install-debian-on-virtualbox/](https://terokarvinen.com/2021/install-debian-on-virtualbox/). Luettu: 25.02.2024
 
