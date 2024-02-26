@@ -159,7 +159,7 @@ Päätin vielä kokeillla Vagrantin käyttöä. Aloitin tehtävän teon 23:40. K
 
 ![Asennetteva Vagrant](Kuvat/Vagrant1.png)
 
-Tämän jälkeen käynnistin asennusohjelman tietokoneellani. Asennuksessa ei tarvinnut asettaa muita asetuksia, kuin tallennuspaikka, jonka asetin tallentumaan tallennustila D:hen. Asennus valmistui nopeasti minuutissa. Asennuksen valmistuttua tuli minun käynnistää tietokone uudelleen.
+Tämän jälkeen käynnistin asennusohjelman tietokoneellani. Asennuksessa ei tarvinnut asettaa muita asetuksia, kuin tallennuspaikka, jonka asetin D:ksi. Asennus valmistui nopeasti minuutissa. Asennuksen valmistuttua tuli minun käynnistää tietokone uudelleen.
 
 ![Asennus](Kuvat/Vagrant2.png)
 
