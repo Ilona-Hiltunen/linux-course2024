@@ -78,7 +78,7 @@ Käynnistin virtuaalikoneen uudestaan. Nyt pystyin suurentamaan virtuaalikoneen 
 
 ## Sivun luonti Apache-weppipalvelimelle
 
-Seuraavaksi aloin luomaann sivua Apache-weppipalvelimelle. Aloitin tehtävän teon kello 19:40. Käytin tehtävässä apuna Tero Karvisen [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/) -artikkelia. Avasin virtuaalitietokoneen ja käynnistin terminaaliohjelman. Aloitin pakettilistan päivityksellä komennolla `$ sudo apt-get update`, niin kuin edellisessäkin osiossa. Latasin Apache-weppipalvelimen komennolla `$ sudo apt-get -y install apache2`. 
+Seuraavaksi aloin luomaan sivua Apache-weppipalvelimelle. Aloitin tehtävän teon kello 19:40. Käytin tehtävässä apuna Tero Karvisen [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/) -artikkelia. Avasin virtuaalitietokoneen ja käynnistin terminaaliohjelman. Aloitin pakettilistan päivityksellä komennolla `$ sudo apt-get update`, niin kuin edellisessäkin osiossa. Latasin Apache-weppipalvelimen komennolla `$ sudo apt-get -y install apache2`. 
 
 ![Apachen lataus](Kuvat/apache1.png)
 
@@ -141,6 +141,8 @@ Kokeilin ensimmäistä komentoa kirjoittamalla terminaaliin `host ilonahiltunen.
 Tämän jälkeen kokeilin seuraavaa komentoa kirjoittamalla terminaaliin `dig ilonahiltunen.com`. Tämä komento palautti pidemmän tekstin, kuin äskeinen. Käytin apuna vastauksen tulkitsemiseen Linux Handbookin artikkelia [Dig Command in Linux Explained](https://linuxhandbook.com/dig-command/). Ensimmäinen rivi tarkoittaa, mistä laitteesta pyyntö on tehty ja mihin se on tehty. Seuraavaksi ilmoitetaan vastaus, joka pyynnön kohteena ollut sivusto palautti. Tässä tapauksessa saimme vastauksena sivuston IP-osoitteen, eikä pyynnön onnistumisessa ilmennyt virheitä. Viimeisenä on tietoa pyynnöstä, kuten siihen kulunut aika, mistä pyyntö on tehty ja milloin pyyntö tehtiin. Tämänkin komennon vastauksessa yhteneväistä Namecheapin sivustolle oli asettamani domain-nimen IP-osoite.
 
 ![Dig-komento](Kuvat/domain4.png)
+
+Viimeinen tehtävä valmistui 23:05.
 
 ## Lähteet
 
