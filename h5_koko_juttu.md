@@ -1,6 +1,6 @@
 # H5 Koko juttu
 
-Viidennessä tehtäväkokonaisuudessa kerrataan oppimaamme ja tehdään uusi tyhjä virtuaalikone. Uudella virtuaalikoneella tulee olla Apache weppipalvelin, ja sille luotu uusi etusivu. Lisäksi virtuaalikoneella tulee olla SSH-etähallintapalvelin, ja SSH-yhteydellä kirjautuminen tulee automatisoida SSH-avaimella. Tämän jälkeen viime tehtävässä vuokrattua domain-nimeä tulee tutkia `host`- ja `dig`-komennoilla sekä analysoida tulokset. (Karvinen 2024.)
+Viidennessä tehtäväkokonaisuudessa kerrataan oppimaamme ja tehdään uusi tyhjä virtuaalikone. Uudella virtuaalikoneella tulee olla Apache weppipalvelin, ja sille luotu uusi etusivu. Lisäksi virtuaalikoneella tulee olla SSH-etähallintapalvelin, ja SSH-yhteydellä kirjautuminen tulee automatisoida SSH-avaimella. Tämän jälkeen [viime tehtävässä](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h4_maailma_kuulee.md) vuokrattua domain-nimeä tulee tutkia `host`- ja `dig`-komennoilla sekä analysoida tulokset. Bonustehtävänä oli asentaa Vagrant, ja tehdä sillä uusi virtuaalikone. (Karvinen 2024.)
 
 ## Uusi virtuaalikone
 
