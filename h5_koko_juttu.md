@@ -115,7 +115,7 @@ Kokeilin vielä kerran mennä osoitteeseen http://localhost/ selaimella, ja täl
 
 ## Kirjautumisen automatisointi SSH-avaimella
 
-Seuraavaksi tuli kirjautuminen automatisoida SSH-avaimella. Päätin automatisoida kirjautumisen [viime tehtävässä](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h4_maailma_kuulee.md) luomalleni virtuaalipalvelimelle. Käytin tehtävässä apuna Debian Wikin [SSH-tietosivua](https://wiki.debian.org/SSH). Asensin SSH-etähallintapalvelimen komennolla `sudo apt-get install openssh-server`. 
+Seuraavaksi tuli kirjautuminen automatisoida SSH-avaimella. Aloitin tehtävän tekemisen 21:45. Päätin automatisoida kirjautumisen [viime tehtävässä](https://github.com/Ilona-Hiltunen/linux-course2024/blob/main/h4_maailma_kuulee.md) luomalleni virtuaalipalvelimelle. Käytin tehtävässä apuna Debian Wikin [SSH-tietosivua](https://wiki.debian.org/SSH). Asensin SSH-etähallintapalvelimen komennolla `sudo apt-get install openssh-server`. 
 
 ![SSH-etähallintapalvelimen asennus](Kuvat/ssh1.png)
 
