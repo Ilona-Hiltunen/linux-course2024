@@ -75,6 +75,16 @@ Käynnistin virtuaalikoneen uudestaan. Nyt pystyin suurentamaan virtuaalikoneen 
 
 ![Toimiva Quest Additions](Kuvat/virtuaalikone13.png)
 
+### Valmiin virtuaalikoneen käyttöympäristö
+
+Tietokone: Virtualboxilla luotu virtuaalikone
+
+Keskusmuisti: 4 GB
+
+Massamuisti: 60 GB
+
+Käyttöjärjestelmä: Debian 12 Bookworm (64-bit)
+
 ## Sivun luonti Apache-weppipalvelimelle
 
 Seuraavaksi aloin luomaan sivua Apache-weppipalvelimelle. Aloitin tehtävän teon kello 19:40. Käytin tehtävässä apuna Tero Karvisen [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/) -artikkelia. Avasin virtuaalitietokoneen ja käynnistin terminaaliohjelman. Aloitin pakettilistan päivityksellä komennolla `$ sudo apt-get update`, niin kuin edellisessäkin osiossa. Latasin Apache-weppipalvelimen komennolla `$ sudo apt-get -y install apache2`. 
