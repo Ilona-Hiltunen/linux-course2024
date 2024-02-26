@@ -163,6 +163,23 @@ Tämän jälkeen käynnistin asennusohjelman tietokoneellani. Asennuksessa ei ta
 
 ![Asennus](Kuvat/Vagrant2.png)
 
+Kun tietokoneeni oli käynnistynyt uudestaan avasin PowerShellin. Siirryin haluamaani kansioon komennolla `cd D:\Vagrant`. Tämän jälkeen loin kyseiseen kansioon Vagrant-tiedoston komennolla `vagrant init debian/bookworm64`.
+
+![Vagrant-tiedoston luominen](Kuvat/Vagrant3.png)
+
+Tämän jälkeen loin virtuaalikoneen komennolla `vagrant up`. Virtuaalikoneen luomisessa meni muutamia kymmeniä sekunteja. PowerShelliin tulevasta tekstistä päätellen Vagrant loi virtuaalikoneen Virtualboxin avulla. Huomasin myös, että Virtualboxiin oli tullut uusi Vagrant-alkuinen virtuaalikone.
+
+![Virtuaalikoneen luominen](Kuvat/Vagrant4.png)
+
+![Virtualboxiin ilmestynyt kone](Kuvat/Vagrant5.png)
+
+Tämän jälkeen yhdistin luomaani virtuaalikoneeseen komennolla `vagrant ssh`. Pääsin virtuaalikoneelle ilman salasanoja. Terminaalista huomasin, että olin Vagrant-nimisellä koneella, jossa oli Debian-käyttöjärjestelmä.
+
+![Virtuaalikone](Kuvat/Vagrant6.png)
+
+Lopuksi vielä poistin virtuaalikoneen komennolla `vagrant destroy`. Tehtävä tuli valmiiksi 00:10.
+
+![Virtuaalikoneen poisto](Kuvat/Vagrant7.png)
 
 ## Lähteet
 
