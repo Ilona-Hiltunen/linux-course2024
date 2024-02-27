@@ -61,7 +61,7 @@ Tämän jälkeen tein käyttäjän sivustolle komennolla `$ ./manage.py createsu
 
 ![Käyttäjän teko ja kirjautuminen](Kuvat/crm6.png)
 
-Tämän jälkeen aloin luomaan asiakas-tietokantaa. Loin kansion ohjelmalle komennolla `$ ./manage.py startapp crm`. Muokkasin `settings.py`-tiedostoa komennolla `$ micro kissala/settings.py`. Lisäsin sinne INSTALLED_APPS kohtaan crm-kansion kuvan mukaisesti.
+Tämän jälkeen aloin luomaan CRM-ohjelmaa. Loin kansion ohjelmalle komennolla `$ ./manage.py startapp crm`. Muokkasin `settings.py`-tiedostoa komennolla `$ micro kissala/settings.py`. Lisäsin sinne INSTALLED_APPS kohtaan crm-kansion kuvan mukaisesti.
 
 ![Ohjelman luominen](Kuvat/crm9.png)
 
