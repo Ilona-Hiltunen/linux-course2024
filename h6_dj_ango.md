@@ -27,6 +27,60 @@ Kurssin kuudennessa osiossa ensimmäiseksi tuli tehdä lyhyet tiivistelmät Tero
 
 (Karvinen 2021. a.)
 
+## Käyttöympäristö
+
+Tietokone: Virtualboxilla luotu virtuaalikone
+
+Keskusmuisti: 4 GB
+
+Massamuisti: 60 GB
+
+Käyttöjärjestelmä: Debian 12 Bookworm (64-bit)
+
+## Yksinkertainen esimerkkiohjelma Djangolla
+
+Käytin tehtävässä apuna Tero Karvisen [Django 4 Instant Customer Database Tutorial](https://terokarvinen.com/2022/django-instant-crm-tutorial/) -artikkelia, ja päätin tehdä samanlaisen CRM-ohjelman. Aloitin tehtävien teon 22:00. Ensimmäiseksi tein django-nimisen kansion, johon aion laittaa projektin ja muut tiedostot komennolla `$ mkdir django`. Tämän jälkeen siirryin kyseiseen kansioon ja tein sinne env-kansion komennolla `$ $ virtualenv --system-site-packages -p python3 env/`. Tämän jälkeen laitoin virtualenv-tilan päälle komennolla `$ source env/bin/activate`.
+
+![Alkukomennot](Kuvat/crm1.png)
+
+Tämän jälkeen tein requirements.txt-tiedoston komennolla `$ micro requirements.txt`, jonka sisälloksi kirjoitin ladattavan Djangon. Päätin käyttää versiota 4, sillä sitä oli käytetty ohjeistuksessa. Tämän jälkeen aloitin Djangon latauksen komennolla `$ pip install -r requirements.txt`.
+
+![Djangon lataus](Kuvat/crm2.png)
+
+Nyt olin valmis luomaan projektin, ja tein sen komennolla `$ django-admin startproject kissala`. Testasin vielä sivuston toiminnan siirtymällä kissala-projektikansioon ja käynnistämällä projektin komennolla `$ ./manage.py runserver`. Menin terminaaliin palauttamaan http://127.0.0.1:8000/ -osoitteeseen ja sain näkyviin Djangon testisivun.
+
+![Projektin luonti](Kuvat/crm3.png)
+
+![Testaus](Kuvat/crm4.png)
+
+Tämän jälkeen päivitin tietokannan komennoilla `$ ./manage.py makemigrations` ja sen jälkeen `./manage.py migrate`. 
+
+![Tietokantojen päivitys](Kuvat/crm5.png)
+
+Tämän jälkeen tein käyttäjän sivustolle komennolla `$ ./manage.py createsuperuser`, jonka nimeksi asetin ilona ja tein tietoturvallisen salasanan salasanageneraattorillani. Tämän jälkeen testasin kirjautua tekemilläni tunnuksilla osoitteeseen  http://127.0.0.1:8000/admin/, ja kirjautuminen onnistui.
+
+![Käyttäjän teko ja kirjautuminen](Kuvat/crm6.png)
+
+Tämän jälkeen siirrtyin luomaan asiakas-tietokantaa. Loin kansion ohjelmalle komennolla `$ ./manage.py startapp crm`. Muokkasin `settings.py`-tiedostoa komennolla `$ micro kissala/settings.py`. Lisäsin sinne INSTALLED_APPS kohtaan crm-kansion kuvan mukaisesti.
+
+![Ohjelman luominen](Kuvat/crm9.png)
+
+![Settings-tiedoston muokkaus](Kuvat/crm7.png)
+
+Seuraavaksi loin asiakas-luokan, jolla oli attribuuttina asiakkaan nimi. Tein luokan models.py-tiedostoon komennolla `$ micro crm/models.py`. Kirjoitin luokan sisällön kuvan mukaisesti, jossa luokan nimeksi annetaan Customer, attribuutiksi nimi ja alempana määritellään, että asiakas näkyy nimellänsä tietokannassa.
+
+![Customer-luokan tekeminen](Kuvat/crm8.png)
+
+Tämän jälkeen päivitin taas tietokannan komennoilla `$ ./manage.py makemigrations` ja sen jälkeen `./manage.py migrate`. Tämän jälkeen vielä rekisteröin luokan admin.py-tiedostoon komennolla `$ micro crm/admin.py`. Muokkasin tiedostoa kuvan mukaisella tavalla.
+
+![Admin-tiedoston muokkaus](Kuvat/crm10.png)
+
+Viimeiseksi käynnistin testiserverin komennolla `$ ./manage.py runserver`. Menin osoitteeseen http://127.0.0.1:8000/admin/ ja kokeilin lisätä ja poistaa asiakkaita. Tämä onnistui ja ohjelma oli valmis klo 22:50.
+
+![Valmis CRM-ohjelma](Kuvat/crm11.png)
+
+
+
 ## Lähteet
 
 Karvinen, T. 2021. a. Deploy Django 4 - Production Install. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2022/deploy-django/](https://terokarvinen.com/2022/deploy-django/). Luettu: 27.02.2024.
