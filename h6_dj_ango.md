@@ -61,7 +61,7 @@ Tämän jälkeen tein käyttäjän sivustolle komennolla `$ ./manage.py createsu
 
 ![Käyttäjän teko ja kirjautuminen](Kuvat/crm6.png)
 
-Tämän jälkeen aloin luomaan CRM-ohjelmaa. Loin kansion ohjelmalle komennolla `$ ./manage.py startapp crm`. Muokkasin `settings.py`-tiedostoa komennolla `$ micro kissala/settings.py`. Lisäsin sinne INSTALLED_APPS kohtaan crm-kansion kuvan mukaisesti.
+Tämän jälkeen aloin luomaan CRM-ohjelmaa. Loin kansion ohjelmalle komennolla `$ ./manage.py startapp crm`. Muokkasin settings.py-tiedostoa komennolla `$ micro kissala/settings.py`. Lisäsin sinne INSTALLED_APPS kohtaan crm-kansion kuvan mukaisesti.
 
 ![Ohjelman luominen](Kuvat/crm9.png)
 
@@ -105,7 +105,7 @@ Siirryin muokkaamaan Apachen ilohi.conf-tiedostoa komennolla `$ sudoedit /etc/ap
 
 ![Conf-tiedoston sisältö](Kuvat/django6.png)
 
-Tämän jälkeen asensin WSGI-moduulin komennolla `$ sudo apt-get -y install libapache2-mod-wsgi-py3`, jotta ilohi.conf-tiedostoon asetettuja WSGI-komentoja. Tämän jälkeen vielä testasin syntaksin komennolla `$ /sbin/apache2ctl configtest` ja terminaali palautti, että se on kunnossa. Lopuksi vielä käynnistin Apachen uudelleen komennolla `$ sudo systemctl restart apache2`.
+Tämän jälkeen asensin WSGI-moduulin komennolla `$ sudo apt-get -y install libapache2-mod-wsgi-py3`, jotta Apache osaa lukea ilohi.conf-tiedostoon asetettuja WSGI-komentoja. Tämän jälkeen vielä testasin syntaksin komennolla `$ /sbin/apache2ctl configtest` ja terminaali palautti, että se on kunnossa. Lopuksi vielä käynnistin Apachen uudelleen komennolla `$ sudo systemctl restart apache2`.
 
 ![WSGI-moduulin lataus](Kuvat/django7.png)
 
