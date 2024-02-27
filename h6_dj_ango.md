@@ -93,7 +93,7 @@ Siirryin publicwsgi-kansioon ja tein sinne env-kansion ladattaville paketeille k
 
 ![Virtualenv](Kuvat/django3.png)
 
-Seuraavaksi edellisessä tehtävässä tekemäni requirements.txt-tiedoston tähän kansioon komennolla `cp /home/ilona/django/requirements.txt requirements.txt` ja tarkistin, että tiedosto on varmasti oikea komennolla `$ cat requirements.txt`. Tämän jälkeen asensin Djangon komennolla `$ pip install -r requirements.txt` ja tarkistin, että minulla on Djangon 4. versio komennolla `$ django-admin --version`.
+Seuraavaksi kopioin edellisessä tehtävässä tekemäni requirements.txt-tiedoston tähän kansioon komennolla `cp /home/ilona/django/requirements.txt requirements.txt` ja tarkistin, että tiedosto on varmasti oikea komennolla `$ cat requirements.txt`. Tämän jälkeen asensin Djangon komennolla `$ pip install -r requirements.txt` ja tarkistin, että minulla on Djangon 4. versio komennolla `$ django-admin --version`.
 
 ![Djangon asennus](Kuvat/django4.png)
 
