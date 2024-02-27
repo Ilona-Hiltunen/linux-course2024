@@ -79,7 +79,51 @@ Viimeiseksi käynnistin testiserverin komennolla `$ ./manage.py runserver`. Meni
 
 ![Valmis CRM-ohjelma](Kuvat/crm11.png)
 
+## Djangon tuotantotyyppinen asennus
 
+Käytin tässä tehtävässä ohjeena Tero Karvisen [Deploy Django 4 - Production Install](https://terokarvinen.com/2022/deploy-django/) -artikkelia. Aloitin tehtävän teon 23:15. Aloitin tehtävän tekemisen luomalla publicwsgi-, ilohi- ja static-kansion komennolla `$ mkdir -p publicwsgi/ilohi/static`. Tein static-kansioon index-tiedoston komennolla `$ micro publicwsgi/ilohi/static/index.html` ja kirjoitin sisällöksi lyhyen testitekstin. Sitten loin uuden virtualhost-tiedoston komennolla `$ sudoedit /etc/apache2/sites-available/ilohi.conf`, ja kirjoitin sen sisällön kuvan mukaisesti.
+
+![Virtualhost-tiedosto](Kuvat/django1.png)
+
+Tämän jälkeen otin käyttöön tekemäni sivun komennolla `$ sudo a2ensite ilohi.conf` ja poistin vanhan käytössä olevan sivun komennolla `$ sudo a2dissite kissa.example.com.conf`. Tämän jälkeen käynnistin Apachen uudestaan komennolla `$ sudo systemctl restart apache2`. Testasin sivuston näkymistä komennolla `$ curl http://localhost/static/`, ja se palautti kirjoittamani testitekstin.
+
+![Sivun käyttöönotto](Kuvat/django2.png)
+
+Siirryin publicwsgi-kansioon ja tein sinne env-kansion ladattaville paketeille komennolla `$ virtualenv -p python3 --system-site-packages env`. Otin virtualenv-tilan käyttöön komennolla `$ virtualenv -p python3 --system-site-packages env`. Tarkistin vielä komennolla `$ which pip`, että lataukset todellakin menevät env-kansioon.
+
+![Virtualenv](Kuvat/django3.png)
+
+Seuraavaksi edellisessä tehtävässä tekemäni requirements.txt-tiedoston tähän kansioon komennolla `cp /home/ilona/django/requirements.txt requirements.txt` ja tarkistin, että tiedosto on varmasti oikea komennolla `$ cat requirements.txt`. Tämän jälkeen asensin Djangon komennolla `$ pip install -r requirements.txt` ja tarkistin, että minulla on Djangon 4. versio komennolla `$ django-admin --version`.
+
+![Djangon asennus](Kuvat/django4.png)
+
+Poistin tekemäni testikansion komennolla `$ rm -r ilohi`. Tämän jälkeen loin ilohi-nimisen Django-projektin komennolla `$ django-admin startproject ilohi`.
+
+![Projektin luonti](Kuvat/django5.png)
+
+Siirryin muokkaamaan Apachen ilohi.conf-tiedostoa komennolla `$ sudoedit /etc/apache2/sites-available/ilohi.conf`. Asetin tiedoston sisällön kuvan mukaisesti.
+
+![Conf-tiedoston sisältö](Kuvat/django6.png)
+
+Tämän jälkeen asensin WSGI-moduulin komennolla `$ sudo apt-get -y install libapache2-mod-wsgi-py3`, jotta ilohi.conf-tiedostoon asetettuja WSGI-komentoja. Tämän jälkeen vielä testasin syntaksin komennolla `$ /sbin/apache2ctl configtest` ja terminaali palautti, että se on kunnossa. Lopuksi vielä käynnistin Apachen uudelleen komennolla `$ sudo systemctl restart apache2`.
+
+![WSGI-moduulin lataus](Kuvat/django7.png)
+
+Tämän jälkeen kokeilin sivuston toimintaa komennolla `$ curl -s localhost|grep title`, ja komento palautti tekstin, että sivusto toimii. Kokeilin myös, että yhteys otetaan Apacheen eikä testiserveriin komennolla `$ curl -sI localhost|grep Server`. Terminaali vahvisti, pyyntöön vastaa Apache.
+
+![Testaus](Kuvat/django8.png)
+
+Seuraavaksi otin DEBUG-asetuksen pois päältä ja lisäsin sallittuihin hosteihin localhostin. Muokkasin settings.py-tiedostoa komennolla `$ micro ilohi/ilohi/settings.py`. Laitoin siihen kuvassa näkyvät tiedot. Käynnistin Apachen uudelleen komennolla `$ sudo systemctl restart apache2`, jotta asetukset päivittyy.
+
+![Settings-tiedoston muokkaus](Kuvat/django9.png)
+
+Nyt kokeilin komentoa `$ curl -s localhost|grep title` uudestaan. Sain vastaukseksi, että mitään ei löydy. Se oli odotettavissa, sillä etusivulle ei ole määritelty mitään sisältöä. Kokeilin vielä mennä selaimessa osoitteeseen http://localhost/admin. Näkyville tuli ruma kirjautumissivu, mikä johtui siitä että siinä ei ole CSS-muotoilua. Sain kuitenkin vahvistuksen siitä, että sivusto toimii haluamallani tavalla. Tehtävä valmistui 01:00.
+
+![Curl ja admin-sivu](Kuvat/django10.png)
+
+Lisäsin vielä muotoilun sivustolle muokkaamalla settings-tiedostoa komennolla `$ micro ilohi/ilohi/settings.py`. Lisäsin tiedoston alkuun "import os" ja sisältöön "STATIC_ROOT = os.path.join(BASE_DIR, 'static/')". Tämän jälkeen vielä tein komennon `$ ilohi/manage.py collectstatic`. Tämän jälkeen muotoilu näkyi http://localhost/admin -osoitteessa. Lisäaikaa tähän meni 10 minuuttia. 
+
+![Sivu muotoiluilla](Kuvat/django13.png)
 
 ## Lähteet
 
