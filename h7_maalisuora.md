@@ -66,11 +66,59 @@ Tein uuden testitiedoston komennolla `$ micro testi.py`. Laitoin muutaman funkti
 
 ### Apache
 
-Tämän jälkeen tuli asentaa Apache-weppipalvelin, tehdä uusi Erkki-niminen käyttäjä ja tehdä Erkille kotisivu (Karvinen 2024). Käytin tehtävässä ohjeena Tero Karvisen [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/?fromSearch=apache) -artikkelia.
+Tämän jälkeen tuli asentaa Apache-weppipalvelin, tehdä uusi Erkki-niminen käyttäjä ja tehdä Erkille kotisivu (Karvinen 2024). Käytin tehtävässä ohjeena Tero Karvisen [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/?fromSearch=apache) -artikkelia. Aloitin tehtävän kello 18:50. Ensimmäisenä asensin Apachen komennolla `$ sudo apt-get -y install apache2`. Tämän jälkeen loin Erkille käyttäjän komennolla `$ sudo adduser erkki`.
+
+![Apachen lataus](Kuvat/kotisivu1.png) ![Käyttäjän tekeminen](Kuvat/kotisivu2.png)
+
+Seuraavaksi loin uuden tiedoston komennolla `$ sudoedit /etc/apache2/sites-available/homepage.example.com.conf`. Asetin sen sisällön kuvan mukaisesti.
+
+![Erkki.example.com.conf](Kuvat/kotisivu3.png)
+
+Otin sivun käyttöön komennolla `$ sudo a2ensite homepage.example.com`, ja otin oletussivun pois käytöstä `$ sudo a2dissite 000-default.conf`. Käynnistin Apachen uudelleen komennolla `$ sudo systemctl restart apache2`.
+
+![Sivun käyttöönotto](Kuvat/kotisivu5.png)
+
+Vaihdoin käyttäjälle erkki komennolla `$ su erkki`. Loin käyttäjälle public_html-kansion komennolla `$ mkdir public_html`. Tein sinne index.html-tiedoston komennolla `$ micro public_html/index.html`, ja kirjoitin sisällöksi lyhyen testin. Menin sivulle http://localhost/~erkki, ja sivustolle ei ollut lupaa mennä.
+
+![Sivun näkymä](Kuvat/kotisivu6.png)
+
+Selvittelin vikaa internetistä, ja löysin Apachen [Per-user web directories](https://httpd.apache.org/docs/2.4/howto/public_html.html)-manuaalista, että Userdir pitää ottaa käyttöön. Kirjauduin takaisin alkuperäiselle käyttäjälleni. Otin sen käyttöön komennolla `$ sudo a2enmod userdir`, ja käynnistin Apachen uudelleen `$ sudo systemctl restart apache2`. 
+
+![Userdir](Kuvat/kotisivu7.png)
+
+Huomasin vikaa selvitellessäni myös, ettei erkki-käyttäjän kotihakemistoon ole pääsyä muilla kuin erkillä. Korjasin tämän komennolla `$ sudo chmod go+rx erkki/`. 
+
+![Oikeuksien muokkaus](Kuvat/kotisivu8.png)
+
+Tämän jälkeen kokeilin mennä uudestaan osoitteeseen http://localhost/~erkki/, ja tällä kertaa se palauttikin erkki-käyttäjällä tekemäni kotisivun. Tehtävä valmistui 20:00.
+
+![Erkin kotisivu](Kuvat/kotisivu9.png)
 
 ### SSH
 
-Seuraavaksi tuli asentaa SSH-palvelin ja tehdä uusi käyttäjä omalla nimellä. SSH-kirjautuminen tuli automatisoida avaimella ja lopuksi laittaa SSH-palvelin kuuntelemaan porttia 1337/tcp. (Tero Karvinen 2023.) 
+Seuraavaksi tuli asentaa SSH-palvelin ja tehdä uusi testikäyttäjä. SSH-kirjautuminen tuli automatisoida avaimella ja lopuksi laittaa SSH-palvelin kuuntelemaan porttia 1337/tcp. (Tero Karvinen 2023.) Käytin tässä tehtävässä apuna Debianin [SSH-manuaalia](https://wiki.debian.org/SSH). Aloitin tehtävän tekemisen 20:20. Aloitin asentamalla SSH-palvelimen komennolla `$ sudo apt-get install openssh-server`. Tein myös testikäyttäjän komennolla `$ adduser testi`. 
+
+![SSH-asennus](Kuvat/kirjautuminen1.png) ![Käyttäjän teko](Kuvat/kirjautuminen2.png)
+
+Kokeilin kirjautumista testi-käyttäjälle komennolla `$ ssh testi@localhost`, ja salasanan syöttämisen jälkeen pääsin sisään. 
+
+![SSH-yhteys testikäyttäjälle](Kuvat/kirjautuminen3.png)
+
+Poistuin SSH-yhteydestä takaisin alkuperäiselle käyttäjälleni komennolla `$ exit`. Loin SSH-avaimen komennolla `$ ssh-keygen`. Asetin avaimen tallentumaan oletuskansioon ja en asettanut salasanaa tässä testissä. Tämän jälkeen kopioin avaimen testikäyttäjälle komennolla `$ ssh-copy-id testi@localhost`. 
+
+![Avaimen generointi](Kuvat/kirjautuminen4.png) ![Avaimen kopiointi](Kuvat/kirjautuminen5.png)
+
+Kokeilin nyt muodostaa SSH-yhteyden uudestaan komennolla `$ ssh testi@localhost`, ja pääsin kirjautumaan suoraan sisään.
+
+![Onnistunut kirjautuminen](Kuvat/kirjautuminen6.png)
+
+Seuraavaksi aloin vaihtamaan portin, jota SSH kuuntelee. Siirryin SSH-asetuskansioon komennolla `$ cd /etc/ssh/`. Muokkasin sshd_config-tiedostoa komennolla `$ sudoedit sshd_config`. Ja lisäsin siihen portin kuvan mukaisesti.
+
+![Portti](Kuvat/kirjautuminen8.png)
+
+Tämän jälkeen käynnistin SSH-palvelimen uudestaan komennolla `$ sudo systemctl restart ssh`. Tämän jälkeen katsoin mitkä ohjelmat käyttää porttia 1337 komennolla `sudo lsof -i -P -n | grep LISTEN | grep 1337`, ja terminaali palautti, että se on SSH:n käytössä. Tehtävä oli valmis 21:00. 
+
+![SSH portissa 1337](Kuvat/kirjautuminen7.png)
 
 ### Django
 
@@ -81,6 +129,10 @@ Tässä tehtävässä tuli asentaa Django, ja tehdä sinne tietokanta, jossa on 
 Viimeisenä tuli tehdä tuotantotyyppinen asennus Djangosta, ja asettaa siihen edellinen lahjatietokanta (Karvinen 2023).
 
 # Lähteet
+
+Apache Software Foundation. s.a. Per-user web directories. Apache Software Foundation. Luettavissa: [https://httpd.apache.org/docs/2.4/howto/public_html.html](https://httpd.apache.org/docs/2.4/howto/public_html.html). Luettu: 06.03.2024.
+
+Debian Wiki. 09.11.2023. SSH. Debian Wiki. Luettavissa: [https://wiki.debian.org/SSH](https://wiki.debian.org/SSH). Luettu: 06.03.2024.
 
 Karvinen, T. 2023. Final Lab for Linux Palvelimet 2023. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2023/linux-palvelimet-2023-arvioitava-laboratorioharjoitus/](https://terokarvinen.com/2023/linux-palvelimet-2023-arvioitava-laboratorioharjoitus/). Luettu: 05.03.2024.
 
