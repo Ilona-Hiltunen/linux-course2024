@@ -124,41 +124,41 @@ Tämän jälkeen käynnistin SSH-palvelimen uudestaan komennolla `$ sudo systemc
 
 Tässä tehtävässä tuli asentaa Django, ja tehdä sinne tietokanta, jossa on lahjoitettuja esineitä. Tietokantaan piti pystyä kirjautumaan salasanalla, tehdä Erkille oma käyttäjä ja tehdä taulu Donations- joka sisältää lahjoitukset. (Tero Karvinen 2023.) Käytin tehtävässä ohjeena Tero Karvisen [Django 4 Instant Customer Database Tutorial](https://terokarvinen.com/2022/django-instant-crm-tutorial/) -artikkelia. Aloitin tehtävän teon 21:20. Aloitin tehtävän asentamalla virtualenvin komennolla `$ sudo apt-get -y install virtualenv`. Tämän jälkeen tein uuden kansion tehtävälle komennolla `$ mkdir django`, ja siirryin sinne. Loin uuden kansion ladattaville ohjelmille komennolla `$ virtualenv --system-site-packages -p python3 env/`, ja otin virtualenv-tilan käyttöön `$ source env/bin/activate`.
 
-![Virtualenv-tilan käyttöönotto]()
+![Virtualenv-tilan käyttöönotto](Kuvat/donations1.png)
 
 Loin requirements.txt-tiedoston komennolla `$ micro requirements.txt`, johon kirjoitin sisällöksi "django". Tämä vaihe tehtiin, ettei tekstiä vahingossa kirjoita asennusvaiheessa väärin. Tämän jälkeen asensin Djangon komennolla `$ pip install -r requirements.txt`.
 
-![Djangon asennus]()
+![Djangon asennus](Kuvat/donations2.png)
 
 Aloitin uuden projektin komennolla `$ django-admin startproject donations`, ja siirryin juuri luotuun projektikansioon. Tämän jälkeen käynnistin testiserverin komennolla `$ ./manage.py runserver`. Menin terminaalin palauttamaan osoitteeseen, ja sain näkyville Djangon oletussivun. Punainen teksti terminaalissa kertoo, että tietokanta pitää päivittää.
 
-![Projektin aloitus ja Djangon oletussivu]()
+![Projektin aloitus ja Djangon oletussivu](Kuvat/donations3.png)
 
 Tämän jälkeen päivitin tietokannat komennolla `$ ./manage.py makemigrations`, ja sen jälkeen `$ ./manage.py migrate`. Tämän jälkeen loin admin-käyttäjän komennolla `$ ./manage.py createsuperuser`. 
 
-![Päivitys ja superuserin teko]()
+![Päivitys ja superuserin teko](Kuvat/donations6.png)
 
 Loin osoitteessa http://127.0.0.1:8000/admin/ Erkille käyttäjän nimellä erkki, ja annoin hänelle staff-roolin.
 
-![Käyttäjän luominen]() 
+![Käyttäjän luominen](Kuvat/donations4.png) 
 
-![Erkin rooli]()
+![Erkin rooli](Kuvat/donations5.png)
 
 Tein uuden ohjelman komennolla `$ ./manage.py startapp donation`. Menin muokkaamaan projektin asetuksia komennolla `$ micro donations/settings.py`, ja lisäsin asetuksiin INSTALLED_APPS juuri luomani ohjelman nimen.
 
-![Asetusten muuttaminen]()
+![Asetusten muuttaminen](Kuvat/donations7.png)
 
 Tämän jälkeen muokkasin donation-ohjelman models.py-tiedostoa komennolla `$ micro donation/models.py`. Lisäsin sinne kuvanmukaisesti Item-luokan, jolla on attribuuttina nimi ja hinta. Viimeinen kappale määrittää sen, että tavarat näkyvät nimellään tietokannassa.
 
-![Donation-luokka]
+![Item-luokka](Kuvat/donations8.png)
 
 Tämän jälkeen päivitin tietokannat uudelleen komennolla `$ ./manage.py makemigrations`, ja sen jälkeen `$ ./manage.py migrate`. Tämän jälkeen vielä rekisteröin uuden tietokannan muokkaamalla admin.py-tiedostoa komennolla `$ micro donation/admin.py`. Lisäsin juuri luomani luokan sinne kuvan mukaisesti.
 
-![Admins.py-tiedosto]()
+![Admins.py-tiedosto](Kuvat/donations9.png)
 
 Käynnistin taas testiserverin komennolla `$ ./manage.py runserver`. Menin osoitteeseen http://127.0.0.1:8000/admin/, ja kokeilin lisätä ja poistaa esineitä. Annoin erkki-käyttäjälle luvan katsoa Item-luokan esineitä. Kirjauduttuani erkki-käyttäjälle näin esineet, mutta en voinut muokata niitä, eli sovellus toimi haluamallani tavalla. Tehtävä oli valmis 22:00.
 
-![Esineen muokkaus]()
+![Esineen muokkaus](Kuvat/donations91.png)
 
 ### Tuotantotyyppinen Django
 
