@@ -162,7 +162,64 @@ Käynnistin taas testiserverin komennolla `$ ./manage.py runserver`. Menin osoit
 
 ### Tuotantotyyppinen Django
 
-Viimeisenä tuli tehdä tuotantotyyppinen asennus Djangosta, ja asettaa siihen edellinen lahjatietokanta (Karvinen 2023).
+Viimeisenä tuli tehdä tuotantotyyppinen asennus Djangosta, ja asettaa siihen edellinen lahjatietokanta (Karvinen 2023). Käytin tehtävässä ohjeena Tero Karvisen [Deploy Django 4 - Production Install](https://terokarvinen.com/2022/deploy-django/) -artikkelia. Aloitin tehtävän tekemisen 22:30. Tein ensin uuden hakemiston komennolla `$ mkdir publicwsgi`, ja siirryin hakemiston sisään. Siirryin virtualenv-tilaan juuri samalla tavalla, kuin ylemmässä tehtävässä. Kopioin edellisessä tehtävässä tekemäni requirements.txt-tiedoston komennolla `$ cp /home/lab/django/requirements.txt requirements.txt`. Asensin Djangon komennolla `$ pip install -r requirements.txt`.
+
+![Djangon asennus](Kuvat/tuotanto1.png)
+
+Aloitin uuden Django-projektin komennolla `$ django-admin startproject production`. Loin projektille Apache-asetustiedoston komennolla `$ sudoedit /etc/apache2/sites-available/production.conf`. Kirjoitin tiedoston sisällön kuvan mukaisesti.
+
+![Production.conf-tiedosto](Kuvat/tuotanto2.png)
+
+Asensin WSGI-moduulin komennolla `$ sudo apt-get -y install libapache2-mod-wsgi-py3`. Otin sivun käyttöön komennolla `$ sudo a2ensite production.conf`, ja otin vanhan pois käytöstä `$ sudo a2dissite homepage.example.com`. Käynnistin Apachen uudestaan komennolla `$ sudo systemctl restart apache2`. Kokeilin mennä http://localhost/ -osoitteeseen ja sivu ei toiminut. 
+
+![Toimimaton sivu](Kuvat/tuotanto3.png)
+
+Menin katsomaan error.logia komennolla `$ sudo tail /var/log/apache2/error.log`, ja vastauksista päätellen Djangoa ei löytynyt.
+
+![Error.log](Kuvat/tuotanto4.png)
+
+Huomasin kirjoitusvirheen production.conf-tiedostossa TVENV-kohdassa, joka ei näkynyt config-testissä. Kirjoitusvirheen takia Python-paketteja etsittiin väärästä kansiosta. Korjasin sen komennolla `$ sudoedit /etc/apache2/sites-available/production.conf`. Käynnistin Apachen uudestaan komennolla `$ sudo systemctl restart apache2`.
+
+![Virheen korjaus](Kuvat/tuotanto5.png)
+
+Nyt http://localhost/-osoitteesta avautui Djangon oletussivu. Tarkistin vielä `$ curl -sI localhost|grep Server`, että pyyntöön vastaa Apache.
+
+![Localhost](Kuvat/tuotanto6.png)
+
+Tämän jälkeen muokkasin settings.py-tiedostoa komennolla `$ micro production/settings.py `, ottaakseni debugin pois päältä. Lisäsin siihen sallituksi osoitteeksi localhostin kuvan mukaisesti.
+
+![Settings.py](Kuvat/tuotanto7.png)
+
+Tämän jälkeen päivitin muutokset komennolla `$ touch production/wsgi.py`. Etusivulla ei näkynyt mitään, koska sille ei olla määritelty sisältöä. Osoitteesta http://localhost/admin/login/ avautui muotoilematon kirjautumissivu.
+
+![Admin/login sivu](Kuvat/tuotanto8.png)
+
+Seuraavaksi aloin kopioimaan edellisessä tehtävässä tekemääni sovellusta. Kopioin koko sovelluksen komennolla `$ cp -r /home/lab/django/donations/donation donation` nykyiseen projektikansiooni. Muokkasin settings.py INSTALLED_APPS-kohtaa ja lisäsin taas kuvan mukaisesti donation-ohjelman. 
+
+![Settings.py](Kuvat/tuotanto9.png)
+
+Poistin donation-ohjelman kansiosta migrations-kansion siltä varalta että se sisältää viittauksia edelliseen projektiin komennolla `$ rm -r migrations/`. Tein vielä admin-käyttäjän komennolla `$ $ ./manage.py createsuperuser`.
+
+![Migrations poisto ja käyttäjän teko](Kuvat/tuotanto91.png)
+
+Importoin muotoilun sivustolle, koska sitä oli ärsyttävä käyttää ilman muotoiluja. Tein sen muokkaamalla settings.py-tiedostoa komennolla `$ micro production/settings.py`, ja lisäämällä tiedostoon:
+
+    import os
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+Tämän jälkeen kopioin tiedostot `$ ./manage.py collectstatic`. Nyt sivulla näkyi muotoilu.
+
+![Muotoilu](Kuvat/tuotanto92.png)
+
+Yritin päivittää tiedot normaalisti komennolla `$ ./manage.py makemigrations`, ja sen jälkeen `$ ./manage.py migrate`. Tämä ei kuitenkaan löytänyt donation-ohjelmaa, mutta päivittäessäni komennolla `$ python ./manage.py makemigrations donation` se löytyi (luultavasti pythonia ei olisi tarvinnut lisätä komennon alkuun). Jatkoin normaalisti tekemällä komennon `$ ./manage.py migrate`. 
+
+![Päivittäminen](Kuvat/tuotanto93.png)
+
+Käynnistin Apachen uudelleen komennolla `$ sudo systemctl restart apache2`. Nyt http://localhost/admin/-osoitteessa näkyi tekemäni donation-ohjelma. Tehtävä oli valmis 00:00.
+
+![Valmis sivu](Kuvat/tuotanto94.png)
+
+## Uuden virtuaalikoneen teko arvioitavaa laboratorioharjoitusta varten
 
 # Lähteet
 
@@ -171,6 +228,8 @@ Apache Software Foundation. s.a. Per-user web directories. Apache Software Found
 Debian Wiki. 09.11.2023. SSH. Debian Wiki. Luettavissa: [https://wiki.debian.org/SSH](https://wiki.debian.org/SSH). Luettu: 06.03.2024.
 
 Karvinen, T. 2021. Django 4 Instant Customer Database Tutorial. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2022/django-instant-crm-tutorial/](https://terokarvinen.com/2022/django-instant-crm-tutorial/). Luettu: 06.03.2024.
+
+Karvinen, T. 2021. Deploy Django 4 - Production Install. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2022/deploy-django/](https://terokarvinen.com/2022/deploy-django/). Luettu: 06.03.2024.
 
 Karvinen, T. 2023. Final Lab for Linux Palvelimet 2023. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2023/linux-palvelimet-2023-arvioitava-laboratorioharjoitus/](https://terokarvinen.com/2023/linux-palvelimet-2023-arvioitava-laboratorioharjoitus/). Luettu: 05.03.2024.
 
