@@ -221,6 +221,20 @@ Käynnistin Apachen uudelleen komennolla `$ sudo systemctl restart apache2`. Nyt
 
 ## Uuden virtuaalikoneen teko arvioitavaa laboratorioharjoitusta varten
 
+Tein laboratorioharjoitus-nimisen virtuaalikoneen loppuharjoitusta varten. Asetin sille Debian live-levykuvan.
+
+![Nimi ja järjestemä](Kuvat/labra1.png)
+
+Annoin koneelle 4 GB ram-muistia ja 4 prosessorinydintä.
+
+![Ram](Kuvat/labra2.png)
+
+Loin uuden kovalevyn ja annoin sille muistia 60 GB. Jätin automaattisen allokoinnin pois päältä. 
+
+![Kovalevy](Kuvat/labra3.png)
+
+Loin tietokoneen painamalla `Finish`-nappia ja tämän jälkeen virtuaalikone laboratorioharjoitusta olikin valmis.
+
 # Lähteet
 
 Apache Software Foundation. s.a. Per-user web directories. Apache Software Foundation. Luettavissa: [https://httpd.apache.org/docs/2.4/howto/public_html.html](https://httpd.apache.org/docs/2.4/howto/public_html.html). Luettu: 06.03.2024.
