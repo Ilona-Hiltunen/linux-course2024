@@ -122,7 +122,43 @@ Tämän jälkeen käynnistin SSH-palvelimen uudestaan komennolla `$ sudo systemc
 
 ### Django
 
-Tässä tehtävässä tuli asentaa Django, ja tehdä sinne tietokanta, jossa on lahjoitettuja esineitä. Tietokantaan piti pystyä kirjautumaan salasanalla, tehdä Erkille oma käyttäjä ja tehdä taulu Donations- joka sisältää lahjoitukset. (Tero Karvinen 2023.)
+Tässä tehtävässä tuli asentaa Django, ja tehdä sinne tietokanta, jossa on lahjoitettuja esineitä. Tietokantaan piti pystyä kirjautumaan salasanalla, tehdä Erkille oma käyttäjä ja tehdä taulu Donations- joka sisältää lahjoitukset. (Tero Karvinen 2023.) Käytin tehtävässä ohjeena Tero Karvisen [Django 4 Instant Customer Database Tutorial](https://terokarvinen.com/2022/django-instant-crm-tutorial/) -artikkelia. Aloitin tehtävän teon 21:20. Aloitin tehtävän asentamalla virtualenvin komennolla `$ sudo apt-get -y install virtualenv`. Tämän jälkeen tein uuden kansion tehtävälle komennolla `$ mkdir django`, ja siirryin sinne. Loin uuden kansion ladattaville ohjelmille komennolla `$ virtualenv --system-site-packages -p python3 env/`, ja otin virtualenv-tilan käyttöön `$ source env/bin/activate`.
+
+![Virtualenv-tilan käyttöönotto]()
+
+Loin requirements.txt-tiedoston komennolla `$ micro requirements.txt`, johon kirjoitin sisällöksi "django". Tämä vaihe tehtiin, ettei tekstiä vahingossa kirjoita asennusvaiheessa väärin. Tämän jälkeen asensin Djangon komennolla `$ pip install -r requirements.txt`.
+
+![Djangon asennus]()
+
+Aloitin uuden projektin komennolla `$ django-admin startproject donations`, ja siirryin juuri luotuun projektikansioon. Tämän jälkeen käynnistin testiserverin komennolla `$ ./manage.py runserver`. Menin terminaalin palauttamaan osoitteeseen, ja sain näkyville Djangon oletussivun. Punainen teksti terminaalissa kertoo, että tietokanta pitää päivittää.
+
+![Projektin aloitus ja Djangon oletussivu]()
+
+Tämän jälkeen päivitin tietokannat komennolla `$ ./manage.py makemigrations`, ja sen jälkeen `$ ./manage.py migrate`. Tämän jälkeen loin admin-käyttäjän komennolla `$ ./manage.py createsuperuser`. 
+
+![Päivitys ja superuserin teko]()
+
+Loin osoitteessa http://127.0.0.1:8000/admin/ Erkille käyttäjän nimellä erkki, ja annoin hänelle staff-roolin.
+
+![Käyttäjän luominen]() 
+
+![Erkin rooli]()
+
+Tein uuden ohjelman komennolla `$ ./manage.py startapp donation`. Menin muokkaamaan projektin asetuksia komennolla `$ micro donations/settings.py`, ja lisäsin asetuksiin INSTALLED_APPS juuri luomani ohjelman nimen.
+
+![Asetusten muuttaminen]()
+
+Tämän jälkeen muokkasin donation-ohjelman models.py-tiedostoa komennolla `$ micro donation/models.py`. Lisäsin sinne kuvanmukaisesti Item-luokan, jolla on attribuuttina nimi ja hinta. Viimeinen kappale määrittää sen, että tavarat näkyvät nimellään tietokannassa.
+
+![Donation-luokka]
+
+Tämän jälkeen päivitin tietokannat uudelleen komennolla `$ ./manage.py makemigrations`, ja sen jälkeen `$ ./manage.py migrate`. Tämän jälkeen vielä rekisteröin uuden tietokannan muokkaamalla admin.py-tiedostoa komennolla `$ micro donation/admin.py`. Lisäsin juuri luomani luokan sinne kuvan mukaisesti.
+
+![Admins.py-tiedosto]()
+
+Käynnistin taas testiserverin komennolla `$ ./manage.py runserver`. Menin osoitteeseen http://127.0.0.1:8000/admin/, ja kokeilin lisätä ja poistaa esineitä. Annoin erkki-käyttäjälle luvan katsoa Item-luokan esineitä. Kirjauduttuani erkki-käyttäjälle näin esineet, mutta en voinut muokata niitä, eli sovellus toimi haluamallani tavalla. Tehtävä oli valmis 22:00.
+
+![Esineen muokkaus]()
 
 ### Tuotantotyyppinen Django
 
@@ -133,6 +169,8 @@ Viimeisenä tuli tehdä tuotantotyyppinen asennus Djangosta, ja asettaa siihen e
 Apache Software Foundation. s.a. Per-user web directories. Apache Software Foundation. Luettavissa: [https://httpd.apache.org/docs/2.4/howto/public_html.html](https://httpd.apache.org/docs/2.4/howto/public_html.html). Luettu: 06.03.2024.
 
 Debian Wiki. 09.11.2023. SSH. Debian Wiki. Luettavissa: [https://wiki.debian.org/SSH](https://wiki.debian.org/SSH). Luettu: 06.03.2024.
+
+Karvinen, T. 2021. Django 4 Instant Customer Database Tutorial. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2022/django-instant-crm-tutorial/](https://terokarvinen.com/2022/django-instant-crm-tutorial/). Luettu: 06.03.2024.
 
 Karvinen, T. 2023. Final Lab for Linux Palvelimet 2023. Tero Karvisen verkkosivusto. Luettavissa: [https://terokarvinen.com/2023/linux-palvelimet-2023-arvioitava-laboratorioharjoitus/](https://terokarvinen.com/2023/linux-palvelimet-2023-arvioitava-laboratorioharjoitus/). Luettu: 05.03.2024.
 
