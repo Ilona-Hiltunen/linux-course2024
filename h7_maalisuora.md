@@ -233,7 +233,11 @@ Loin uuden kovalevyn ja annoin sille muistia 60 GB. Jätin automaattisen allokoi
 
 ![Kovalevy](Kuvat/labra3.png)
 
-Loin tietokoneen painamalla `Finish`-nappia ja tämän jälkeen virtuaalikone laboratorioharjoitusta olikin valmis.
+Loin tietokoneen painamalla `Finish`-nappia. Asensin Debian 12 Bookworm -käyttöjärjestelmän kuvanmukaisilla asetuksilla.
+
+![Käyttöjärjestelmän asetukset](Kuvat/labra4.png)
+
+Viimeiseksi vielä ajoin päivitykset komennolla `$ sudo apt-get update` ja sen jälkeen `$ sudo apt-get -y dist-upgrade`. Päivitysten valmistuttua asensin palomuurin komennolla `$ sudo apt-get -y install ufw` ja otin sen käyttöön komennolla `$ sudo ufw enable`. Nyt virtuaalikone olikinsud valmis laboratorioharjoitusta varten.
 
 # Lähteet
 
