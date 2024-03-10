@@ -237,7 +237,7 @@ Loin tietokoneen painamalla `Finish`-nappia. Asensin Debian 12 Bookworm -käytt�
 
 ![Käyttöjärjestelmän asetukset](Kuvat/labra4.png)
 
-Viimeiseksi vielä ajoin päivitykset komennolla `$ sudo apt-get update` ja sen jälkeen `$ sudo apt-get -y dist-upgrade`. Päivitysten valmistuttua asensin palomuurin komennolla `$ sudo apt-get -y install ufw` ja otin sen käyttöön komennolla `$ sudo ufw enable`. Nyt virtuaalikone olikinsud valmis laboratorioharjoitusta varten.
+Viimeiseksi vielä ajoin päivitykset komennolla `$ sudo apt-get update` ja sen jälkeen `$ sudo apt-get -y dist-upgrade`. Päivitysten valmistuttua asensin palomuurin komennolla `$ sudo apt-get -y install ufw` ja otin sen käyttöön komennolla `$ sudo ufw enable`. Nyt virtuaalikone olikin valmis laboratorioharjoitusta varten.
 
 # Lähteet
 
